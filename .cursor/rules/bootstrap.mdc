@@ -1,0 +1,36 @@
+---
+description: Bootstrap 5 utility-first approach — prefer built-in classes, grid system, and components over custom CSS
+globs: **/*.{html,scss}
+alwaysApply: false
+---
+
+# Bootstrap 5 Standards
+
+@https://getbootstrap.com/docs/5.0
+
+## Utility-First Approach
+
+- Prefer Bootstrap utility classes (`d-flex`, `gap-3`, `p-3`, `mb-2`, `text-center`, `fw-bold`, etc.) over writing custom CSS/SCSS
+- Only write custom styles when no Bootstrap utility exists for the need
+
+## Layout
+
+- Use the Bootstrap grid system: `container` / `container-fluid`, `row`, `col-*`
+- Use responsive breakpoint variants (`col-sm-*`, `col-md-*`, `col-lg-*`, `col-xl-*`)
+- Use `d-flex` and flex utilities for non-grid layouts
+
+## Components
+
+- Use Bootstrap component markup (cards, modals, navbars, dropdowns, alerts, badges, buttons, forms, etc.)
+- Angular handles interactivity — do **not** rely on Bootstrap JS plugins or Popper.js
+- No jQuery dependencies
+
+## Responsive Design
+
+- Design mobile-first, layering styles for larger breakpoints
+- Use Bootstrap responsive display utilities (`d-none`, `d-md-block`, etc.)
+
+## Spacing & Typography
+
+- Use spacing scale: `m-*`, `p-*` (0–5 and `auto`)
+- Use typography helpers: `fs-*`, `fw-*`, `text-*`, `lh-*`

@@ -1,0 +1,40 @@
+---
+description: Themify Icons usage conventions — icon class patterns and markup
+globs: **/*.html
+alwaysApply: false
+---
+
+# Themify Icons
+
+@https://themify.me/themify-icons
+
+## Usage
+
+- Use `<i class="ti-{name}"></i>` for all icons
+- Browse the full icon set at the reference URL above
+
+## Common Icons
+
+| Icon | Class |
+|------|-------|
+| Home | `ti-home` |
+| User | `ti-user` |
+| Settings | `ti-settings` |
+| Search | `ti-search` |
+| Menu | `ti-menu` |
+| Close | `ti-close` |
+| Arrow Left | `ti-arrow-left` |
+| Arrow Right | `ti-arrow-right` |
+| Check | `ti-check` |
+| Plus | `ti-plus` |
+| Trash | `ti-trash` |
+| Pencil | `ti-pencil` |
+| Eye | `ti-eye` |
+| Lock | `ti-lock` |
+| Bell | `ti-bell` |
+
+## Guidelines
+
+- Do **not** mix with other icon libraries (Font Awesome, Material Icons, etc.) unless explicitly requested
+- Size icons with Bootstrap utility classes (`fs-4`, `fs-5`) or custom font-size when needed
+- Apply color with Bootstrap text utilities (`text-primary`, `text-danger`, etc.)

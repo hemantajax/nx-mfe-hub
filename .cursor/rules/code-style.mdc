@@ -1,0 +1,33 @@
+---
+description: General TypeScript and code quality conventions — optimal code, readonly, protected, early returns
+globs: **/*.ts
+alwaysApply: false
+---
+
+# Code Style
+
+## General Principles
+
+- Keep code **optimal and minimal** — avoid unnecessary abstractions, wrappers, or boilerplate
+- Prefer **early returns** to reduce nesting
+- Avoid redundant comments that narrate what the code does; comment only non-obvious intent or trade-offs
+
+## TypeScript Conventions
+
+- Mark properties that should not be reassigned as `readonly`
+- Use `protected` for component members accessed only from the template
+- Use `private` for truly internal members not used in templates
+- Prefer `const` over `let`; never use `var`
+- Use strict typing — avoid `any`; prefer `unknown` when the type is genuinely uncertain
+- Use optional chaining (`?.`) and nullish coalescing (`??`) over manual null checks
+
+## Functions & Methods
+
+- Keep functions small and focused on a single responsibility
+- Prefer pure functions where possible
+- Use arrow functions for callbacks and inline handlers
+
+## Imports
+
+- Use path aliases defined in `tsconfig` for cross-project imports
+- Avoid deep relative imports (`../../../`) — restructure or use aliases instead

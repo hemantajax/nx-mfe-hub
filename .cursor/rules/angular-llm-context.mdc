@@ -1,0 +1,10 @@
+---
+description: Angular official LLM documentation context — loaded only when working on Angular files
+globs: **/*.{ts,html}
+alwaysApply: false
+---
+
+# Angular LLM Context
+
+@https://angular.dev/llms.txt
+@https://angular.dev/assets/context/llms-full.txt

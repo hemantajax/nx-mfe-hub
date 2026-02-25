@@ -1,0 +1,63 @@
+---
+description: Angular 18+ development standards — standalone components, signals, inject(), new control flow, OnPush, functional guards/resolvers
+globs:
+alwaysApply: true
+---
+
+# Angular 18+ Standards
+
+## Architecture
+
+- **Standalone components only** — do not create or use NgModules for new code
+- Use `inject()` function for dependency injection; avoid constructor injection
+- Apply `ChangeDetectionStrategy.OnPush` on every component
+- One concept per file (one component, directive, pipe, or service per file)
+
+## State Management with Signals
+
+- Use `signal()` for local reactive state
+- Use `computed()` for derived values
+- Use `effect()` for side-effects that react to signal changes
+- Use `input()` / `input.required()` for component inputs (signal-based inputs)
+- Use `output()` for component outputs
+- Use `model()` for two-way binding inputs
+
+## Template Control Flow
+
+Use the built-in control flow syntax — do **not** use `*ngIf`, `*ngFor`, or `*ngSwitch`:
+
+```html
+@if (condition) {
+  ...
+} @else {
+  ...
+}
+
+@for (item of items; track item.id) {
+  ...
+} @empty {
+  ...
+}
+
+@switch (value) {
+  @case (a) { ... }
+  @case (b) { ... }
+  @default { ... }
+}
+
+@defer (on viewport) {
+  <heavy-component />
+} @placeholder {
+  <span>Loading…</span>
+}
+```
+
+## Routing & Guards
+
+- Use functional guards (`CanActivateFn`, `CanDeactivateFn`) and functional resolvers
+- Prefer lazy-loaded routes with `loadComponent` / `loadChildren`
+
+## File Naming
+
+- Hyphenated filenames: `user-profile.component.ts`, `auth.guard.ts`, `data.service.ts`
+- Suffix files by type: `.component.ts`, `.service.ts`, `.guard.ts`, `.resolver.ts`, `.pipe.ts`, `.directive.ts`, `.model.ts`

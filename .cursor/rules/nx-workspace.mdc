@@ -1,0 +1,38 @@
+---
+description: Nx monorepo conventions — project structure, generators, library boundaries, and tooling
+globs:
+alwaysApply: true
+---
+
+# Nx Monorepo Conventions
+
+## Workspace Structure
+
+- This is an **Nx 22.5** workspace — there is no root `angular.json`
+- Each project has its own `project.json` for targets and configuration
+- Use `nx.json` for workspace-wide defaults, caching, and task pipeline configuration
+
+## Scaffolding
+
+- Use **Nx generators** to create apps and libraries:
+  - `nx g @nx/angular:app` for applications
+  - `nx g @nx/angular:lib` for libraries
+  - `nx g @nx/angular:component` for components
+- Do not manually create project boilerplate; generators ensure consistency
+
+## Library Boundaries
+
+- Tag projects in `project.json` using `tags` for enforcement
+- Respect module boundary rules defined in ESLint (`@nx/enforce-module-boundaries`)
+- Organize libraries by type: `feature`, `ui`, `data-access`, `util`, `shared`
+
+## Running Tasks
+
+- Use `nx serve <app>` to serve applications
+- Use `nx build <app>` for production builds
+- Use `nx test <project>` / `nx lint <project>` for testing and linting
+- Use `nx affected` to only run tasks on changed projects
+
+## Nx MCP Server
+
+- The Nx MCP server tools are available in this workspace for querying project graphs, generators, and documentation
