@@ -1,0 +1,11 @@
+<div class="container py-4">
+  <a routerLink=".." class="btn btn-outline-secondary btn-sm mb-3">
+    <i class="ti-arrow-left me-1"></i> Back
+  </a>
+
+  @if (user(); as u) {
+    <lib-user-form [user]="u" />
+  } @else {
+    <div class="alert alert-warning">User not found.</div>
+  }
+</div>

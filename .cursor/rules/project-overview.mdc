@@ -1,0 +1,82 @@
+---
+description: Project identity, structure, tech stack, and key commands for the ng-mfe-hub workspace
+alwaysApply: true
+---
+
+# ng-mfe-hub — Angular Micro-Frontend Hub
+
+## Project Identity
+
+Nx 22.5 monorepo for an Angular micro-frontend architecture using **Dynamic Module Federation**.
+Shell (host) app orchestrates 6 remote MFE apps, each independently deployable.
+
+## Tech Stack
+
+- **Framework**: Angular 21+ (standalone components, signals, new control flow)
+- **Monorepo**: Nx 22.5 (`nx.json`, per-project `project.json`)
+- **MFE**: Dynamic Module Federation via `@nx/angular` + Webpack
+- **UI Components**: ng-bootstrap (`@ng-bootstrap/ng-bootstrap`)
+- **Styling**: Bootstrap 5 (utility-first, no jQuery) + shared SCSS in `libs/shared/styles`
+- **Icons**: Themify Icons
+
+## Workspace Structure
+
+```
+ng-mfe-hub/
+├── apps/
+│   ├── shell/           # Host app :4200 — loads remotes dynamically
+│   ├── dashboard/       # Remote :4201
+│   ├── profile/         # Remote :4202
+│   ├── lab/             # Remote :4204
+│   ├── theme/           # Remote :4205 — Bootswatch-like themes + shared style testing
+│   └── demos/           # Remote :4206
+├── libs/
+│   ├── shared/          # Level 1 — Global (used by all apps)
+│   │   ├── ui/          # @ng-mfe-hub/ui — ng-bootstrap wrappers, common components
+│   │   ├── data-access/ # @ng-mfe-hub/data-access — shared services
+│   │   ├── util/        # @ng-mfe-hub/util — pure utilities, pipes, validators
+│   │   └── styles/      # @ng-mfe-hub/styles — Bootstrap theme, SCSS variables
+│   └── dashboard/       # Level 2 — App-scoped (dashboard only)
+│       ├── ui/          # @ng-mfe-hub/dashboard-ui
+│       ├── data-access/ # @ng-mfe-hub/dashboard-data-access
+│       └── feature-users/ # Level 3 — Feature (lazy-loaded)
+├── nx.json
+├── tsconfig.base.json   # Path aliases (@ng-mfe-hub/*)
+└── eslint.config.mjs    # Module boundary enforcement
+```
+
+## 3-Level Shared Hierarchy
+
+| Level | Location | Scope | Example |
+|-------|----------|-------|---------|
+| Global | `libs/shared/*` | All apps | `@ng-mfe-hub/ui` |
+| App | `libs/<app>/*` | Single app + its features | `@ng-mfe-hub/dashboard-ui` |
+| Feature | `libs/<app>/feature-*` | Single feature, lazy-loaded | `@ng-mfe-hub/dashboard-feature-users` |
+
+## Smart / Dumb Component Pattern
+
+- **Smart** (`containers/`): inject services, manage signals, pass data down
+- **Dumb** (`components/`): pure `input()`/`output()`, no injected services, `OnPush`
+
+## Key Commands
+
+| Task | Command |
+|------|---------|
+| Serve everything | `nx serve shell` |
+| Serve single remote | `nx serve dashboard` |
+| Build app | `nx build shell` |
+| Test project | `nx test dashboard-feature-users` |
+| Lint project | `nx lint shell` |
+| Affected only | `nx affected -t build,test,lint` |
+| Generate lib | `nx g @nx/angular:lib libs/<scope>/<name> --name=<scope>-<name>` |
+| Generate component | `nx g @nx/angular:component --path=libs/.../path` |
+
+## Module Boundaries (Nx Tags)
+
+- **scope**: `shared`, `shell`, `dashboard`, `profile`, `lab`, `theme`, `demos`
+- **type**: `app`, `feature`, `ui`, `data-access`, `util`, `styles`
+- `scope:shared` — importable by everyone
+- `scope:<app>` — only importable within that app and its libs
+- `type:feature` — cannot import other features
+- `type:ui` — cannot import features or data-access
+- `type:util` — leaf node, no upward dependencies

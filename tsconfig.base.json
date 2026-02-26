@@ -1,0 +1,39 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "dashboard/Routes": [
+        "apps/dashboard/src/app/remote-entry/entry.routes.ts"
+      ],
+      "profile/Routes": ["apps/profile/src/app/remote-entry/entry.routes.ts"],
+      "lab/Routes": ["apps/lab/src/app/remote-entry/entry.routes.ts"],
+      "theme/Routes": ["apps/theme/src/app/remote-entry/entry.routes.ts"],
+      "demos/Routes": ["apps/demos/src/app/remote-entry/entry.routes.ts"],
+      "@ng-mfe-hub/ui": ["libs/shared/ui/src/index.ts"],
+      "@ng-mfe-hub/data-access": ["libs/shared/data-access/src/index.ts"],
+      "@ng-mfe-hub/util": ["libs/shared/util/src/index.ts"],
+      "@ng-mfe-hub/styles": ["libs/shared/styles/src/index.ts"],
+      "@ng-mfe-hub/dashboard-ui": ["libs/dashboard/ui/src/index.ts"],
+      "@ng-mfe-hub/dashboard-data-access": [
+        "libs/dashboard/data-access/src/index.ts"
+      ],
+      "@ng-mfe-hub/dashboard-feature-users": [
+        "libs/dashboard/feature-users/src/index.ts"
+      ]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

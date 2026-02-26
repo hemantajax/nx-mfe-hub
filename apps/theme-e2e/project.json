@@ -1,0 +1,9 @@
+{
+  "name": "theme-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/theme-e2e/src",
+  "implicitDependencies": ["theme"],
+  "// targets": "to see all targets run: nx show project theme-e2e --web",
+  "targets": {}
+}

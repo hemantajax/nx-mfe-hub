@@ -1,0 +1,14 @@
+<div class="container py-4">
+  <h2 class="mb-3">Users</h2>
+  <div class="row g-3">
+    @for (user of users(); track user.id) {
+      <div class="col-md-4">
+        <a [routerLink]="[user.id]" class="text-decoration-none">
+          <lib-user-card [user]="user" />
+        </a>
+      </div>
+    } @empty {
+      <p class="text-muted">No users found.</p>
+    }
+  </div>
+</div>
