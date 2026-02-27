@@ -1,10 +1,17 @@
-<ul class="remote-menu">
-  <li><a routerLink="/">Home</a></li>
-  <li><a routerLink="dashboard">Dashboard</a></li>
-  <li><a routerLink="profile">Profile</a></li>
-  <li><a routerLink="styleguide">Styleguide</a></li>
-  <li><a routerLink="lab">Lab</a></li>
-  <li><a routerLink="theme">Theme</a></li>
-  <li><a routerLink="demos">Demos</a></li>
-</ul>
-<router-outlet></router-outlet>
+<ui-header
+  brand="MFE Hub"
+  [navItems]="headerNavItems"
+  (menuToggle)="toggleSidebar()">
+</ui-header>
+
+<div class="app-layout">
+  <ui-sidebar
+    [navItems]="sidebarNavItems"
+    [open]="sidebarOpen()"
+    (close)="closeSidebar()">
+  </ui-sidebar>
+
+  <main class="app-content">
+    <router-outlet></router-outlet>
+  </main>
+</div>

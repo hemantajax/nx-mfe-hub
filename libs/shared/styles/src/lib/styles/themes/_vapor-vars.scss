@@ -1,0 +1,68 @@
+// ─── Vapor Theme CSS Variable Overrides ──────────────────────────────────────
+// Applied via a .theme-vapor wrapper on a remote's root entry component.
+// These styles load WITH the remote's JS chunks (not global styles.css),
+// so they work in both standalone and shell contexts.
+//
+// Dark theme: sets background/color directly on the wrapper and cascades
+// CSS variable overrides into all Bootstrap components inside.
+
+$vapor-primary:    #6f42c1;
+$vapor-secondary:  #ea39b8;
+$vapor-body-bg:    #1a0933;
+$vapor-body-color: #32fbe2;
+$vapor-card-bg:    #{mix(white, #1a0933, 8%)};
+
+.theme-vapor {
+  // ── Dark background applied directly on the wrapper ──────────────────
+  background-color: #{$vapor-body-bg};
+  color:            #{$vapor-body-color};
+  min-height:       100%;
+
+  // ── Core tokens ──────────────────────────────────────────────────────
+  --bs-primary:          #{$vapor-primary};
+  --bs-primary-rgb:      111, 66, 193;
+  --bs-secondary:        #{$vapor-secondary};
+  --bs-body-bg:          #{$vapor-body-bg};
+  --bs-body-color:       #{$vapor-body-color};
+  --bs-link-color:       #{$vapor-body-color};
+  --bs-link-hover-color: #{mix(white, $vapor-body-color, 20%)};
+
+  // ── .btn-primary ─────────────────────────────────────────────────────
+  .btn-primary {
+    --bs-btn-color:               #fff;
+    --bs-btn-bg:                  #{$vapor-primary};
+    --bs-btn-border-color:        #{$vapor-primary};
+    --bs-btn-hover-bg:            #{mix(white, $vapor-primary, 15%)};
+    --bs-btn-hover-border-color:  #{mix(white, $vapor-primary, 20%)};
+    --bs-btn-active-bg:           #{mix(white, $vapor-primary, 20%)};
+    --bs-btn-active-border-color: #{mix(white, $vapor-primary, 25%)};
+    --bs-btn-disabled-bg:         #{$vapor-primary};
+    --bs-btn-disabled-border-color: #{$vapor-primary};
+  }
+
+  // ── .btn-secondary ───────────────────────────────────────────────────
+  .btn-secondary {
+    --bs-btn-bg:                 #{$vapor-secondary};
+    --bs-btn-border-color:       #{$vapor-secondary};
+    --bs-btn-hover-bg:           #{mix(white, $vapor-secondary, 15%)};
+    --bs-btn-active-bg:          #{mix(white, $vapor-secondary, 20%)};
+  }
+
+  // ── Cards ────────────────────────────────────────────────────────────
+  .card {
+    --bs-card-bg:           #{mix(white, $vapor-body-bg, 8%)};
+    --bs-card-color:        #{$vapor-body-color};
+    --bs-card-border-color: transparent;
+  }
+
+  // ── Utility overrides ────────────────────────────────────────────────
+  .bg-primary     { background-color: #{$vapor-primary} !important; }
+  .text-primary   { color: #{$vapor-primary} !important; }
+  .border-primary { border-color: #{$vapor-primary} !important; }
+
+  // ── Links ────────────────────────────────────────────────────────────
+  a:not(.btn):not(.nav-link):not(.dropdown-item) {
+    color: #{$vapor-body-color};
+    &:hover { color: #{mix(white, $vapor-body-color, 20%)}; }
+  }
+}

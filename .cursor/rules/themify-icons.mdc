@@ -6,32 +6,38 @@ alwaysApply: false
 
 # Themify Icons
 
-@https://themify.me/themify-icons
+Installed via npm (`themify-icons` package). The compiled CSS uses `.icon-{name}` classes (NOT `ti-{name}`).
 
 ## Usage
 
-- Use `<i class="ti-{name}"></i>` for all icons
-- Browse the full icon set at the reference URL above
+- Use `<i class="icon-{name}"></i>` for all icons
+- Font files are served from `/fonts/themify.*` (copied to each app's `public/fonts/`)
 
 ## Common Icons
 
 | Icon | Class |
 |------|-------|
-| Home | `ti-home` |
-| User | `ti-user` |
-| Settings | `ti-settings` |
-| Search | `ti-search` |
-| Menu | `ti-menu` |
-| Close | `ti-close` |
-| Arrow Left | `ti-arrow-left` |
-| Arrow Right | `ti-arrow-right` |
-| Check | `ti-check` |
-| Plus | `ti-plus` |
-| Trash | `ti-trash` |
-| Pencil | `ti-pencil` |
-| Eye | `ti-eye` |
-| Lock | `ti-lock` |
-| Bell | `ti-bell` |
+| Home | `icon-home` |
+| User | `icon-user` |
+| Settings | `icon-settings` |
+| Search | `icon-search` |
+| Menu | `icon-menu` |
+| Close | `icon-close` |
+| Arrow Left | `icon-arrow-left` |
+| Arrow Right | `icon-arrow-right` |
+| Check | `icon-check` |
+| Plus | `icon-plus` |
+| Trash | `icon-trash` |
+| Pencil | `icon-pencil` |
+| Eye | `icon-eye` |
+| Lock | `icon-lock` |
+| Bell | `icon-bell` |
+| Dashboard | `icon-dashboard` |
+| Palette | `icon-palette` |
+| Layers | `icon-layers` |
+| Pulse | `icon-pulse` |
+| Rocket | `icon-rocket` |
+| Layout Grid | `icon-layout-grid2` |
 
 ## Guidelines
 

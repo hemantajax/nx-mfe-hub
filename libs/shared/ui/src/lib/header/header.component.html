@@ -1,0 +1,32 @@
+<nav class="navbar bg-primary navbar-dark sticky-top shadow-sm">
+  <div class="container-fluid px-3 justify-content-start">
+
+    <!-- Sidebar hamburger — mobile only -->
+    <button
+      class="btn btn-link text-white p-0 me-2 d-lg-none border-0 lh-1"
+      type="button"
+      aria-label="Toggle sidebar"
+      (click)="menuToggle.emit()">
+      <i class="icon-menu fs-5"></i>
+    </button>
+
+    <!-- Brand -->
+    <a class="navbar-brand fw-bold" routerLink="/">{{ brand() }}</a>
+
+    <!-- Nav links — desktop only; sidebar handles mobile nav -->
+    <ul class="navbar-nav flex-row ms-auto gap-1 d-none d-lg-flex">
+      @for (item of navItems(); track item.label) {
+        <li class="nav-item">
+          <a
+            class="nav-link px-2"
+            [routerLink]="item.route"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: item.exact ?? false }">
+            {{ item.label }}
+          </a>
+        </li>
+      }
+    </ul>
+
+  </div>
+</nav>

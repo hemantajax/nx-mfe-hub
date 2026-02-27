@@ -1,0 +1,286 @@
+// ─── Cosmo Theme CSS Variable Overrides ──────────────────────────────────────
+// Applied via a .theme-cosmo wrapper on a remote's root entry component.
+// Mirrors Bootswatch Cosmo 5.3.8 as closely as possible via CSS custom
+// properties so remotes render correctly in both standalone and shell contexts.
+
+$cosmo-primary:   #2780e3;
+$cosmo-secondary: #373a3c;
+$cosmo-success:   #3fb618;
+$cosmo-info:      #9954bb;
+$cosmo-warning:   #ff7518;
+$cosmo-danger:    #ff0039;
+$cosmo-light:     #f8f9fa;
+$cosmo-dark:      #373a3c;
+$cosmo-body-color: #373a3c;
+
+.theme-cosmo {
+  // ── Base color tokens ─────────────────────────────────────────────────────
+  --bs-primary:       #{$cosmo-primary};
+  --bs-primary-rgb:   39, 128, 227;
+  --bs-secondary:     #{$cosmo-secondary};
+  --bs-secondary-rgb: 55, 58, 60;
+  --bs-success:       #{$cosmo-success};
+  --bs-success-rgb:   63, 182, 24;
+  --bs-info:          #{$cosmo-info};
+  --bs-info-rgb:      153, 84, 187;
+  --bs-warning:       #{$cosmo-warning};
+  --bs-warning-rgb:   255, 117, 24;
+  --bs-danger:        #{$cosmo-danger};
+  --bs-danger-rgb:    255, 0, 57;
+
+  // ── Bootstrap 5.3 semantic color system ──────────────────────────────────
+  // These drive alerts, tables, list-group contextual variants.
+  // Formula mirrors Bootstrap: text-emphasis = shade 60%, bg-subtle = tint 80%,
+  // border-subtle = tint 60%  (Bootstrap uses shade-color/tint-color = mix())
+  --bs-primary-text-emphasis:   #{mix(black, $cosmo-primary,   60%)};
+  --bs-primary-bg-subtle:       #{mix(white, $cosmo-primary,   80%)};
+  --bs-primary-border-subtle:   #{mix(white, $cosmo-primary,   60%)};
+
+  --bs-secondary-text-emphasis: #{mix(black, $cosmo-secondary, 60%)};
+  --bs-secondary-bg-subtle:     #{mix(white, $cosmo-secondary, 80%)};
+  --bs-secondary-border-subtle: #{mix(white, $cosmo-secondary, 60%)};
+
+  --bs-success-text-emphasis:   #{mix(black, $cosmo-success,   60%)};
+  --bs-success-bg-subtle:       #{mix(white, $cosmo-success,   80%)};
+  --bs-success-border-subtle:   #{mix(white, $cosmo-success,   60%)};
+
+  --bs-info-text-emphasis:      #{mix(black, $cosmo-info,      60%)};
+  --bs-info-bg-subtle:          #{mix(white, $cosmo-info,      80%)};
+  --bs-info-border-subtle:      #{mix(white, $cosmo-info,      60%)};
+
+  --bs-warning-text-emphasis:   #{mix(black, $cosmo-warning,   60%)};
+  --bs-warning-bg-subtle:       #{mix(white, $cosmo-warning,   80%)};
+  --bs-warning-border-subtle:   #{mix(white, $cosmo-warning,   60%)};
+
+  --bs-danger-text-emphasis:    #{mix(black, $cosmo-danger,    60%)};
+  --bs-danger-bg-subtle:        #{mix(white, $cosmo-danger,    80%)};
+  --bs-danger-border-subtle:    #{mix(white, $cosmo-danger,    60%)};
+
+  // ── Body / typography ─────────────────────────────────────────────────────
+  --bs-body-color:       #{$cosmo-body-color};
+  --bs-body-font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --bs-link-color:           #{$cosmo-primary};
+  --bs-link-color-rgb:       39, 128, 227;
+  --bs-link-hover-color:     #{mix(black, $cosmo-primary, 20%)};
+  --bs-link-hover-color-rgb: 31, 102, 182;
+
+  // ── Flat border-radius — Cosmo: $enable-rounded = false ──────────────────
+  --bs-border-radius:     0;
+  --bs-border-radius-sm:  0;
+  --bs-border-radius-lg:  0;
+  --bs-border-radius-xl:  0;
+  --bs-border-radius-xxl: 0;
+
+  // Bootstrap 5 sets --bs-btn-border-radius per .btn, not inherited from root
+  .btn              { --bs-btn-border-radius: 0; }
+  .card             { --bs-card-border-radius: 0; --bs-card-inner-border-radius: 0; }
+  .badge            { --bs-badge-border-radius: 0; }
+  .alert            { --bs-alert-border-radius: 0; }
+  .modal-content    { --bs-modal-border-radius: 0; --bs-modal-inner-border-radius: 0; }
+  .dropdown-menu    { --bs-dropdown-border-radius: 0; }
+  .form-control,
+  .form-select,
+  .input-group-text { border-radius: 0; }
+
+  // ── .btn-primary ──────────────────────────────────────────────────────────
+  .btn-primary {
+    --bs-btn-color:                 #fff;
+    --bs-btn-bg:                    #{$cosmo-primary};
+    --bs-btn-border-color:          #{$cosmo-primary};
+    --bs-btn-hover-bg:              #{mix(black, $cosmo-primary, 15%)};
+    --bs-btn-hover-border-color:    #{mix(black, $cosmo-primary, 20%)};
+    --bs-btn-active-bg:             #{mix(black, $cosmo-primary, 20%)};
+    --bs-btn-active-border-color:   #{mix(black, $cosmo-primary, 25%)};
+    --bs-btn-disabled-bg:           #{$cosmo-primary};
+    --bs-btn-disabled-border-color: #{$cosmo-primary};
+  }
+
+  .btn-outline-primary {
+    --bs-btn-color:        #{$cosmo-primary};
+    --bs-btn-border-color: #{$cosmo-primary};
+    --bs-btn-hover-color:  #fff;
+    --bs-btn-hover-bg:     #{$cosmo-primary};
+    --bs-btn-active-bg:    #{$cosmo-primary};
+  }
+
+  // ── .btn-secondary ────────────────────────────────────────────────────────
+  .btn-secondary {
+    --bs-btn-color:                 #fff;
+    --bs-btn-bg:                    #{$cosmo-secondary};
+    --bs-btn-border-color:          #{$cosmo-secondary};
+    --bs-btn-hover-bg:              #{mix(black, $cosmo-secondary, 15%)};
+    --bs-btn-hover-border-color:    #{mix(black, $cosmo-secondary, 20%)};
+    --bs-btn-active-bg:             #{mix(black, $cosmo-secondary, 20%)};
+    --bs-btn-disabled-bg:           #{$cosmo-secondary};
+    --bs-btn-disabled-border-color: #{$cosmo-secondary};
+  }
+
+  .btn-outline-secondary {
+    --bs-btn-color:        #{$cosmo-secondary};
+    --bs-btn-border-color: #{$cosmo-secondary};
+    --bs-btn-hover-color:  #fff;
+    --bs-btn-hover-bg:     #{$cosmo-secondary};
+    --bs-btn-active-bg:    #{$cosmo-secondary};
+  }
+
+  // ── .btn-success ──────────────────────────────────────────────────────────
+  .btn-success {
+    --bs-btn-color:                 #fff;
+    --bs-btn-bg:                    #{$cosmo-success};
+    --bs-btn-border-color:          #{$cosmo-success};
+    --bs-btn-hover-bg:              #{mix(black, $cosmo-success, 15%)};
+    --bs-btn-hover-border-color:    #{mix(black, $cosmo-success, 20%)};
+    --bs-btn-active-bg:             #{mix(black, $cosmo-success, 20%)};
+    --bs-btn-disabled-bg:           #{$cosmo-success};
+    --bs-btn-disabled-border-color: #{$cosmo-success};
+  }
+
+  .btn-outline-success {
+    --bs-btn-color:        #{$cosmo-success};
+    --bs-btn-border-color: #{$cosmo-success};
+    --bs-btn-hover-color:  #fff;
+    --bs-btn-hover-bg:     #{$cosmo-success};
+    --bs-btn-active-bg:    #{$cosmo-success};
+  }
+
+  // ── .btn-info ─────────────────────────────────────────────────────────────
+  .btn-info {
+    --bs-btn-color:                 #fff;
+    --bs-btn-bg:                    #{$cosmo-info};
+    --bs-btn-border-color:          #{$cosmo-info};
+    --bs-btn-hover-bg:              #{mix(black, $cosmo-info, 15%)};
+    --bs-btn-hover-border-color:    #{mix(black, $cosmo-info, 20%)};
+    --bs-btn-active-bg:             #{mix(black, $cosmo-info, 20%)};
+    --bs-btn-disabled-bg:           #{$cosmo-info};
+    --bs-btn-disabled-border-color: #{$cosmo-info};
+  }
+
+  .btn-outline-info {
+    --bs-btn-color:        #{$cosmo-info};
+    --bs-btn-border-color: #{$cosmo-info};
+    --bs-btn-hover-color:  #fff;
+    --bs-btn-hover-bg:     #{$cosmo-info};
+    --bs-btn-active-bg:    #{$cosmo-info};
+  }
+
+  // ── .btn-warning ──────────────────────────────────────────────────────────
+  .btn-warning {
+    --bs-btn-color:                 #fff;
+    --bs-btn-bg:                    #{$cosmo-warning};
+    --bs-btn-border-color:          #{$cosmo-warning};
+    --bs-btn-hover-bg:              #{mix(black, $cosmo-warning, 15%)};
+    --bs-btn-hover-border-color:    #{mix(black, $cosmo-warning, 20%)};
+    --bs-btn-active-bg:             #{mix(black, $cosmo-warning, 20%)};
+    --bs-btn-disabled-bg:           #{$cosmo-warning};
+    --bs-btn-disabled-border-color: #{$cosmo-warning};
+  }
+
+  .btn-outline-warning {
+    --bs-btn-color:        #{$cosmo-warning};
+    --bs-btn-border-color: #{$cosmo-warning};
+    --bs-btn-hover-color:  #fff;
+    --bs-btn-hover-bg:     #{$cosmo-warning};
+    --bs-btn-active-bg:    #{$cosmo-warning};
+  }
+
+  // ── .btn-danger ───────────────────────────────────────────────────────────
+  .btn-danger {
+    --bs-btn-color:                 #fff;
+    --bs-btn-bg:                    #{$cosmo-danger};
+    --bs-btn-border-color:          #{$cosmo-danger};
+    --bs-btn-hover-bg:              #{mix(black, $cosmo-danger, 15%)};
+    --bs-btn-hover-border-color:    #{mix(black, $cosmo-danger, 20%)};
+    --bs-btn-active-bg:             #{mix(black, $cosmo-danger, 20%)};
+    --bs-btn-disabled-bg:           #{$cosmo-danger};
+    --bs-btn-disabled-border-color: #{$cosmo-danger};
+  }
+
+  .btn-outline-danger {
+    --bs-btn-color:        #{$cosmo-danger};
+    --bs-btn-border-color: #{$cosmo-danger};
+    --bs-btn-hover-color:  #fff;
+    --bs-btn-hover-bg:     #{$cosmo-danger};
+    --bs-btn-active-bg:    #{$cosmo-danger};
+  }
+
+  // ── Background utilities ──────────────────────────────────────────────────
+  .bg-primary   { background-color: #{$cosmo-primary}   !important; }
+  .bg-secondary { background-color: #{$cosmo-secondary} !important; }
+  .bg-success   { background-color: #{$cosmo-success}   !important; }
+  .bg-info      { background-color: #{$cosmo-info}      !important; }
+  .bg-warning   { background-color: #{$cosmo-warning}   !important; }
+  .bg-danger    { background-color: #{$cosmo-danger}    !important; }
+
+  // ── Text utilities ────────────────────────────────────────────────────────
+  .text-primary   { color: #{$cosmo-primary}   !important; }
+  .text-secondary { color: #{$cosmo-secondary} !important; }
+  .text-success   { color: #{$cosmo-success}   !important; }
+  .text-info      { color: #{$cosmo-info}      !important; }
+  .text-warning   { color: #{$cosmo-warning}   !important; }
+  .text-danger    { color: #{$cosmo-danger}    !important; }
+
+  // ── Border utilities ──────────────────────────────────────────────────────
+  .border-primary   { border-color: #{$cosmo-primary}   !important; }
+  .border-secondary { border-color: #{$cosmo-secondary} !important; }
+  .border-success   { border-color: #{$cosmo-success}   !important; }
+  .border-info      { border-color: #{$cosmo-info}      !important; }
+  .border-warning   { border-color: #{$cosmo-warning}   !important; }
+  .border-danger    { border-color: #{$cosmo-danger}    !important; }
+
+  // ── Alerts — Cosmo: $alert-border-width = 0 ──────────────────────────────
+  .alert { border-width: 0; }
+
+  // ── Progress — Cosmo: $progress-height = .5rem ───────────────────────────
+  .progress { height: .5rem; }
+
+  // ── Pagination ────────────────────────────────────────────────────────────
+  .pagination {
+    --bs-pagination-color:               #{$cosmo-primary};
+    --bs-pagination-hover-color:         #{mix(black, $cosmo-primary, 15%)};
+    --bs-pagination-focus-color:         #{mix(black, $cosmo-primary, 15%)};
+    --bs-pagination-active-bg:           #{$cosmo-primary};
+    --bs-pagination-active-border-color: #{$cosmo-primary};
+  }
+
+  // ── Navbar link colors — must override on .navbar, not .nav-link ─────────
+  // Bootstrap sets --bs-navbar-color on .navbar itself (compiled static value
+  // from the shell theme). .navbar-nav then re-derives --bs-nav-link-color
+  // from it, so any override higher in the tree loses. We must scope to .navbar.
+  .navbar:not([data-bs-theme="dark"]) {
+    --bs-navbar-color:             rgba(0, 0, 0, 0.55);
+    --bs-navbar-hover-color:       rgba(0, 0, 0, 0.7);
+    --bs-navbar-active-color:      rgba(0, 0, 0, 0.9);
+    --bs-navbar-brand-color:       #{$cosmo-primary};
+    --bs-navbar-brand-hover-color: #{$cosmo-primary};
+  }
+
+  .navbar[data-bs-theme="dark"] {
+    --bs-navbar-color:             rgba(255, 255, 255, 0.55);
+    --bs-navbar-hover-color:       rgba(255, 255, 255, 1);
+    --bs-navbar-active-color:      #fff;
+    --bs-navbar-brand-color:       #fff;
+    --bs-navbar-brand-hover-color: rgba(255, 255, 255, 0.75);
+  }
+
+  // ── Standalone nav links (tabs, pills only — NOT inside .navbar) ─────────
+  // Scoped to .nav:not(.navbar-nav) so we don't fight --bs-navbar-color which
+  // Bootstrap re-derives on .navbar-nav itself at higher DOM proximity.
+  .nav:not(.navbar-nav) .nav-link {
+    --bs-nav-link-color:       #{$cosmo-primary};
+    --bs-nav-link-hover-color: #{mix(black, $cosmo-primary, 15%)};
+  }
+
+  // ── Links ─────────────────────────────────────────────────────────────────
+  // Exclude every Bootstrap component link class that manages its own color
+  // via CSS variables — otherwise our a:not() chain (specificity [0,5+,1])
+  // beats those component rules ([0,1,0]) and forces everything to primary blue.
+  //   .navbar-brand  → var(--bs-navbar-brand-color)
+  //   .alert-link    → var(--bs-alert-link-color)
+  //   .page-link     → var(--bs-pagination-color)
+  //   .card-link     → inherits link color correctly from Bootstrap
+  //   .list-group-item → manages its own color via list-group CSS vars
+  a:not(.btn):not(.nav-link):not(.dropdown-item):not(.navbar-brand):not(.page-link):not(.card-link):not(.list-group-item) {
+    color: #{$cosmo-primary};
+    &:hover { color: #{mix(black, $cosmo-primary, 20%)}; }
+  }
+}

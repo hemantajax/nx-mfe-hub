@@ -1,9 +1,16 @@
-import { Component } from '@angular/core';
-import { NxWelcome } from './nx-welcome';
+import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
-  imports: [NxWelcome],
+  imports: [RouterOutlet],
   selector: 'app-lab-entry',
-  template: `<app-nx-welcome></app-nx-welcome>`,
+  styleUrls: ['./entry.scss'],
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: `
+    <div class="theme-vapor">
+      <router-outlet />
+    </div>
+  `,
 })
 export class RemoteEntry {}

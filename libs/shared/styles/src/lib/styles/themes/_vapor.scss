@@ -1,0 +1,12 @@
+// ─── Vapor (Bootswatch) Theme ─────────────────────────────────────────────────
+// A cyberpunk aesthetic — neon gradients, dark backgrounds, vivid accents.
+// Compilation order matters:
+//  1. Custom variable overrides (applied before Bootstrap reads its !default vars)
+//  2. Bootswatch _variables.scss (sets Vapor-specific Bootstrap variable values)
+//  3. Full Bootstrap compile (picks up all variables set above)
+//  4. Bootswatch _bootswatch.scss (Vapor component-level CSS on top of Bootstrap)
+
+@import '../variables';
+@import 'bootswatch/dist/vapor/variables';
+@import 'bootstrap/scss/bootstrap';
+@import 'bootswatch/dist/vapor/bootswatch';

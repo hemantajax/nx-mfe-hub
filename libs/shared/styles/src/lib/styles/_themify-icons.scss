@@ -1,0 +1,19 @@
+// Themify Icons — fonts served from /public/fonts/ (copied from node_modules)
+@font-face {
+  font-family: 'themify';
+  src: url('/fonts/themify.eot');
+  src:
+    url('/fonts/themify.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/themify.woff') format('woff'),
+    url('/fonts/themify.ttf') format('truetype'),
+    url('/fonts/themify.svg#themify') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Icon classes (skip _path since we declared @font-face above)
+@import 'themify-icons/themify-icons/variables';
+@import 'themify-icons/themify-icons/mixins';
+@import 'themify-icons/themify-icons/core';
+@import 'themify-icons/themify-icons/extras';
+@import 'themify-icons/themify-icons/icons';

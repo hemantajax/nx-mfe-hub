@@ -1,0 +1,27 @@
+<!-- Mobile backdrop -->
+@if (open()) {
+  <div class="sidebar-backdrop d-lg-none" (click)="close.emit()"></div>
+}
+
+<aside class="sidebar" [class.sidebar--open]="open()">
+  <nav class="sidebar-nav" aria-label="Main navigation">
+    <ul class="nav flex-column">
+      @for (item of navItems(); track item.label) {
+        <li class="nav-item">
+          <a
+            class="nav-link d-flex align-items-center gap-2 px-3 py-2"
+            [routerLink]="item.route"
+            [fragment]="item.fragment"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: item.exact ?? false }"
+            (click)="close.emit()">
+            @if (item.icon) {
+              <i class="{{ item.icon }} sidebar-icon"></i>
+            }
+            <span>{{ item.label }}</span>
+          </a>
+        </li>
+      }
+    </ul>
+  </nav>
+</aside>

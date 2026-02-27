@@ -1,0 +1,12 @@
+// ─── Cosmo (Bootswatch) Theme ────────────────────────────────────────────────
+// An ode to Metro — clean, crisp, modern flat design.
+// Compilation order matters:
+//  1. Custom variable overrides (applied before Bootstrap reads its !default vars)
+//  2. Bootswatch _variables.scss (sets Cosmo-specific Bootstrap variable values)
+//  3. Full Bootstrap compile (picks up all variables set above)
+//  4. Bootswatch _bootswatch.scss (Cosmo component-level CSS on top of Bootstrap)
+
+@import '../variables';
+@import 'bootswatch/dist/cosmo/variables';
+@import 'bootstrap/scss/bootstrap';
+@import 'bootswatch/dist/cosmo/bootswatch';

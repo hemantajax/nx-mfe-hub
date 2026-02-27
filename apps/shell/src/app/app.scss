@@ -1,0 +1,12 @@
+.app-layout {
+  display: flex;
+  min-height: calc(100vh - 56px); // offset sticky navbar height
+}
+
+.app-content {
+  --content-pad: 1.5rem;
+  flex: 1 1 auto;
+  min-width: 0; // prevent flex blowout
+  padding: var(--content-pad);
+
+}

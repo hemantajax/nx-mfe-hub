@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-nx-welcome',
+  selector: 'app-home',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <div class="d-flex flex-column align-items-center justify-content-center py-5">
@@ -11,4 +11,4 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     </div>
   `,
 })
-export class NxWelcome {}
+export class HomeComponent {}

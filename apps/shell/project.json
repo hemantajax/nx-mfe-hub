@@ -19,6 +19,11 @@
           {
             "glob": "**/*",
             "input": "apps/shell/public"
+          },
+          {
+            "glob": "*.{eot,woff,ttf,svg}",
+            "input": "node_modules/themify-icons/themify-icons/fonts",
+            "output": "/fonts"
           }
         ],
         "styles": ["apps/shell/src/styles.scss"],

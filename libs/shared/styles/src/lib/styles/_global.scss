@@ -1,5 +1,19 @@
-@import 'bootstrap';
+// ─── Global Non-Theme Styles ─────────────────────────────────────────────────
+// Bootstrap / theme is imported separately in each app's styles.scss.
+// Only place layout resets and global rules that apply regardless of theme here.
+
+@import 'themify-icons';
 
 body {
   min-height: 100vh;
+}
+
+// Remote theme wrappers bleed to fill .app-content, cancelling its padding.
+// --content-pad is set on .app-content in the shell component stylesheet.
+.app-content {
+  .theme-vapor,
+  .theme-cosmo {
+    margin: calc(-1 * var(--content-pad));
+    min-height: calc(100% + 2 * var(--content-pad));
+  }
 }

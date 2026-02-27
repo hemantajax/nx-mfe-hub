@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { NxWelcome } from './nx-welcome';
+import { HomeComponent } from './home.component';
 
 @Component({
-  imports: [NxWelcome],
+  imports: [HomeComponent],
   selector: 'app-dashboard-entry',
-  template: `<app-nx-welcome></app-nx-welcome>`,
+  template: `<app-home />`,
 })
 export class RemoteEntry {}
