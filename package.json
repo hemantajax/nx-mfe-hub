@@ -11,6 +11,7 @@
     "start:demos": "nx serve demos",
     "build": "nx build shell",
     "build:all": "nx run-many -t build",
+    "deploy": "bash deploy-gh-pages.sh",
     "test": "nx run-many -t test",
     "lint": "nx run-many -t lint",
     "affected:build": "nx affected -t build",
