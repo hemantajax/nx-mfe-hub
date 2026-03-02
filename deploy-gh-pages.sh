@@ -26,7 +26,8 @@ mkdir -p "$DIST"
 cp -r dist/apps/shell/. "$DIST/"
 
 for remote in dashboard profile lab theme demos jobs; do
-  cp -r dist/apps/"$remote" "$DIST/$remote"
+  mkdir -p "$DIST/$remote"
+  cp -r dist/apps/"$remote"/. "$DIST/$remote/"
 done
 
 # Replace localhost manifest with production GitHub Pages URLs
