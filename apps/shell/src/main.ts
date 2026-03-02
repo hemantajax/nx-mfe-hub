@@ -1,6 +1,8 @@
 import { registerRemotes } from '@module-federation/enhanced/runtime';
 
-fetch('/module-federation.manifest.json')
+// Resolve relative to <base href> so it works both at / and at /nx-mfe-hub/
+const base = document.querySelector('base')?.getAttribute('href') ?? '/';
+fetch(`${base}module-federation.manifest.json`)
   .then((res) => res.json())
   .then((remotes: Record<string, string>) =>
     Object.entries(remotes).map(([name, entry]) => ({ name, entry })),
