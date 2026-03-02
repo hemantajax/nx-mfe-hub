@@ -42,6 +42,10 @@ cat > "$DIST/module-federation.manifest.json" <<EOF
 }
 EOF
 
+# Patch absolute /fonts/ → relative fonts/ in all CSS bundles so they resolve
+# correctly under the /nx-mfe-hub/ sub-path on GitHub Pages.
+find "$DIST" -name "*.css" -exec sed -i '' 's|url(/fonts/|url(fonts/|g' {} \;
+
 # SPA fallback for GitHub Pages static hosting
 cp "$DIST/index.html" "$DIST/404.html"
 

@@ -1,12 +1,12 @@
 // Themify Icons — fonts served from /public/fonts/ (copied from node_modules)
 @font-face {
   font-family: 'themify';
-  src: url('fonts/themify.eot');
+  src: url('/fonts/themify.eot');
   src:
-    url('fonts/themify.eot?#iefix') format('embedded-opentype'),
-    url('fonts/themify.woff') format('woff'),
-    url('fonts/themify.ttf') format('truetype'),
-    url('fonts/themify.svg#themify') format('svg');
+    url('/fonts/themify.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/themify.woff') format('woff'),
+    url('/fonts/themify.ttf') format('truetype'),
+    url('/fonts/themify.svg#themify') format('svg');
   font-weight: normal;
   font-style: normal;
 }
