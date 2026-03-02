@@ -24,6 +24,9 @@ node_modules
 !.vscode/launch.json
 !.vscode/extensions.json
 
+# IDE - Cursor
+.cursor/
+
 # misc
 /.sass-cache
 /connect.lock
@@ -34,10 +37,21 @@ yarn-error.log
 testem.log
 /typings
 
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Test output
+test-results/
+playwright-report/
+e2e-results/
+
 # System Files
 .DS_Store
 Thumbs.db
 
+# Nx
 .nx/cache
 .nx/workspace-data
 
