@@ -11,6 +11,7 @@ import { MarkdownComponent } from 'ngx-markdown';
         <markdown
           [src]="src()"
           lineNumbers
+          mermaid
           (load)="onLoad()"
           (error)="onError()"
         />
@@ -105,6 +106,22 @@ import { MarkdownComponent } from 'ngx-markdown';
         ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; li { margin-bottom: 0.25rem; } }
 
         hr { border-color: var(--bs-border-color); margin: 2rem 0; }
+
+        .mermaid {
+          display: flex;
+          justify-content: center;
+          padding: 1.5rem 1rem;
+          margin: 1.5rem 0;
+          background: var(--bs-tertiary-bg);
+          border: 1px solid var(--bs-border-color);
+          border-radius: 8px;
+          overflow-x: auto;
+
+          svg {
+            max-width: 100%;
+            height: auto;
+          }
+        }
       }
     }
   `,

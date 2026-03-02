@@ -12,9 +12,14 @@ import 'prismjs/components/prism-yaml';
 import 'prismjs/components/prism-sql';
 import 'prismjs/plugins/line-numbers/prism-line-numbers';
 
+// Mermaid — bundled into the MFE chunk and exposed as a global so ngx-markdown
+// can call mermaid.initialize() / mermaid.run() after rendering.
+import mermaid from 'mermaid';
+(window as unknown as Record<string, unknown>)['mermaid'] = mermaid;
+
 import { Route } from '@angular/router';
 import { RemoteEntry } from './entry';
-import { MARKED_OPTIONS, provideMarkdown } from 'ngx-markdown';
+import { MARKED_OPTIONS, MERMAID_OPTIONS, provideMarkdown } from 'ngx-markdown';
 import { HttpClient, provideHttpClient } from '@angular/common/http';
 import { DOCS_ASSET_BASE, DocService } from '@ng-mfe-hub/lab-data-access';
 
@@ -34,6 +39,14 @@ export const remoteRoutes: Route[] = [
         markedOptions: {
           provide: MARKED_OPTIONS,
           useValue: { gfm: true, breaks: false },
+        },
+        mermaidOptions: {
+          provide: MERMAID_OPTIONS,
+          useValue: {
+            theme: 'neutral',
+            securityLevel: 'loose',
+            fontFamily: 'inherit',
+          },
         },
       }),
       {
