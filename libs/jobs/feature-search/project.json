@@ -1,0 +1,20 @@
+{
+  "name": "jobs-feature-search",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/jobs/feature-search/src",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": ["scope:jobs", "type:feature"],
+  "targets": {
+    "test": {
+      "executor": "@nx/vitest:test",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "reportsDirectory": "../../../coverage/libs/jobs/feature-search"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

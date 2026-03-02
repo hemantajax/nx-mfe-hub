@@ -18,6 +18,7 @@ export class App {
     { label: 'Lab', route: '/lab', icon: 'icon-pulse' },
     { label: 'Theme', route: '/theme', icon: 'icon-palette' },
     { label: 'Demos', route: '/demos', icon: 'icon-layers' },
+    { label: 'Jobs', route: '/jobs', icon: 'icon-briefcase' },
   ];
 
   protected readonly sidebarNavItems: NavItem[] = [
@@ -27,6 +28,7 @@ export class App {
     { label: 'Lab', route: '/lab', icon: 'icon-pulse' },
     { label: 'Theme', route: '/theme', icon: 'icon-palette' },
     { label: 'Demos', route: '/demos', icon: 'icon-layers' },
+    { label: 'Jobs', route: '/jobs', icon: 'icon-briefcase' },
   ];
 
   protected toggleSidebar(): void {

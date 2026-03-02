@@ -32,6 +32,12 @@
       ],
       "@ng-mfe-hub/dashboard-feature-users": [
         "libs/dashboard/feature-users/src/index.ts"
+      ],
+      "jobs/Routes": ["apps/jobs/src/app/remote-entry/entry.routes.ts"],
+      "@ng-mfe-hub/jobs-data-access": ["libs/jobs/data-access/src/index.ts"],
+      "@ng-mfe-hub/jobs-ui": ["libs/jobs/ui/src/index.ts"],
+      "@ng-mfe-hub/jobs-feature-search": [
+        "libs/jobs/feature-search/src/index.ts"
       ]
     }
   },

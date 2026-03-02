@@ -1,37 +1,32 @@
 {
-  "name": "shell",
+  "name": "jobs",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "prefix": "app",
-  "sourceRoot": "apps/shell/src",
-  "tags": ["scope:shell", "type:app"],
+  "sourceRoot": "apps/jobs/src",
+  "tags": ["scope:jobs", "type:app"],
   "targets": {
     "build": {
       "executor": "@nx/angular:webpack-browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/shell",
-        "index": "apps/shell/src/index.html",
-        "main": "apps/shell/src/main.ts",
-        "tsConfig": "apps/shell/tsconfig.app.json",
-        "inlineStyleLanguage": "scss",
+        "outputPath": "dist/apps/jobs",
+        "index": "apps/jobs/src/index.html",
+        "main": "apps/jobs/src/main.ts",
+        "tsConfig": "apps/jobs/tsconfig.app.json",
         "assets": [
           {
             "glob": "**/*",
-            "input": "apps/shell/public"
-          },
-          {
-            "glob": "*.{eot,woff,ttf,svg}",
-            "input": "node_modules/themify-icons/themify-icons/fonts",
-            "output": "/fonts"
+            "input": "apps/jobs/public"
           }
         ],
-        "styles": ["apps/shell/src/styles.scss"],
+        "inlineStyleLanguage": "scss",
+        "styles": ["apps/jobs/src/styles.scss"],
         "stylePreprocessorOptions": {
           "includePaths": ["."]
         },
         "customWebpackConfig": {
-          "path": "apps/shell/webpack.config.ts"
+          "path": "apps/jobs/webpack.config.ts"
         }
       },
       "configurations": {
@@ -48,7 +43,10 @@
               "maximumError": "8kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "apps/jobs/webpack.prod.config.ts"
+          }
         },
         "development": {
           "buildOptimizer": false,
@@ -63,33 +61,26 @@
     },
     "serve": {
       "continuous": true,
-      "executor": "@nx/angular:module-federation-dev-server",
+      "executor": "@nx/angular:dev-server",
       "options": {
-        "port": 4200,
-        "publicHost": "http://localhost:4200",
-        "devRemotes": [
-          { "remoteName": "dashboard", "configuration": "development" },
-          { "remoteName": "profile", "configuration": "development" },
-          { "remoteName": "lab", "configuration": "development" },
-          { "remoteName": "theme", "configuration": "development" },
-          { "remoteName": "demos", "configuration": "development" },
-          { "remoteName": "jobs", "configuration": "development" }
-        ]
+        "port": 4207,
+        "publicHost": "http://localhost:4207"
       },
       "configurations": {
         "production": {
-          "buildTarget": "shell:build:production"
+          "buildTarget": "jobs:build:production"
         },
         "development": {
-          "buildTarget": "shell:build:development"
+          "buildTarget": "jobs:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "dependsOn": ["shell:serve"]
     },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "buildTarget": "shell:build"
+        "buildTarget": "jobs:build"
       }
     },
     "lint": {
@@ -99,16 +90,25 @@
       "executor": "@nx/vitest:test",
       "outputs": ["{options.reportsDirectory}"],
       "options": {
-        "reportsDirectory": "../../coverage/apps/shell"
+        "reportsDirectory": "../../coverage/apps/jobs"
       }
     },
     "serve-static": {
       "continuous": true,
       "executor": "@nx/web:file-server",
+      "defaultConfiguration": "production",
       "options": {
-        "buildTarget": "shell:build",
-        "port": 4200,
-        "spa": true
+        "buildTarget": "jobs:build",
+        "port": 4207,
+        "watch": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "jobs:build:development"
+        },
+        "production": {
+          "buildTarget": "jobs:build:production"
+        }
       }
     }
   }
