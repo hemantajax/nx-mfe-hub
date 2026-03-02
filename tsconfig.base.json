@@ -38,7 +38,10 @@
       "@ng-mfe-hub/jobs-ui": ["libs/jobs/ui/src/index.ts"],
       "@ng-mfe-hub/jobs-feature-search": [
         "libs/jobs/feature-search/src/index.ts"
-      ]
+      ],
+      "@ng-mfe-hub/lab-data-access": ["libs/lab/data-access/src/index.ts"],
+      "@ng-mfe-hub/lab-ui": ["libs/lab/ui/src/index.ts"],
+      "@ng-mfe-hub/lab-feature-docs": ["libs/lab/feature-docs/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

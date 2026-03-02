@@ -1,0 +1,20 @@
+{
+  "name": "lab-feature-docs",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/lab/feature-docs/src",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": ["scope:lab", "type:feature"],
+  "targets": {
+    "test": {
+      "executor": "@nx/vitest:test",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "reportsDirectory": "../../../coverage/libs/lab/feature-docs"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

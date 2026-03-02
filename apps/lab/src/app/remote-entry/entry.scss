@@ -1,1 +1,7 @@
 @import 'libs/shared/styles/src/lib/styles/themes/vapor-vars';
+
+// Prism syntax highlighting theme — loaded here (ViewEncapsulation.None)
+// so it's injected into the DOM when the MFE mounts, not via a separate
+// styles.css bundle that the shell never loads.
+@import 'prism-themes/themes/prism-material-light.css';
+@import 'prismjs/plugins/line-numbers/prism-line-numbers.css';

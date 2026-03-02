@@ -1,0 +1,48 @@
+{
+  "books": [
+    {
+      "slug": "angular-step-by-step",
+      "title": "Angular Step by Step",
+      "icon": "icon-desktop",
+      "description": "Deep dive into Angular 18+ architecture, signals, RxJS and beyond",
+      "chapters": [
+        { "slug": "01-architecture", "title": "Architecture", "file": "01-architecture.md" },
+        { "slug": "02-change-detection", "title": "Change Detection", "file": "02-change-detection.md" },
+        { "slug": "03-defer-lazy-loading", "title": "Defer & Lazy Loading", "file": "03-defer-lazy-loading.md" },
+        { "slug": "04-ngrx-deep-dive", "title": "NgRx Deep Dive", "file": "04-ngrx-deep-dive.md" },
+        { "slug": "05-rxjs-deep-dive", "title": "RxJS Deep Dive", "file": "05-rxjs-deep-dive.md" },
+        { "slug": "06-signals", "title": "Signals", "file": "06-signals.md" },
+        { "slug": "07-security-auth", "title": "Security & Auth", "file": "07-security-auth.md" },
+        { "slug": "08-ssr-hydration", "title": "SSR & Hydration", "file": "08-ssr-hydration.md" },
+        { "slug": "09-performance", "title": "Performance", "file": "09-performance.md" },
+        { "slug": "10-testing", "title": "Testing", "file": "10-testing.md" },
+        { "slug": "11-ai-angular-mcp", "title": "AI & Angular MCP", "file": "11-ai-angular-mcp.md" },
+        { "slug": "12-interview-qa", "title": "Interview Q&A", "file": "12-interview-qa.md" }
+      ]
+    },
+    {
+      "slug": "system-design-ebook",
+      "title": "System Design",
+      "icon": "icon-server",
+      "description": "Scalability, databases, caching, APIs and modern system design patterns",
+      "chapters": [
+        { "slug": "01-system-design-thinking", "title": "System Design Thinking", "file": "01-system-design-thinking.md" },
+        { "slug": "02-scalability", "title": "Scalability", "file": "02-scalability.md" },
+        { "slug": "03-databases", "title": "Databases", "file": "03-databases.md" },
+        { "slug": "04-caching", "title": "Caching", "file": "04-caching.md" },
+        { "slug": "05-networking-and-protocols", "title": "Networking & Protocols", "file": "05-networking-and-protocols.md" },
+        { "slug": "06-api-design", "title": "API Design", "file": "06-api-design.md" },
+        { "slug": "07-messaging-and-async", "title": "Messaging & Async", "file": "07-messaging-and-async.md" },
+        { "slug": "08-frontend-system-design", "title": "Frontend System Design", "file": "08-frontend-system-design.md" },
+        { "slug": "09-state-management", "title": "State Management", "file": "09-state-management.md" },
+        { "slug": "10-rendering-strategies", "title": "Rendering Strategies", "file": "10-rendering-strategies.md" },
+        { "slug": "11-performance-optimization", "title": "Performance Optimization", "file": "11-performance-optimization.md" },
+        { "slug": "12-micro-frontends", "title": "Micro Frontends", "file": "12-micro-frontends.md" },
+        { "slug": "13-security", "title": "Security", "file": "13-security.md" },
+        { "slug": "14-testing-and-quality", "title": "Testing & Quality", "file": "14-testing-and-quality.md" },
+        { "slug": "15-observability", "title": "Observability", "file": "15-observability.md" },
+        { "slug": "16-cheat-sheet", "title": "Cheat Sheet", "file": "16-cheat-sheet.md" }
+      ]
+    }
+  ]
+}

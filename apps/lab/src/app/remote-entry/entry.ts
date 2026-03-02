@@ -7,10 +7,6 @@ import { RouterOutlet } from '@angular/router';
   styleUrls: ['./entry.scss'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  template: `
-    <div class="theme-vapor">
-      <router-outlet />
-    </div>
-  `,
+  template: `<router-outlet />`,
 })
 export class RemoteEntry {}
