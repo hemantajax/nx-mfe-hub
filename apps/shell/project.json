@@ -4,11 +4,16 @@
   "projectType": "application",
   "prefix": "app",
   "sourceRoot": "apps/shell/src",
-  "tags": ["scope:shell", "type:app"],
+  "tags": [
+    "scope:shell",
+    "type:app"
+  ],
   "targets": {
     "build": {
       "executor": "@nx/angular:webpack-browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/shell",
         "index": "apps/shell/src/index.html",
@@ -26,9 +31,13 @@
             "output": "/fonts"
           }
         ],
-        "styles": ["apps/shell/src/styles.scss"],
+        "styles": [
+          "apps/shell/src/styles.scss"
+        ],
         "stylePreprocessorOptions": {
-          "includePaths": ["."]
+          "includePaths": [
+            "."
+          ]
         },
         "customWebpackConfig": {
           "path": "apps/shell/webpack.config.ts"
@@ -57,6 +66,9 @@
           "extractLicenses": false,
           "sourceMap": true,
           "namedChunks": true
+        },
+        "ghpages": {
+          "baseHref": "/nx-mfe-hub/"
         }
       },
       "defaultConfiguration": "production"
@@ -68,12 +80,30 @@
         "port": 4200,
         "publicHost": "http://localhost:4200",
         "devRemotes": [
-          { "remoteName": "dashboard", "configuration": "development" },
-          { "remoteName": "profile", "configuration": "development" },
-          { "remoteName": "lab", "configuration": "development" },
-          { "remoteName": "theme", "configuration": "development" },
-          { "remoteName": "demos", "configuration": "development" },
-          { "remoteName": "jobs", "configuration": "development" }
+          {
+            "remoteName": "dashboard",
+            "configuration": "development"
+          },
+          {
+            "remoteName": "profile",
+            "configuration": "development"
+          },
+          {
+            "remoteName": "lab",
+            "configuration": "development"
+          },
+          {
+            "remoteName": "theme",
+            "configuration": "development"
+          },
+          {
+            "remoteName": "demos",
+            "configuration": "development"
+          },
+          {
+            "remoteName": "jobs",
+            "configuration": "development"
+          }
         ]
       },
       "configurations": {
@@ -97,7 +127,9 @@
     },
     "test": {
       "executor": "@nx/vitest:test",
-      "outputs": ["{options.reportsDirectory}"],
+      "outputs": [
+        "{options.reportsDirectory}"
+      ],
       "options": {
         "reportsDirectory": "../../coverage/apps/shell"
       }

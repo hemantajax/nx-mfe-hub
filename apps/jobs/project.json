@@ -4,11 +4,16 @@
   "projectType": "application",
   "prefix": "app",
   "sourceRoot": "apps/jobs/src",
-  "tags": ["scope:jobs", "type:app"],
+  "tags": [
+    "scope:jobs",
+    "type:app"
+  ],
   "targets": {
     "build": {
       "executor": "@nx/angular:webpack-browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/jobs",
         "index": "apps/jobs/src/index.html",
@@ -21,9 +26,13 @@
           }
         ],
         "inlineStyleLanguage": "scss",
-        "styles": ["apps/jobs/src/styles.scss"],
+        "styles": [
+          "apps/jobs/src/styles.scss"
+        ],
         "stylePreprocessorOptions": {
-          "includePaths": ["."]
+          "includePaths": [
+            "."
+          ]
         },
         "customWebpackConfig": {
           "path": "apps/jobs/webpack.config.ts"
@@ -55,6 +64,9 @@
           "extractLicenses": false,
           "sourceMap": true,
           "namedChunks": true
+        },
+        "ghpages": {
+          "baseHref": "/nx-mfe-hub/jobs/"
         }
       },
       "defaultConfiguration": "production"
@@ -75,7 +87,9 @@
         }
       },
       "defaultConfiguration": "development",
-      "dependsOn": ["shell:serve"]
+      "dependsOn": [
+        "shell:serve"
+      ]
     },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
@@ -88,7 +102,9 @@
     },
     "test": {
       "executor": "@nx/vitest:test",
-      "outputs": ["{options.reportsDirectory}"],
+      "outputs": [
+        "{options.reportsDirectory}"
+      ],
       "options": {
         "reportsDirectory": "../../coverage/apps/jobs"
       }

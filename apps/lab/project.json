@@ -4,11 +4,16 @@
   "projectType": "application",
   "prefix": "app",
   "sourceRoot": "apps/lab/src",
-  "tags": ["scope:lab", "type:app"],
+  "tags": [
+    "scope:lab",
+    "type:app"
+  ],
   "targets": {
     "build": {
       "executor": "@nx/angular:webpack-browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/lab",
         "index": "apps/lab/src/index.html",
@@ -21,9 +26,13 @@
             "input": "apps/lab/public"
           }
         ],
-        "styles": ["apps/lab/src/styles.scss"],
+        "styles": [
+          "apps/lab/src/styles.scss"
+        ],
         "stylePreprocessorOptions": {
-          "includePaths": ["."]
+          "includePaths": [
+            "."
+          ]
         },
         "customWebpackConfig": {
           "path": "apps/lab/webpack.config.ts"
@@ -55,6 +64,9 @@
           "extractLicenses": false,
           "sourceMap": true,
           "namedChunks": true
+        },
+        "ghpages": {
+          "baseHref": "/nx-mfe-hub/lab/"
         }
       },
       "defaultConfiguration": "production"
@@ -75,7 +87,9 @@
         }
       },
       "defaultConfiguration": "development",
-      "dependsOn": ["shell:serve"]
+      "dependsOn": [
+        "shell:serve"
+      ]
     },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
@@ -88,7 +102,9 @@
     },
     "test": {
       "executor": "@nx/vitest:test",
-      "outputs": ["{options.reportsDirectory}"],
+      "outputs": [
+        "{options.reportsDirectory}"
+      ],
       "options": {
         "reportsDirectory": "../../coverage/apps/lab"
       }
