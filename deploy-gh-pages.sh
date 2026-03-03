@@ -13,10 +13,10 @@ echo "▶ Cleaning previous gh-pages assembly..."
 rm -rf "$DIST"
 
 echo "▶ Building all apps in parallel (production + ghpages config)..."
-npx nx run-many -t build \
+NX_PLUGIN_NO_TIMEOUTS=true npx nx run-many -t build \
   --projects="$APPS" \
   --configuration=production,ghpages \
-  --parallel=3 \
+  --parallel=2 \
   --skip-nx-cache
 
 echo "▶ Assembling $DIST..."
