@@ -24,8 +24,8 @@
             [routerLinkActiveOptions]="{ exact: item.exact ?? false }">
             {{ item.label }}
             @if (item.badge) {
-              <span class="badge rounded-pill text-uppercase"
-                style="font-size:0.55rem;letter-spacing:.04em;background:rgba(255,255,255,.18);color:rgba(255,255,255,.85)">
+              <span class="badge rounded-pill text-uppercase fw-semibold"
+                style="font-size:0.5rem;letter-spacing:.08em;border:1.5px solid #0dcaf0;color:#0dcaf0;background:transparent">
                 {{ item.badge }}
               </span>
             }
