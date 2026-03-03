@@ -16,7 +16,8 @@ echo "▶ Building all apps in parallel (production + ghpages config)..."
 npx nx run-many -t build \
   --projects="$APPS" \
   --configuration=production,ghpages \
-  --parallel=3
+  --parallel=3 \
+  --skip-nx-cache
 
 echo "▶ Assembling $DIST..."
 mkdir -p "$DIST"
