@@ -8,30 +8,65 @@
 
 ### The Problem with Zone.js-Based Change Detection
 
-```
-Click event fires
-      ↓
-Zone.js intercepts
-      ↓
-Angular checks ENTIRE component tree
-      ↓
-Most components: nothing changed
-      ↓
-Wasted CPU
+```mermaid
+flowchart TB
+    E["Async Event / User Interaction"]
+    Z["Zone.js intercepts — schedules change detection"]
+
+    E --> Z
+
+    subgraph all ["Entire Component Tree — Every Node Checked"]
+        App["AppComponent"]
+        Nav["NavComponent"]
+        Side["SidebarComponent"]
+        User["UserComponent"]
+        Foot["FooterComponent"]
+        App --> Nav
+        App --> Side
+        App --> User
+        App --> Foot
+    end
+
+    Z --> App
+
+    Nav -->|"unchanged"| W["Wasted CPU cycles"]
+    Side -->|"unchanged"| W
+    Foot -->|"unchanged"| W
+    User -->|"data changed"| D["DOM Update"]
+
+    style E fill:#e67e22,stroke:#d35400,color:#fff
+    style W fill:#e74c3c,stroke:#c0392b,color:#fff
+    style D fill:#27ae60,stroke:#1e8449,color:#fff
 ```
 
 Angular doesn't know WHICH component's data changed — it checks all of them.
 
 ### What Signals Solve
 
-```
-Signal value changes
-      ↓
-Angular knows EXACTLY which templates read this signal
-      ↓
-Updates ONLY those specific DOM nodes
-      ↓
-Zero wasted work
+```mermaid
+flowchart TB
+    S["signal.set() called"]
+    G["Angular reads dependency graph"]
+
+    S --> G
+
+    subgraph tree ["Component Tree"]
+        App["AppComponent"]
+        Nav["NavComponent — not subscribed, skipped"]
+        Side["SidebarComponent — not subscribed, skipped"]
+        User["UserComponent — reads this signal"]
+        Foot["FooterComponent — not subscribed, skipped"]
+        App --> Nav
+        App --> Side
+        App --> User
+        App --> Foot
+    end
+
+    G -->|"only UserComponent reads this signal"| User
+    User --> D["Surgical DOM update — Zero wasted work"]
+
+    style S fill:#27ae60,stroke:#1e8449,color:#fff
+    style D fill:#2ecc71,stroke:#27ae60,color:#fff
 ```
 
 Signals create an explicit dependency graph. Angular tracks which template reads which signal, and updates only the relevant parts.
