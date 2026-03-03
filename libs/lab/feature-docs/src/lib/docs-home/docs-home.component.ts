@@ -16,7 +16,7 @@ import { DocService } from '@ng-mfe-hub/lab-data-access';
       @if (manifest()) {
         <div class="row g-4">
           @for (book of manifest()?.books ?? []; track book.slug) {
-            <div class="col-md-6">
+            <div class="col-md-6 col-lg-4">
               <button
                 class="card h-100 border shadow-sm w-100 text-start bg-body p-0"
                 style="cursor: pointer"

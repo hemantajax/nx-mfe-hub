@@ -43,6 +43,26 @@
         { "slug": "15-observability", "title": "Observability", "file": "15-observability.md" },
         { "slug": "16-cheat-sheet", "title": "Cheat Sheet", "file": "16-cheat-sheet.md" }
       ]
+    },
+    {
+      "slug": "react-step-by-step",
+      "title": "React 19 Step by Step",
+      "icon": "icon-layout-media-center-alt",
+      "description": "React 19 deep dive — Fiber, Server Components, Compiler, hooks, performance and architecture",
+      "chapters": [
+        { "slug": "01-architecture", "title": "Architecture", "file": "01-architecture.md" },
+        { "slug": "02-rendering", "title": "Rendering & Reconciliation", "file": "02-rendering.md" },
+        { "slug": "03-react-19", "title": "React 19 Deep Dive", "file": "03-react-19.md" },
+        { "slug": "04-react-compiler", "title": "React Compiler", "file": "04-react-compiler.md" },
+        { "slug": "05-hooks-deep-dive", "title": "Hooks Deep Dive", "file": "05-hooks-deep-dive.md" },
+        { "slug": "06-state-management", "title": "State Management", "file": "06-state-management.md" },
+        { "slug": "07-server-components", "title": "Server Components & SSR", "file": "07-server-components.md" },
+        { "slug": "08-performance", "title": "Performance", "file": "08-performance.md" },
+        { "slug": "09-routing-data", "title": "Routing & Data Fetching", "file": "09-routing-data.md" },
+        { "slug": "10-security", "title": "Security & Auth", "file": "10-security.md" },
+        { "slug": "11-testing", "title": "Testing Strategy", "file": "11-testing.md" },
+        { "slug": "12-interview-qa", "title": "Interview Q&A", "file": "12-interview-qa.md" }
+      ]
     }
   ]
 }
