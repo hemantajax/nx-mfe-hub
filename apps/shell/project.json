@@ -41,7 +41,8 @@
         },
         "customWebpackConfig": {
           "path": "apps/shell/webpack.config.ts"
-        }
+        },
+        "polyfills": []
       },
       "configurations": {
         "production": {
