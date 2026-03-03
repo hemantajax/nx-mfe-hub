@@ -66,7 +66,25 @@
           "namedChunks": true
         },
         "ghpages": {
-          "baseHref": "/nx-mfe-hub/demos/"
+          "outputHashing": "all",
+          "optimization": true,
+          "buildOptimizer": true,
+          "extractLicenses": true,
+          "sourceMap": false,
+          "namedChunks": false,
+          "baseHref": "/nx-mfe-hub/demos/",
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "4kb",
+              "maximumError": "8kb"
+            }
+          ]
         }
       },
       "defaultConfiguration": "production"

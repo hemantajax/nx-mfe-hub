@@ -15,7 +15,7 @@ rm -rf "$DIST"
 echo "▶ Building all apps in parallel (production + ghpages config)..."
 NX_PLUGIN_NO_TIMEOUTS=true npx nx run-many -t build \
   --projects="$APPS" \
-  --configuration=production,ghpages \
+  --configuration=ghpages \
   --parallel=2 \
   --skip-nx-cache
 
