@@ -9,8 +9,8 @@ DIST="dist/gh-pages"
 TMP="/tmp/gh-pages-push"
 APPS="shell,dashboard,profile,lab,theme,demos,jobs"
 
-echo "▶ Cleaning previous build..."
-rm -rf dist/apps "$DIST"
+echo "▶ Cleaning previous gh-pages assembly..."
+rm -rf "$DIST"
 
 echo "▶ Building all apps in parallel (production + ghpages config)..."
 npx nx run-many -t build \
