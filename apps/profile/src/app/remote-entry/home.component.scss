@@ -1,29 +1,70 @@
+// ── Hero ──
 .profile-hero {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f857a6 100%);
   min-height: 340px;
   display: flex;
   align-items: center;
-}
+  position: relative;
 
-.profile-avatar {
-  object-fit: cover;
-  transition: transform 0.3s ease;
-
-  &:hover {
-    transform: scale(1.05);
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.06) 0%, transparent 50%);
   }
 }
 
-.ls-wide {
-  letter-spacing: 0.06em;
+.hero-subtitle {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 300;
 }
 
+.avatar-ring {
+  width: 152px;
+  height: 152px;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, #f857a6, #ffd166, #06d6a0, #667eea);
+  display: inline-block;
+
+  img {
+    display: block;
+    object-fit: cover;
+    border: 3px solid #fff;
+  }
+}
+
+.btn-hero-link {
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(4px);
+  transition: all 0.2s;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border-color: #fff;
+  }
+}
+
+// ── Section titles ──
+.section-title {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 1.25rem;
+}
+
+// ── Timeline ──
 .timeline-dot {
   width: 10px;
   height: 10px;
   min-width: 10px;
 }
 
+// ── Tech badges ──
 .badge.text-bg-light {
   color: #444 !important;
   font-weight: 500;

@@ -7,23 +7,25 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   template: `
     <!-- Hero -->
     <section class="profile-hero text-center text-white position-relative overflow-hidden">
-      <div class="container py-5">
-        <img
-          src="images/me.jpg"
-          alt="Hemant Kumar Singh"
-          class="profile-avatar rounded-circle border border-4 border-white shadow mb-3"
-          width="150"
-          height="150"
-        />
+      <div class="container py-5 position-relative" style="z-index:1">
+        <div class="avatar-ring mx-auto mb-3">
+          <img
+            src="/images/me.jpg"
+            alt="Hemant Kumar Singh"
+            class="rounded-circle"
+            width="140"
+            height="140"
+          />
+        </div>
         <h1 class="fw-bold mb-1">Hemant Kumar Singh</h1>
-        <p class="fs-5 opacity-75 mb-2">Full Stack Architect</p>
-        <p class="small opacity-50 mb-3">
+        <p class="fs-5 hero-subtitle mb-2">Full Stack Architect</p>
+        <p class="small opacity-60 mb-4">
           <i class="icon-location-pin me-1"></i>Hyderabad, India
         </p>
         <div class="d-flex justify-content-center gap-2 flex-wrap">
           <a
             href="mailto:hemant.ajax&#64;gmail.com"
-            class="btn btn-sm btn-outline-light rounded-pill px-3"
+            class="btn btn-sm btn-hero-link rounded-pill px-3"
           >
             <i class="icon-email me-1"></i>Email
           </a>
@@ -31,7 +33,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
             href="https://linkedin.com/in/hkajax/"
             target="_blank"
             rel="noopener"
-            class="btn btn-sm btn-outline-light rounded-pill px-3"
+            class="btn btn-sm btn-hero-link rounded-pill px-3"
           >
             <i class="icon-linkedin me-1"></i>LinkedIn
           </a>
@@ -39,7 +41,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
             href="https://github.com/hs2504785"
             target="_blank"
             rel="noopener"
-            class="btn btn-sm btn-outline-light rounded-pill px-3"
+            class="btn btn-sm btn-hero-link rounded-pill px-3"
           >
             <i class="icon-github me-1"></i>GitHub
           </a>
@@ -47,7 +49,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
             href="https://hs950559.github.io/portfolio/"
             target="_blank"
             rel="noopener"
-            class="btn btn-sm btn-outline-light rounded-pill px-3"
+            class="btn btn-sm btn-hero-link rounded-pill px-3"
           >
             <i class="icon-link me-1"></i>Portfolio
           </a>
@@ -59,10 +61,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     <section class="container py-5">
       <div class="row justify-content-center">
         <div class="col-lg-8">
-          <h2 class="h5 fw-bold mb-3 text-uppercase ls-wide">
-            <i class="icon-user me-2 text-primary"></i>About
-          </h2>
-          <p class="text-muted lh-lg">
+          <h2 class="section-title">About</h2>
+          <p class="text-muted lh-lg fs-6">
             Software engineer who loves building scalable web applications
             end-to-end. I work across the full stack — from architecting
             Angular &amp; React frontends to designing REST APIs with
@@ -79,9 +79,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8">
-            <h2 class="h5 fw-bold mb-4 text-uppercase ls-wide">
-              <i class="icon-layers me-2 text-primary"></i>Expertise
-            </h2>
+            <h2 class="section-title">Expertise</h2>
             <div class="row g-4">
               @for (area of expertise; track area.title) {
                 <div class="col-sm-6">
@@ -106,9 +104,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     <section class="container py-5">
       <div class="row justify-content-center">
         <div class="col-lg-8">
-          <h2 class="h5 fw-bold mb-3 text-uppercase ls-wide">
-            <i class="icon-settings me-2 text-primary"></i>Tech Stack
-          </h2>
+          <h2 class="section-title">Tech Stack</h2>
           <div class="d-flex flex-wrap gap-2">
             @for (tech of techStack; track tech) {
               <span class="badge rounded-pill text-bg-light border px-3 py-2">
@@ -125,21 +121,17 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8">
-            <h2 class="h5 fw-bold mb-4 text-uppercase ls-wide">
-              <i class="icon-briefcase me-2 text-primary"></i>Career Highlights
-            </h2>
-            <div class="timeline">
-              @for (item of highlights; track item.company) {
-                <div class="d-flex mb-4">
-                  <div class="timeline-dot bg-primary rounded-circle mt-1 me-3 flex-shrink-0"></div>
-                  <div>
-                    <h3 class="h6 fw-semibold mb-0">{{ item.role }}</h3>
-                    <p class="small text-primary mb-1">{{ item.company }}</p>
-                    <p class="small text-muted mb-0">{{ item.summary }}</p>
-                  </div>
+            <h2 class="section-title">Career Highlights</h2>
+            @for (item of highlights; track item.company) {
+              <div class="d-flex mb-4">
+                <div class="timeline-dot bg-primary rounded-circle mt-1 me-3 flex-shrink-0"></div>
+                <div>
+                  <h3 class="h6 fw-semibold mb-0">{{ item.role }}</h3>
+                  <p class="small text-primary mb-1">{{ item.company }}</p>
+                  <p class="small text-muted mb-0">{{ item.summary }}</p>
                 </div>
-              }
-            </div>
+              </div>
+            }
           </div>
         </div>
       </div>
@@ -149,9 +141,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     <section class="container py-5">
       <div class="row justify-content-center">
         <div class="col-lg-8">
-          <h2 class="h5 fw-bold mb-3 text-uppercase ls-wide">
-            <i class="icon-book me-2 text-primary"></i>Education
-          </h2>
+          <h2 class="section-title">Education</h2>
           <p class="mb-0">
             <strong>B.Tech — Computer Science Engineering</strong>
           </p>
