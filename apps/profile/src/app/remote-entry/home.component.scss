@@ -1,0 +1,30 @@
+.profile-hero {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+}
+
+.profile-avatar {
+  object-fit: cover;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.ls-wide {
+  letter-spacing: 0.06em;
+}
+
+.timeline-dot {
+  width: 10px;
+  height: 10px;
+  min-width: 10px;
+}
+
+.badge.text-bg-light {
+  color: #444 !important;
+  font-weight: 500;
+}

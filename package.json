@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx serve shell",
+    "start": "NODE_OPTIONS='--max-old-space-size=8192' nx serve shell",
     "start:dashboard": "nx serve dashboard",
     "start:profile": "nx serve profile",
     "start:lab": "nx serve lab",
