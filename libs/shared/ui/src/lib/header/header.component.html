@@ -18,11 +18,17 @@
       @for (item of navItems(); track item.label) {
         <li class="nav-item">
           <a
-            class="nav-link px-2"
+            class="nav-link px-2 d-flex align-items-center gap-1"
             [routerLink]="item.route"
             routerLinkActive="active"
             [routerLinkActiveOptions]="{ exact: item.exact ?? false }">
             {{ item.label }}
+            @if (item.badge) {
+              <span class="badge rounded-pill text-uppercase"
+                style="font-size:0.55rem;letter-spacing:.04em;background:rgba(255,255,255,.18);color:rgba(255,255,255,.85)">
+                {{ item.badge }}
+              </span>
+            }
           </a>
         </li>
       }

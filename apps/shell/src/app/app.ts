@@ -13,22 +13,22 @@ export class App {
   protected sidebarOpen = signal(false);
 
   protected readonly headerNavItems: NavItem[] = [
-    { label: 'Dashboard', route: '/dashboard', icon: 'icon-dashboard' },
-    { label: 'Profile', route: '/profile', icon: 'icon-user' },
-    { label: 'Lab', route: '/lab', icon: 'icon-pulse' },
-    { label: 'Theme', route: '/theme', icon: 'icon-palette' },
-    { label: 'Demos', route: '/demos', icon: 'icon-layers' },
-    { label: 'Jobs', route: '/jobs', icon: 'icon-briefcase' },
+    { label: 'Dashboard', route: '/dashboard', icon: 'icon-dashboard', badge: 'remote' },
+    { label: 'Profile',   route: '/profile',   icon: 'icon-user',      badge: 'remote' },
+    { label: 'Lab',       route: '/lab',        icon: 'icon-pulse',     badge: 'remote' },
+    { label: 'Theme',     route: '/theme',      icon: 'icon-palette',   badge: 'remote' },
+    { label: 'Demos',     route: '/demos',      icon: 'icon-layers',    badge: 'remote' },
+    { label: 'Jobs',      route: '/jobs',       icon: 'icon-briefcase', badge: 'remote' },
   ];
 
   protected readonly sidebarNavItems: NavItem[] = [
-    { label: 'Home', route: '/', icon: 'icon-home', exact: true },
-    { label: 'Dashboard', route: '/dashboard', icon: 'icon-dashboard' },
-    { label: 'Profile', route: '/profile', icon: 'icon-user' },
-    { label: 'Lab', route: '/lab', icon: 'icon-pulse' },
-    { label: 'Theme', route: '/theme', icon: 'icon-palette' },
-    { label: 'Demos', route: '/demos', icon: 'icon-layers' },
-    { label: 'Jobs', route: '/jobs', icon: 'icon-briefcase' },
+    { label: 'Home',      route: '/',           icon: 'icon-home',      exact: true },
+    { label: 'Dashboard', route: '/dashboard',  icon: 'icon-dashboard', badge: 'remote' },
+    { label: 'Profile',   route: '/profile',    icon: 'icon-user',      badge: 'remote' },
+    { label: 'Lab',       route: '/lab',         icon: 'icon-pulse',     badge: 'remote' },
+    { label: 'Theme',     route: '/theme',       icon: 'icon-palette',   badge: 'remote' },
+    { label: 'Demos',     route: '/demos',       icon: 'icon-layers',    badge: 'remote' },
+    { label: 'Jobs',      route: '/jobs',        icon: 'icon-briefcase', badge: 'remote' },
   ];
 
   protected toggleSidebar(): void {

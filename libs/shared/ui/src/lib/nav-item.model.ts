@@ -4,4 +4,5 @@ export interface NavItem {
   icon?: string;
   fragment?: string;
   exact?: boolean;
+  badge?: string;
 }

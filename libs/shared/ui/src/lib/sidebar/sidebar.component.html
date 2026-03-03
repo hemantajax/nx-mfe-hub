@@ -19,6 +19,12 @@
               <i class="{{ item.icon }} sidebar-icon"></i>
             }
             <span>{{ item.label }}</span>
+            @if (item.badge) {
+              <span class="badge rounded-pill bg-primary-subtle text-primary ms-auto"
+                style="font-size:0.55rem;letter-spacing:.04em">
+                {{ item.badge }}
+              </span>
+            }
           </a>
         </li>
       }
