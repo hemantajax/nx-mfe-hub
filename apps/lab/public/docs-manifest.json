@@ -45,6 +45,28 @@
       ]
     },
     {
+      "slug": "node-express-mongodb",
+      "title": "Node.js / Express / MongoDB",
+      "icon": "icon-harddrives",
+      "description": "Backend architecture deep dive — Express 5, Mongoose 8, auth, security, performance and DevOps",
+      "chapters": [
+        { "slug": "01-architecture", "title": "Architecture & Structure", "file": "01-architecture.md" },
+        { "slug": "02-express-deep-dive", "title": "Express 5 Deep Dive", "file": "02-express-deep-dive.md" },
+        { "slug": "03-mongodb-mongoose", "title": "MongoDB & Mongoose", "file": "03-mongodb-mongoose.md" },
+        { "slug": "04-middleware-patterns", "title": "Middleware Patterns", "file": "04-middleware-patterns.md" },
+        { "slug": "05-authentication-authz", "title": "Authentication & Auth", "file": "05-authentication-authz.md" },
+        { "slug": "06-validation-error-handling", "title": "Validation & Errors", "file": "06-validation-error-handling.md" },
+        { "slug": "07-logging-observability", "title": "Logging & Observability", "file": "07-logging-observability.md" },
+        { "slug": "08-security", "title": "Security", "file": "08-security.md" },
+        { "slug": "09-performance", "title": "Performance", "file": "09-performance.md" },
+        { "slug": "10-testing", "title": "Testing Strategy", "file": "10-testing.md" },
+        { "slug": "11-configuration", "title": "Environment & Config", "file": "11-configuration.md" },
+        { "slug": "12-deployment-devops", "title": "Deployment & DevOps", "file": "12-deployment-devops.md" },
+        { "slug": "13-advanced-patterns", "title": "Advanced Patterns", "file": "13-advanced-patterns.md" },
+        { "slug": "14-interview-qa", "title": "Interview Q&A", "file": "14-interview-qa.md" }
+      ]
+    },
+    {
       "slug": "react-step-by-step",
       "title": "React 19 Step by Step",
       "icon": "icon-layout-media-center-alt",
