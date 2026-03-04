@@ -63,7 +63,7 @@ flowchart LR
     direction TB
     ve["Variable Environment setup"]
     le["Lexical Environment setup"]
-    tb["`this` binding"]
+    tb["this binding"]
     ve --> le --> tb
   end
 
@@ -71,8 +71,8 @@ flowchart LR
     direction TB
     assign["Assign values"]
     run["Execute statements"]
-    call["Invoke functions"]
-    assign --> run --> call
+    invoke["Invoke functions"]
+    assign --> run --> invoke
   end
 
   creation -.-> creationDetails
@@ -281,7 +281,7 @@ flowchart TB
     direction TB
     varEnv["Variable Environment\n(var, function)"]
     lexEnv["Lexical Environment\n(let, const, class)"]
-    thisBinding["`this` Binding"]
+    thisBinding["this Binding"]
   end
   outerEnv["Outer Lexical Environment"]
   lexEnv --> outerEnv

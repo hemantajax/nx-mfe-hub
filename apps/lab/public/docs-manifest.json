@@ -41,7 +41,8 @@
         { "slug": "13-security", "title": "Security", "file": "13-security.md" },
         { "slug": "14-testing-and-quality", "title": "Testing & Quality", "file": "14-testing-and-quality.md" },
         { "slug": "15-observability", "title": "Observability", "file": "15-observability.md" },
-        { "slug": "16-cheat-sheet", "title": "Cheat Sheet", "file": "16-cheat-sheet.md" }
+        { "slug": "16-cheat-sheet", "title": "Cheat Sheet", "file": "16-cheat-sheet.md" },
+        { "slug": "17-authentication-authorization", "title": "Authentication & Authorization", "file": "17-authentication-authorization.md" }
       ]
     },
     {

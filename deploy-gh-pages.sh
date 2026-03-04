@@ -12,12 +12,12 @@ APPS="shell,dashboard,profile,lab,theme,demos,jobs,eco-tracker"
 echo "▶ Cleaning previous gh-pages assembly..."
 rm -rf "$DIST"
 
-echo "▶ Building all apps in parallel (production + ghpages config)..."
+echo "▶ Building all apps (production + ghpages config)..."
+echo "  Nx cache is ON — only changed projects will rebuild."
 NX_PLUGIN_NO_TIMEOUTS=true npx nx run-many -t build \
   --projects="$APPS" \
   --configuration=ghpages \
-  --parallel=2 \
-  --skip-nx-cache
+  --parallel=2
 
 echo "▶ Assembling $DIST..."
 mkdir -p "$DIST"
