@@ -4,6 +4,7 @@
   "license": "MIT",
   "scripts": {
     "start": "NODE_OPTIONS='--max-old-space-size=8192' nx serve shell",
+    "dev": "NODE_OPTIONS='--max-old-space-size=4096' nx serve shell --devRemotes=${REMOTE:-eco-tracker}",
     "start:dashboard": "nx serve dashboard",
     "start:profile": "nx serve profile",
     "start:lab": "nx serve lab",
