@@ -634,4 +634,4 @@ Key DevTools features:
 
 ## Next Topic
 
-→ [05-rxjs-deep-dive.md](05-rxjs-deep-dive.md) — Operator comparison, hot/cold observables, memory leak prevention, and modern patterns.
+→ [04b-ngrx-data.md](04b-ngrx-data.md) — NgRx Data: zero-boilerplate CRUD with EntityCollectionService, optimistic/pessimistic strategies, and custom data services.

@@ -10,6 +10,7 @@
         { "slug": "02-change-detection", "title": "Change Detection", "file": "02-change-detection.md" },
         { "slug": "03-defer-lazy-loading", "title": "Defer & Lazy Loading", "file": "03-defer-lazy-loading.md" },
         { "slug": "04-ngrx-deep-dive", "title": "NgRx Deep Dive", "file": "04-ngrx-deep-dive.md" },
+        { "slug": "04b-ngrx-data", "title": "NgRx Data (Zero-Boilerplate CRUD)", "file": "04b-ngrx-data.md" },
         { "slug": "05-rxjs-deep-dive", "title": "RxJS Deep Dive", "file": "05-rxjs-deep-dive.md" },
         { "slug": "06-signals", "title": "Signals", "file": "06-signals.md" },
         { "slug": "07-security-auth", "title": "Security & Auth", "file": "07-security-auth.md" },
