@@ -70,6 +70,30 @@
           "extractLicenses": false,
           "sourceMap": true,
           "namedChunks": true
+        },
+        "ghpages": {
+          "outputHashing": "all",
+          "optimization": true,
+          "buildOptimizer": true,
+          "extractLicenses": true,
+          "sourceMap": false,
+          "namedChunks": false,
+          "baseHref": "/nx-mfe-hub/eco-tracker/",
+          "customWebpackConfig": {
+            "path": "apps/eco-tracker/webpack.prod.config.ts"
+          },
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "4kb",
+              "maximumError": "8kb"
+            }
+          ]
         }
       },
       "defaultConfiguration": "production"

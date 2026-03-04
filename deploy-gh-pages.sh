@@ -7,7 +7,7 @@ REPO="hemantajax/nx-mfe-hub"
 PAGES_BASE="https://hemantajax.github.io/nx-mfe-hub"
 DIST="dist/gh-pages"
 TMP="/tmp/gh-pages-push"
-APPS="shell,dashboard,profile,lab,theme,demos,jobs"
+APPS="shell,dashboard,profile,lab,theme,demos,jobs,eco-tracker"
 
 echo "▶ Cleaning previous gh-pages assembly..."
 rm -rf "$DIST"
@@ -23,7 +23,7 @@ echo "▶ Assembling $DIST..."
 mkdir -p "$DIST"
 cp -r dist/apps/shell/. "$DIST/"
 
-for remote in dashboard profile lab theme demos jobs; do
+for remote in dashboard profile lab theme demos jobs eco-tracker; do
   mkdir -p "$DIST/$remote"
   cp -r dist/apps/"$remote"/. "$DIST/$remote/"
 done
@@ -31,12 +31,13 @@ done
 # Inject production remote URLs (replaces localhost manifest from dev)
 cat > "$DIST/module-federation.manifest.json" <<EOF
 {
-  "dashboard": "$PAGES_BASE/dashboard/mf-manifest.json",
-  "profile":   "$PAGES_BASE/profile/mf-manifest.json",
-  "lab":       "$PAGES_BASE/lab/mf-manifest.json",
-  "theme":     "$PAGES_BASE/theme/mf-manifest.json",
-  "demos":     "$PAGES_BASE/demos/mf-manifest.json",
-  "jobs":      "$PAGES_BASE/jobs/mf-manifest.json"
+  "dashboard":   "$PAGES_BASE/dashboard/mf-manifest.json",
+  "profile":     "$PAGES_BASE/profile/mf-manifest.json",
+  "lab":         "$PAGES_BASE/lab/mf-manifest.json",
+  "theme":       "$PAGES_BASE/theme/mf-manifest.json",
+  "demos":       "$PAGES_BASE/demos/mf-manifest.json",
+  "jobs":        "$PAGES_BASE/jobs/mf-manifest.json",
+  "eco-tracker": "$PAGES_BASE/eco-tracker/mf-manifest.json"
 }
 EOF
 

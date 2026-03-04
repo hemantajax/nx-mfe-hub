@@ -10,7 +10,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       <div class="container py-5 position-relative" style="z-index:1">
         <div class="avatar-ring mx-auto mb-3">
           <img
-            src="/images/me.jpg"
+            src="images/me.jpg"
             alt="Hemant Kumar Singh"
             class="rounded-circle"
             width="140"
