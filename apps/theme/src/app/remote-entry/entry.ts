@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { HomeComponent } from './home.component';
+import { ThemePreviewComponent } from '@ng-mfe-hub/ui';
 
 @Component({
-  imports: [HomeComponent],
+  imports: [ThemePreviewComponent],
   selector: 'app-theme-entry',
-  template: `<app-home />`,
+  template: `<ui-theme-preview />`,
 })
 export class RemoteEntry {}
