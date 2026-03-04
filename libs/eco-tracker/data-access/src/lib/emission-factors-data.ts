@@ -21,7 +21,7 @@ export const EMISSION_FACTORS: EmissionFactor[] = [
   { category: 'food', type: 'fish-meal',      label: 'Fish Meal',         unit: 'meal', co2ePerUnit: 0.490, icon: 'icon-cup' },
   { category: 'food', type: 'vegetarian-meal', label: 'Vegetarian Meal',  unit: 'meal', co2ePerUnit: 0.380, icon: 'icon-cup' },
   { category: 'food', type: 'vegan-meal',     label: 'Vegan Meal',        unit: 'meal', co2ePerUnit: 0.220, icon: 'icon-cup' },
-  { category: 'food', type: 'dairy',          label: 'Dairy (per litre)', unit: 'litre', co2ePerUnit: 3.200, icon: 'icon-drop' },
+  { category: 'food', type: 'dairy',          label: 'Dairy (per litre)', unit: 'litre', co2ePerUnit: 3.200, icon: 'icon-cup' },
   { category: 'food', type: 'food-waste',     label: 'Food Waste',        unit: 'kg',   co2ePerUnit: 2.500, icon: 'icon-trash' },
 
   // Energy

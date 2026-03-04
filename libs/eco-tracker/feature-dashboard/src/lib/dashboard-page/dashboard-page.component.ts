@@ -44,8 +44,7 @@ import type { MapMarker } from '@ng-mfe-hub/eco-tracker-data-access';
         <div class="card-body p-0">
           <div class="row g-0">
             <div class="col-md-4 p-4 d-flex flex-column justify-content-center"
-                 [class.bg-eco-primary]="isNetPositive()"
-                 [style.background]="!isNetPositive() ? 'var(--eco-warning-color)' : null"
+                 [style.background]="isNetPositive() ? 'var(--eco-primary, #40916c)' : 'var(--eco-warning-color, #e76f51)'"
                  style="color:#fff">
               <div class="small mb-1 opacity-75">Net Carbon Status</div>
               <div class="fw-bold mb-1" style="font-size:2rem">
@@ -62,7 +61,7 @@ import type { MapMarker } from '@ng-mfe-hub/eco-tracker-data-access';
                   <eco-stat-card
                     label="Total CO₂ Offset"
                     [value]="formatCo2Fn(treeService.totalOffset())"
-                    icon="icon-leaf"
+                    icon="icon-world"
                     iconColor="var(--eco-primary)"
                     iconBg="var(--eco-accent)"
                     [sub]="treeService.treeCount() + ' trees planted'" />

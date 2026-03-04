@@ -25,7 +25,7 @@ import { DocService } from '@ng-mfe-hub/lab-data-access';
               >
                 <div class="card-body p-4">
                   <div class="d-flex align-items-center gap-3 mb-3">
-                    <div class="icon-circle d-flex align-items-center justify-content-center rounded-circle bg-primary-subtle"
+                    <div class="flex-shrink-0 d-flex align-items-center justify-content-center rounded-circle bg-primary-subtle"
                       style="width: 3rem; height: 3rem;">
                       <i [class]="book.icon + ' text-primary fs-5'"></i>
                     </div>

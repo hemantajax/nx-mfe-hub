@@ -23,7 +23,7 @@ import { ActivityCardComponent, EmptyStateComponent } from '@ng-mfe-hub/eco-trac
         </div>
         <div class="d-flex gap-2">
           <a class="btn btn-outline-secondary btn-sm" (click)="router.navigate(['/eco-tracker/footprint/breakdown'])">
-            <i class="icon-chart me-1"></i>Breakdown
+            <i class="icon-bar-chart me-1"></i>Breakdown
           </a>
           <button class="btn btn-danger btn-sm" (click)="router.navigate(['/eco-tracker/footprint/log'])">
             <i class="icon-plus me-1"></i>Log Activity

@@ -4,6 +4,7 @@ import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 @Component({
   imports: [RouterOutlet, RouterLink, RouterLinkActive],
   selector: 'app-eco-entry',
+  styleUrls: ['./entry.scss'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
@@ -37,15 +38,5 @@ import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
     </div>
     <router-outlet />
   `,
-  styles: [`
-    .nav-tabs .nav-link.active {
-      color: var(--eco-primary, #2d6a4f) !important;
-      border-bottom: 2px solid var(--eco-primary, #2d6a4f) !important;
-      font-weight: 600;
-    }
-    .nav-tabs .nav-link { color: #6c757d; border: none; }
-    .nav-tabs { scrollbar-width: none; }
-    .nav-tabs::-webkit-scrollbar { display: none; }
-  `],
 })
 export class RemoteEntry {}

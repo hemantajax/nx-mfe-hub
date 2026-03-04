@@ -21,8 +21,8 @@ const ECO_TIPS: EcoTip[] = [
   { category: 'energy',     tip: 'Lowering your thermostat by 1°C can reduce heating emissions by up to 10%.',           icon: 'icon-bolt' },
   { category: 'shopping',   tip: 'Buy second-hand clothing and electronics to reduce manufacturing emissions.',           icon: 'icon-bag' },
   { category: 'shopping',   tip: 'Repair before replacing – extending a product\'s life is the most sustainable choice.', icon: 'icon-settings' },
-  { category: 'general',    tip: 'Plant native tree species – they sequester carbon and support local biodiversity.',     icon: 'icon-leaf' },
-  { category: 'general',    tip: 'Share your eco journey with friends to multiply your positive impact.',                 icon: 'icon-social-twitter' },
+  { category: 'general',    tip: 'Plant native tree species – they sequester carbon and support local biodiversity.',     icon: 'icon-world'},
+  { category: 'general',    tip: 'Share your eco journey with friends to multiply your positive impact.',                 icon: 'icon-twitter' },
 ];
 
 @Injectable({ providedIn: 'root' })

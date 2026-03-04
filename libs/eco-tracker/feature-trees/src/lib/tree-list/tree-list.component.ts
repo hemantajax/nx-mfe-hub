@@ -29,7 +29,7 @@ import type { MapMarker } from '@ng-mfe-hub/eco-tracker-data-access';
             {{ viewMode() === 'grid' ? 'Map View' : 'Grid View' }}
           </button>
           <button class="btn btn-link btn-sm text-muted" (click)="router.navigate(['/eco-tracker/trees/species'])">
-            <i class="icon-book-open me-1"></i>Species Guide
+            <i class="icon-book me-1"></i>Species Guide
           </button>
           <button class="btn btn-success btn-sm" (click)="router.navigate(['/eco-tracker/trees/new'])">
             <i class="icon-plus me-1"></i>Plant Tree

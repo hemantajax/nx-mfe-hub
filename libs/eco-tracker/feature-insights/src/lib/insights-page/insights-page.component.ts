@@ -26,15 +26,14 @@ import type { ChartDataset } from '@ng-mfe-hub/eco-tracker-ui';
             🏆 Achievements
           </button>
           <button class="btn btn-success btn-sm" (click)="exportData()">
-            <i class="icon-cloud-download me-1"></i>Export
+            <i class="icon-cloud-down me-1"></i>Export
           </button>
         </div>
       </div>
 
       <!-- Net Impact Banner -->
       <div class="card border-0 shadow-sm mb-4 p-4"
-           [class.bg-eco-primary]="insightsService.isNetPositive()"
-           [style.background]="!insightsService.isNetPositive() ? '#e76f51' : null"
+           [style.background]="insightsService.isNetPositive() ? 'var(--eco-primary, #40916c)' : 'var(--eco-warning-color, #e76f51)'"
            style="color:#fff">
         <div class="row align-items-center g-3">
           <div class="col-md-8">

@@ -68,7 +68,7 @@ type ViewMode = 'grid' | 'map';
             <i class="icon-plus me-1"></i>Plant Tree
           </a>
           <a routerLink="../trees/species" class="btn btn-sm btn-outline-secondary">
-            <i class="icon-leaf me-1"></i>Species Guide
+            <i class="icon-world me-1"></i>Species Guide
           </a>
         </div>
       </div>
