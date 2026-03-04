@@ -1,0 +1,20 @@
+{
+  "name": "eco-tracker-data-access",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/eco-tracker/data-access/src",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": ["scope:eco-tracker", "type:data-access"],
+  "targets": {
+    "test": {
+      "executor": "@nx/vitest:test",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "reportsDirectory": "../../../coverage/libs/eco-tracker/data-access"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

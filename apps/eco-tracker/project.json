@@ -1,0 +1,134 @@
+{
+  "name": "eco-tracker",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "app",
+  "sourceRoot": "apps/eco-tracker/src",
+  "tags": [
+    "scope:eco-tracker",
+    "type:app"
+  ],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:webpack-browser",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/apps/eco-tracker",
+        "index": "apps/eco-tracker/src/index.html",
+        "main": "apps/eco-tracker/src/main.ts",
+        "tsConfig": "apps/eco-tracker/tsconfig.app.json",
+        "assets": [
+          {
+            "glob": "**/*",
+            "input": "apps/eco-tracker/public"
+          },
+          {
+            "glob": "**/*",
+            "input": "apps/eco-tracker/src/assets",
+            "output": "assets"
+          }
+        ],
+        "inlineStyleLanguage": "scss",
+        "styles": [
+          "apps/eco-tracker/src/styles.scss"
+        ],
+        "stylePreprocessorOptions": {
+          "includePaths": [
+            "."
+          ]
+        },
+        "customWebpackConfig": {
+          "path": "apps/eco-tracker/webpack.config.ts"
+        },
+        "polyfills": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "4kb",
+              "maximumError": "8kb"
+            }
+          ],
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "apps/eco-tracker/webpack.prod.config.ts"
+          }
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "continuous": true,
+      "executor": "@nx/angular:dev-server",
+      "options": {
+        "port": 4208,
+        "publicHost": "http://localhost:4208"
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "eco-tracker:build:production"
+        },
+        "development": {
+          "buildTarget": "eco-tracker:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "dependsOn": [
+        "shell:serve"
+      ]
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "buildTarget": "eco-tracker:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "test": {
+      "executor": "@nx/vitest:test",
+      "outputs": [
+        "{options.reportsDirectory}"
+      ],
+      "options": {
+        "reportsDirectory": "../../coverage/apps/eco-tracker"
+      }
+    },
+    "serve-static": {
+      "continuous": true,
+      "executor": "@nx/web:file-server",
+      "defaultConfiguration": "production",
+      "options": {
+        "buildTarget": "eco-tracker:build",
+        "port": 4208,
+        "watch": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "eco-tracker:build:development"
+        },
+        "production": {
+          "buildTarget": "eco-tracker:build:production"
+        }
+      }
+    }
+  }
+}

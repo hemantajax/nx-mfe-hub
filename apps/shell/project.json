@@ -97,30 +97,11 @@
       "executor": "@nx/angular:module-federation-dev-server",
       "options": {
         "port": 4200,
+        "host": "127.0.0.1",
         "publicHost": "http://localhost:4200",
         "devRemotes": [
           {
-            "remoteName": "dashboard",
-            "configuration": "development"
-          },
-          {
-            "remoteName": "profile",
-            "configuration": "development"
-          },
-          {
-            "remoteName": "lab",
-            "configuration": "development"
-          },
-          {
-            "remoteName": "theme",
-            "configuration": "development"
-          },
-          {
-            "remoteName": "demos",
-            "configuration": "development"
-          },
-          {
-            "remoteName": "jobs",
+            "remoteName": "eco-tracker",
             "configuration": "development"
           }
         ]

@@ -19,6 +19,7 @@ export class App {
     { label: 'Theme',     route: '/theme',      icon: 'icon-palette',   badge: 'remote' },
     { label: 'Demos',     route: '/demos',      icon: 'icon-layers',    badge: 'remote' },
     { label: 'Jobs',      route: '/jobs',       icon: 'icon-briefcase', badge: 'remote' },
+    { label: 'EcoTracker', route: '/eco-tracker', icon: 'icon-world',    badge: 'remote' },
   ];
 
   protected readonly sidebarNavItems: NavItem[] = [
@@ -28,7 +29,8 @@ export class App {
     { label: 'Lab',       route: '/lab',         icon: 'icon-pulse',     badge: 'remote' },
     { label: 'Theme',     route: '/theme',       icon: 'icon-palette',   badge: 'remote' },
     { label: 'Demos',     route: '/demos',       icon: 'icon-layers',    badge: 'remote' },
-    { label: 'Jobs',      route: '/jobs',        icon: 'icon-briefcase', badge: 'remote' },
+    { label: 'Jobs',      route: '/jobs',         icon: 'icon-briefcase', badge: 'remote' },
+    { label: 'EcoTracker', route: '/eco-tracker', icon: 'icon-world',     badge: 'remote' },
   ];
 
   protected toggleSidebar(): void {

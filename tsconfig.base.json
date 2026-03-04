@@ -34,6 +34,9 @@
         "libs/dashboard/feature-users/src/index.ts"
       ],
       "jobs/Routes": ["apps/jobs/src/app/remote-entry/entry.routes.ts"],
+      "eco-tracker/Routes": [
+        "apps/eco-tracker/src/app/remote-entry/entry.routes.ts"
+      ],
       "@ng-mfe-hub/jobs-data-access": ["libs/jobs/data-access/src/index.ts"],
       "@ng-mfe-hub/jobs-ui": ["libs/jobs/ui/src/index.ts"],
       "@ng-mfe-hub/jobs-feature-search": [
@@ -41,7 +44,23 @@
       ],
       "@ng-mfe-hub/lab-data-access": ["libs/lab/data-access/src/index.ts"],
       "@ng-mfe-hub/lab-ui": ["libs/lab/ui/src/index.ts"],
-      "@ng-mfe-hub/lab-feature-docs": ["libs/lab/feature-docs/src/index.ts"]
+      "@ng-mfe-hub/lab-feature-docs": ["libs/lab/feature-docs/src/index.ts"],
+      "@ng-mfe-hub/eco-tracker-data-access": [
+        "libs/eco-tracker/data-access/src/index.ts"
+      ],
+      "@ng-mfe-hub/eco-tracker-ui": ["libs/eco-tracker/ui/src/index.ts"],
+      "@ng-mfe-hub/eco-tracker-feature-dashboard": [
+        "libs/eco-tracker/feature-dashboard/src/index.ts"
+      ],
+      "@ng-mfe-hub/eco-tracker-feature-trees": [
+        "libs/eco-tracker/feature-trees/src/index.ts"
+      ],
+      "@ng-mfe-hub/eco-tracker-feature-footprint": [
+        "libs/eco-tracker/feature-footprint/src/index.ts"
+      ],
+      "@ng-mfe-hub/eco-tracker-feature-insights": [
+        "libs/eco-tracker/feature-insights/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,0 +1,12 @@
+export { StatCardComponent } from './lib/stat-card/stat-card.component';
+export { CO2BadgeComponent } from './lib/co2-badge/co2-badge.component';
+export { CategoryIconComponent } from './lib/category-icon/category-icon.component';
+export { EmptyStateComponent } from './lib/empty-state/empty-state.component';
+export { GoalProgressComponent } from './lib/goal-progress/goal-progress.component';
+export { AchievementBadgeComponent } from './lib/achievement-badge/achievement-badge.component';
+export { TreeCardComponent } from './lib/tree-card/tree-card.component';
+export { ActivityCardComponent } from './lib/activity-card/activity-card.component';
+export { TimelineComponent } from './lib/timeline/timeline.component';
+export { TrendChartComponent } from './lib/trend-chart/trend-chart.component';
+export type { ChartDataset } from './lib/trend-chart/trend-chart.component';
+export { MiniMapComponent } from './lib/mini-map/mini-map.component';

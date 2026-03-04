@@ -4,5 +4,6 @@
   "lab": "http://localhost:4204/mf-manifest.json",
   "theme": "http://localhost:4205/mf-manifest.json",
   "demos": "http://localhost:4206/mf-manifest.json",
-  "jobs": "http://localhost:4207/mf-manifest.json"
+  "jobs": "http://localhost:4207/mf-manifest.json",
+  "eco-tracker": "http://localhost:4208/mf-manifest.json"
 }

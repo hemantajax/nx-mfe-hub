@@ -1,0 +1,160 @@
+@import 'libs/shared/styles/src/lib/styles/themes/flatly';
+@import 'libs/shared/styles/src/lib/styles/_global';
+@import 'node_modules/leaflet/dist/leaflet.css';
+
+// Eco-tracker custom theme overrides
+:root {
+  --eco-primary: #2d6a4f;
+  --eco-secondary: #52b788;
+  --eco-accent: #95d5b2;
+  --eco-warning-color: #e76f51;
+  --eco-bg: #f8fdf6;
+  --eco-surface: #ffffff;
+  --eco-text: #1b4332;
+  --eco-border: #b7e4c7;
+  --eco-success: #40916c;
+  --eco-muted: #74c69d;
+}
+
+body {
+  background-color: var(--eco-bg);
+  color: var(--eco-text);
+}
+
+// Utility classes for eco-tracker
+.eco-card {
+  border-color: var(--eco-border) !important;
+  background-color: var(--eco-surface);
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(45, 106, 79, 0.12);
+    transition: box-shadow 0.2s ease;
+  }
+}
+
+.badge-offset {
+  background-color: var(--eco-success);
+  color: #fff;
+}
+
+.badge-emission {
+  background-color: var(--eco-warning-color);
+  color: #fff;
+}
+
+.text-eco {
+  color: var(--eco-primary) !important;
+}
+
+.bg-eco-light {
+  background-color: var(--eco-bg) !important;
+}
+
+.bg-eco-primary {
+  background-color: var(--eco-primary) !important;
+  color: #fff !important;
+}
+
+// Timeline component styles
+.eco-timeline {
+  position: relative;
+  padding-left: 2rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0.5rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--eco-border);
+  }
+}
+
+.eco-timeline-item {
+  position: relative;
+  padding-bottom: 1.5rem;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -1.625rem;
+    top: 0.25rem;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background-color: var(--eco-secondary);
+    border: 2px solid var(--eco-primary);
+  }
+}
+
+// Leaflet map container
+.eco-map {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid var(--eco-border);
+}
+
+// Stat card
+.eco-stat-card {
+  border-left: 4px solid var(--eco-secondary);
+  transition: transform 0.15s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+// Chart container
+.eco-chart-container {
+  position: relative;
+  min-height: 200px;
+}
+
+// Skeleton loader
+.eco-skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--eco-border) 25%,
+    var(--eco-bg) 50%,
+    var(--eco-border) 75%
+  );
+  background-size: 200% 100%;
+  animation: eco-shimmer 1.5s infinite;
+  border-radius: 0.375rem;
+}
+
+@keyframes eco-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+// FAB button
+.eco-fab {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background-color: var(--eco-primary);
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 12px rgba(45, 106, 79, 0.4);
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.15s;
+  z-index: 1000;
+
+  &:hover {
+    background-color: var(--eco-success);
+    transform: scale(1.05);
+  }
+}

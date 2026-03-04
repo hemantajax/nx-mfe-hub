@@ -46,6 +46,13 @@ export const appRoutes: Route[] = [
       ),
   },
   {
+    path: 'eco-tracker',
+    loadChildren: () =>
+      loadRemote<typeof import('eco-tracker/Routes')>('eco-tracker/Routes').then(
+        (m) => m!.remoteRoutes,
+      ),
+  },
+  {
     path: '',
     component: HomeComponent,
   },

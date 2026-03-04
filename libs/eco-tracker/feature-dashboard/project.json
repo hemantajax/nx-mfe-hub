@@ -1,0 +1,20 @@
+{
+  "name": "eco-tracker-feature-dashboard",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/eco-tracker/feature-dashboard/src",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": ["scope:eco-tracker", "type:feature"],
+  "targets": {
+    "test": {
+      "executor": "@nx/vitest:test",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "reportsDirectory": "../../../coverage/libs/eco-tracker/feature-dashboard"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

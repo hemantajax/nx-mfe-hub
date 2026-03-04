@@ -46,6 +46,14 @@ export default [
               sourceTag: 'scope:demos',
               onlyDependOnLibsWithTags: ['scope:shared', 'scope:demos'],
             },
+            {
+              sourceTag: 'scope:jobs',
+              onlyDependOnLibsWithTags: ['scope:shared', 'scope:jobs'],
+            },
+            {
+              sourceTag: 'scope:eco-tracker',
+              onlyDependOnLibsWithTags: ['scope:shared', 'scope:eco-tracker'],
+            },
             // Feature libs cannot depend on other feature libs
             {
               sourceTag: 'type:feature',

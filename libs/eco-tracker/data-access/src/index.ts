@@ -1,0 +1,11 @@
+export * from './lib/models';
+export * from './lib/co2-calc';
+export * from './lib/species-data';
+export * from './lib/emission-factors-data';
+export * from './lib/achievements-data';
+export { StorageService, STORES } from './lib/storage.service';
+export { GeoService } from './lib/geo.service';
+export { TreeService } from './lib/tree.service';
+export { FootprintService } from './lib/footprint.service';
+export { InsightsService } from './lib/insights.service';
+export type { EcoTip } from './lib/insights.service';
