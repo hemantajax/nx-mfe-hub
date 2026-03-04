@@ -85,6 +85,30 @@
         { "slug": "11-testing", "title": "Testing Strategy", "file": "11-testing.md" },
         { "slug": "12-interview-qa", "title": "Interview Q&A", "file": "12-interview-qa.md" }
       ]
+    },
+    {
+      "slug": "js-ts-deep-dive",
+      "title": "JavaScript & TypeScript Deep Dive",
+      "icon": "icon-bolt",
+      "description": "Prototypes, OOP, closures, async, modern ES2024+ and TypeScript — senior interview vault",
+      "chapters": [
+        { "slug": "01-execution-context", "title": "Execution Context & Call Stack", "file": "01-execution-context.md" },
+        { "slug": "02-scope-closures", "title": "Scope & Closures", "file": "02-scope-closures.md" },
+        { "slug": "03-this-keyword", "title": "The this Keyword", "file": "03-this-keyword.md" },
+        { "slug": "04-prototypes-deep-dive", "title": "Prototypes Deep Dive", "file": "04-prototypes-deep-dive.md" },
+        { "slug": "05-oop-javascript", "title": "OOP in JavaScript", "file": "05-oop-javascript.md" },
+        { "slug": "06-oop-design-patterns", "title": "OOP Design Patterns", "file": "06-oop-design-patterns.md" },
+        { "slug": "07-async-javascript", "title": "Async JavaScript", "file": "07-async-javascript.md" },
+        { "slug": "08-functional-patterns", "title": "Functional Patterns", "file": "08-functional-patterns.md" },
+        { "slug": "09-modern-es2024", "title": "Modern JavaScript (ES2020–2024+)", "file": "09-modern-es2024.md" },
+        { "slug": "10-memory-performance", "title": "Memory & Performance", "file": "10-memory-performance.md" },
+        { "slug": "11-modules-bundling", "title": "Modules & Bundling", "file": "11-modules-bundling.md" },
+        { "slug": "12-typescript-foundations", "title": "TypeScript Foundations", "file": "12-typescript-foundations.md" },
+        { "slug": "13-typescript-advanced", "title": "TypeScript Advanced", "file": "13-typescript-advanced.md" },
+        { "slug": "14-typescript-patterns", "title": "TypeScript Patterns in Practice", "file": "14-typescript-patterns.md" },
+        { "slug": "15-error-handling-debugging", "title": "Error Handling & Debugging", "file": "15-error-handling-debugging.md" },
+        { "slug": "16-interview-qa", "title": "Interview Q&A", "file": "16-interview-qa.md" }
+      ]
     }
   ]
 }
