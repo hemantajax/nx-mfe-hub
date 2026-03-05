@@ -46,14 +46,15 @@ import { ToastService, ConfirmDialogService } from '@ng-mfe-hub/ui';
           <div class="mb-3">
             <label class="form-label fw-semibold">
               Shared Board ID
-              <span class="text-muted fw-normal small">(Gist ID — leave blank for first publish)</span>
+              <span class="text-muted fw-normal small">(auto-discovered)</span>
             </label>
-            <input class="form-control font-monospace"
-                   placeholder="Paste Gist ID to join an existing board"
-                   [ngModel]="gistId()"
-                   (ngModelChange)="gistId.set($event)" />
-            <div class="form-text">
-              Share this ID with others so they publish to the same board.
+            <div class="input-group">
+              <input class="form-control font-monospace" readonly
+                     [value]="gistId() || '—'" />
+              <button class="btn btn-outline-secondary" type="button"
+                      [disabled]="!gistId()" (click)="copyGistId()">
+                <i class="icon-layers me-1"></i>Copy
+              </button>
             </div>
           </div>
 
@@ -152,7 +153,6 @@ export class CommunitySettingsComponent {
   protected save(): void {
     this.gistService.setUsername(this.username());
     if (this.token()) this.gistService.setToken(this.token());
-    if (this.gistId()) this.gistService.setGistId(this.gistId());
     if (this.userId()) this.gistService.setUserId(this.userId());
     this.toastService.success('Settings saved');
     this.router.navigate(['/eco-tracker/community']);
@@ -161,6 +161,11 @@ export class CommunitySettingsComponent {
   protected copyUserId(): void {
     navigator.clipboard.writeText(this.gistService.getUserId());
     this.toastService.info('User ID copied');
+  }
+
+  protected copyGistId(): void {
+    navigator.clipboard.writeText(this.gistService.getGistId());
+    this.toastService.info('Board ID copied');
   }
 
   protected async loadGists(): Promise<void> {

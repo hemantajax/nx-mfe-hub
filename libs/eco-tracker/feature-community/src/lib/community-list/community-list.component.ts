@@ -42,18 +42,6 @@ import { ToastService, ConfirmDialogService } from '@ng-mfe-hub/ui';
         </div>
       </div>
 
-      <!-- Gist ID Info -->
-      @if (gistService.getGistId()) {
-        <div class="alert alert-light border d-flex align-items-center gap-2 py-2 small">
-          <i class="icon-link text-muted"></i>
-          <span class="text-muted">Board ID:</span>
-          <code class="flex-grow-1 text-truncate">{{ gistService.getGistId() }}</code>
-          <button class="btn btn-sm btn-outline-secondary py-0 px-2" (click)="copyGistId()">
-            <i class="icon-layers"></i>
-          </button>
-        </div>
-      }
-
       <!-- Loading -->
       @if (communityService.loading()) {
         <div class="text-center py-5">
@@ -210,8 +198,4 @@ export class CommunityListComponent {
     }
   }
 
-  protected copyGistId(): void {
-    navigator.clipboard.writeText(this.gistService.getGistId());
-    this.toastService.info('Board ID copied — share with others!');
-  }
 }
