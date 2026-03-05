@@ -4,7 +4,7 @@ const LS_TOKEN    = 'eco-tracker-gh-token';
 const LS_USERNAME = 'eco-tracker-gh-username';
 const LS_USER_ID  = 'eco-tracker-user-id';
 const LS_GIST_ID  = 'eco-tracker-shared-gist-id';
-const DEFAULT_GIST_ID = '200fd9e7138492254538a80ef2355354';
+const DEFAULT_GIST_ID = '98b6be1b5f12647bbf2a923dc2888c56';
 const GIST_FILE   = 'eco-tracker-community.json';
 const API         = 'https://api.github.com/gists';
 
