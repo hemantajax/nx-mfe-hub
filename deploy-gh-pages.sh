@@ -26,6 +26,7 @@ cp -r dist/apps/shell/. "$DIST/"
 for remote in dashboard profile lab theme demos jobs eco-tracker; do
   mkdir -p "$DIST/$remote"
   cp -r dist/apps/"$remote"/. "$DIST/$remote/"
+  cp "$DIST/index.html" "$DIST/$remote/index.html"
 done
 
 # Inject production remote URLs (replaces localhost manifest from dev)

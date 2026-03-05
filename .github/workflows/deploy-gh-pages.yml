@@ -45,6 +45,7 @@ jobs:
           for remote in dashboard profile lab theme demos jobs eco-tracker; do
             mkdir -p "$DIST/$remote"
             cp -r dist/apps/"$remote"/. "$DIST/$remote/"
+            cp "$DIST/index.html" "$DIST/$remote/index.html"
           done
 
           cat > "$DIST/module-federation.manifest.json" <<EOF
