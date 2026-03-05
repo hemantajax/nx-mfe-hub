@@ -44,7 +44,7 @@ export class TreeCardComponent {
   readonly cardClick = output<string>();
 
   protected readonly ageLabel = computed(() => {
-    const age = calcTreeAgeYears(this.tree().datePlanted);
+    const age = calcTreeAgeYears(this.tree().datePlanted, this.tree().ageAtPlantingMonths);
     if (age < 0.1) return 'Just planted';
     if (age < 1) return `${Math.round(age * 12)}mo old`;
     return `${Math.floor(age)}yr old`;

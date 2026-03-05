@@ -59,9 +59,9 @@ export class FootprintService {
     this._loading.set(false);
   }
 
-  async logActivity(data: Omit<Activity, 'id' | 'co2e' | 'createdAt'>): Promise<Activity> {
+  async logActivity(data: Omit<Activity, 'id' | 'co2e' | 'createdAt'>, co2eOverride?: number): Promise<Activity> {
     const factor = this.getFactorByType(data.type);
-    const co2e = factor ? calcActivityCo2e(data.value, factor) : 0;
+    const co2e = co2eOverride ?? (factor ? calcActivityCo2e(data.value, factor) : 0);
     const activity: Activity = {
       ...data,
       id: crypto.randomUUID(),

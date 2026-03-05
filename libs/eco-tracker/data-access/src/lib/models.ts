@@ -7,6 +7,7 @@ export interface Tree {
   readonly id: string;
   readonly speciesId: string;
   readonly datePlanted: string;
+  readonly ageAtPlantingMonths?: number;
   readonly location: string;
   readonly coords?: GeoCoords;
   readonly notes?: string;

@@ -1,9 +1,10 @@
-import { ChangeDetectionStrategy, Component, inject, computed } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, computed, signal } from '@angular/core';
 import { Router } from '@angular/router';
 import {
   InsightsService, FootprintService, TreeService,
   formatCo2, getMonthLabel
 } from '@ng-mfe-hub/eco-tracker-data-access';
+import { ToastService } from '@ng-mfe-hub/ui';
 import { TrendChartComponent } from '@ng-mfe-hub/eco-tracker-ui';
 import type { ChartDataset } from '@ng-mfe-hub/eco-tracker-ui';
 
@@ -28,6 +29,15 @@ import type { ChartDataset } from '@ng-mfe-hub/eco-tracker-ui';
           <button class="btn btn-success btn-sm" (click)="exportData()">
             <i class="icon-cloud-down me-1"></i>Export
           </button>
+          <button class="btn btn-outline-success btn-sm" (click)="fileInput.click()" [disabled]="importing()">
+            @if (importing()) {
+              <span class="spinner-border spinner-border-sm me-1"></span>
+            } @else {
+              <i class="icon-cloud-up me-1"></i>
+            }
+            Import
+          </button>
+          <input #fileInput type="file" accept=".json" class="d-none" (change)="onFileSelected($event)" />
         </div>
       </div>
 
@@ -148,6 +158,9 @@ export class InsightsPageComponent {
     }));
   });
 
+  private readonly toastService = inject(ToastService);
+  protected readonly importing = signal(false);
+
   protected exportData(): void {
     const json = this.insightsService.exportData();
     const blob = new Blob([json], { type: 'application/json' });
@@ -157,5 +170,26 @@ export class InsightsPageComponent {
     a.download = `eco-tracker-export-${new Date().toISOString().slice(0, 10)}.json`;
     a.click();
     URL.revokeObjectURL(url);
+    this.toastService.success('Data exported successfully.');
+  }
+
+  protected async onFileSelected(event: Event): Promise<void> {
+    const input = event.target as HTMLInputElement;
+    const file = input.files?.[0];
+    if (!file) return;
+
+    this.importing.set(true);
+    try {
+      const text = await file.text();
+      const result = await this.insightsService.importData(text);
+      this.toastService.success(
+        `Imported ${result.trees} trees, ${result.activities} activities, ${result.goals} goals.`,
+      );
+    } catch {
+      this.toastService.error('Import failed — invalid or corrupted file.');
+    } finally {
+      this.importing.set(false);
+      input.value = '';
+    }
   }
 }

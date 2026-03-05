@@ -1,5 +1,5 @@
 import {
-  ChangeDetectionStrategy, Component, inject, signal, computed, OnInit
+  ChangeDetectionStrategy, Component, inject, signal, computed, OnInit,
 } from '@angular/core';
 import { TitleCasePipe } from '@angular/common';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -55,6 +55,19 @@ import { MiniMapComponent } from '@ng-mfe-hub/eco-tracker-ui';
               <label class="form-label fw-semibold">Date Planted <span class="text-danger">*</span></label>
               <input type="date" class="form-control" [(ngModel)]="datePlanted" name="datePlanted"
                      required [max]="today" />
+            </div>
+
+            <!-- Age at Planting -->
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Age at Planting</label>
+              <div class="input-group" style="max-width:280px">
+                <input type="number" class="form-control" [(ngModel)]="ageAtPlantingMonths"
+                       name="ageAtPlantingMonths" min="0" max="1200" placeholder="0" />
+                <span class="input-group-text">months</span>
+              </div>
+              <div class="form-text">
+                Leave at 0 for seedlings. Set the tree's age if planting a grafted or nursery-grown sapling.
+              </div>
             </div>
 
             <!-- Notes -->
@@ -153,6 +166,7 @@ export class TreeFormComponent implements OnInit {
 
   protected speciesId = '';
   protected datePlanted = new Date().toISOString().slice(0, 10);
+  protected ageAtPlantingMonths = 0;
   protected location = '';
   protected notes = '';
   protected coords = signal<GeoCoords | null>(null);
@@ -180,9 +194,9 @@ export class TreeFormComponent implements OnInit {
     return [{ id: 'new', coords: c, label: this.location || 'New tree' }];
   });
 
-  protected readonly isValid = computed(
-    () => !!this.speciesId && !!this.datePlanted && !!this.location,
-  );
+  protected isValid(): boolean {
+    return !!this.speciesId && !!this.datePlanted && !!this.location;
+  }
 
   async detectLocation(): Promise<void> {
     this.geoService.getCurrentPosition();
@@ -221,6 +235,7 @@ export class TreeFormComponent implements OnInit {
     const tree = await this.treeService.addTree({
       speciesId: this.speciesId,
       datePlanted: this.datePlanted,
+      ageAtPlantingMonths: this.ageAtPlantingMonths || undefined,
       location: this.location,
       coords: this.coords() ?? undefined,
       notes: this.notes || undefined,

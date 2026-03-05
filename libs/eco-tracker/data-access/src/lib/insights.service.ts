@@ -1,5 +1,5 @@
 import { Injectable, inject, signal, computed, effect, untracked } from '@angular/core';
-import type { Goal, Achievement, ActivityCategory } from './models';
+import type { Goal, Achievement, ActivityCategory, Tree, TreeEvent, Activity } from './models';
 import { StorageService, STORES } from './storage.service';
 import { ACHIEVEMENTS } from './achievements-data';
 import { TreeService } from './tree.service';
@@ -186,5 +186,39 @@ export class InsightsService {
       goals: this._goals(),
       exportedAt: new Date().toISOString(),
     }, null, 2);
+  }
+
+  async importData(json: string): Promise<{ trees: number; activities: number; goals: number }> {
+    const data = JSON.parse(json);
+    let trees = 0, activities = 0, goals = 0;
+
+    if (Array.isArray(data.trees)) {
+      for (const item of data.trees as Tree[]) {
+        if (item.id) { await this.storage.save(STORES.TREES, item); trees++; }
+      }
+    }
+    if (Array.isArray(data.treeEvents)) {
+      for (const item of data.treeEvents as TreeEvent[]) {
+        if (item.id) await this.storage.save(STORES.TREE_EVENTS, item);
+      }
+    }
+    if (Array.isArray(data.activities)) {
+      for (const item of data.activities as Activity[]) {
+        if (item.id) { await this.storage.save(STORES.ACTIVITIES, item); activities++; }
+      }
+    }
+    if (Array.isArray(data.goals)) {
+      for (const item of data.goals as Goal[]) {
+        if (item.id) { await this.storage.save(STORES.GOALS, item); goals++; }
+      }
+    }
+
+    await Promise.all([
+      this.treeService.reload(),
+      this.footprintService.reload(),
+      this._loadAll(),
+    ]);
+
+    return { trees, activities, goals };
   }
 }

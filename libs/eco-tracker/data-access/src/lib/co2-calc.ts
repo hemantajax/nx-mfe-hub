@@ -1,21 +1,30 @@
 import type { Tree, TreeSpecies, Activity, EmissionFactor } from './models';
 
-export function calcTreeAgeYears(datePlanted: string): number {
+export function calcTreeAgeYears(datePlanted: string, ageAtPlantingMonths = 0): number {
   const planted = new Date(datePlanted).getTime();
-  const now = Date.now();
-  return Math.max(0, (now - planted) / (1000 * 60 * 60 * 24 * 365.25));
+  const timeSincePlanted = Math.max(0, (Date.now() - planted) / (1000 * 60 * 60 * 24 * 365.25));
+  return timeSincePlanted + ageAtPlantingMonths / 12;
+}
+
+function cumulativeCo2(ageYears: number, species: TreeSpecies): number {
+  const youngPhase = Math.min(ageYears, 5);
+  const maturePhase = Math.max(0, ageYears - 5);
+  return youngPhase * species.co2PerYear * species.co2YoungMultiplier
+       + maturePhase * species.co2PerYear;
 }
 
 export function calcTreeCo2Offset(tree: Tree, species: TreeSpecies): number {
-  const ageYears = calcTreeAgeYears(tree.datePlanted);
-  if (ageYears <= 0) return 0;
+  const timeSincePlanted = Math.max(
+    0,
+    (Date.now() - new Date(tree.datePlanted).getTime()) / (1000 * 60 * 60 * 24 * 365.25),
+  );
+  if (timeSincePlanted <= 0) return 0;
 
-  const youngPhase = Math.min(ageYears, 5);
-  const maturePhase = Math.max(0, ageYears - 5);
+  const priorAge = (tree.ageAtPlantingMonths ?? 0) / 12;
+  const totalAge = timeSincePlanted + priorAge;
 
-  const youngOffset = youngPhase * species.co2PerYear * species.co2YoungMultiplier;
-  const matureOffset = maturePhase * species.co2PerYear;
-  return Math.round((youngOffset + matureOffset) * 10) / 10;
+  const offset = cumulativeCo2(totalAge, species) - cumulativeCo2(priorAge, species);
+  return Math.round(offset * 10) / 10;
 }
 
 export function calcActivityCo2e(value: number, factor: EmissionFactor): number {

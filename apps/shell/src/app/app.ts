@@ -1,9 +1,9 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { HeaderComponent, SidebarComponent, NavItem } from '@ng-mfe-hub/ui';
+import { HeaderComponent, SidebarComponent, NavItem, ToastContainerComponent } from '@ng-mfe-hub/ui';
 
 @Component({
-  imports: [RouterModule, HeaderComponent, SidebarComponent],
+  imports: [RouterModule, HeaderComponent, SidebarComponent, ToastContainerComponent],
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.scss',

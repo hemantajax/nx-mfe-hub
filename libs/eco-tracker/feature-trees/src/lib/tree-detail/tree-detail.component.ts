@@ -1,9 +1,7 @@
 import {
-  ChangeDetectionStrategy, Component, inject, computed, signal, effect
+  ChangeDetectionStrategy, Component, inject, computed, signal
 } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { toSignal } from '@angular/core/rxjs-interop';
-import { map } from 'rxjs';
 import { FormsModule } from '@angular/forms';
 import {
   TreeService, formatCo2, calcTreeAgeYears
@@ -105,6 +103,10 @@ import {
                     <dd class="col-7 font-monospace">
                       {{ tree()!.coords!.lat.toFixed(5) }}, {{ tree()!.coords!.lng.toFixed(5) }}
                     </dd>
+                  }
+                  @if (tree()!.ageAtPlantingMonths) {
+                    <dt class="col-5 text-muted">Age at Planting</dt>
+                    <dd class="col-7">{{ tree()!.ageAtPlantingMonths }} months</dd>
                   }
                   @if (tree()!.notes) {
                     <dt class="col-5 text-muted">Notes</dt>
@@ -211,17 +213,13 @@ import {
   `,
 })
 export class TreeDetailComponent {
-  private readonly route = inject(ActivatedRoute);
   protected readonly treeService = inject(TreeService);
   protected readonly router = inject(Router);
 
   protected readonly formatCo2Fn = formatCo2;
   protected readonly today = new Date().toISOString().slice(0, 10);
 
-  private readonly treeId = toSignal(
-    this.route.paramMap.pipe(map((p) => p.get('id') ?? '')),
-    { initialValue: '' },
-  );
+  private readonly treeId = signal(inject(ActivatedRoute).snapshot.paramMap.get('id') ?? '');
 
   protected readonly tree = computed(() =>
     this.treeService.getTreeById(this.treeId()),
@@ -248,7 +246,7 @@ export class TreeDetailComponent {
   protected readonly ageLabel = computed(() => {
     const t = this.tree();
     if (!t) return '';
-    const age = calcTreeAgeYears(t.datePlanted);
+    const age = calcTreeAgeYears(t.datePlanted, t.ageAtPlantingMonths);
     if (age < 0.1) return 'Just planted';
     if (age < 1) return `${Math.round(age * 12)} months`;
     return `${Math.floor(age)} year${Math.floor(age) !== 1 ? 's' : ''}`;
