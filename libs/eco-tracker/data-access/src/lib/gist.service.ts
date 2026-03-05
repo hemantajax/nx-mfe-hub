@@ -134,19 +134,16 @@ export class GistService {
     if (!res.ok) throw new Error(`Failed to delete user (${res.status})`);
   }
 
-  /** Fetch every user record from the shared gist. */
+  /** Fetch every user record from the shared gist (public — no token needed). */
   async fetchAllRecords(gistIdOrUrl?: string): Promise<SharedGistData> {
     const id = gistIdOrUrl
       ? this.extractGistId(gistIdOrUrl)
       : this.getGistId();
     if (!id) throw new Error('Shared Gist ID not configured');
 
-    const headers: Record<string, string> = {
-      Authorization: `Bearer ${this.getToken()}`,
-      Accept: 'application/vnd.github+json',
-    };
-
-    const res = await fetch(`${API}/${id}`, { headers });
+    const res = await fetch(`${API}/${id}`, {
+      headers: { Accept: 'application/vnd.github+json' },
+    });
     if (!res.ok) throw new Error(`Failed to fetch gist (${res.status})`);
 
     const data = await res.json();
