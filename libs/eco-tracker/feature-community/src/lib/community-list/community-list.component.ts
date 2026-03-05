@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { DatePipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -109,11 +109,13 @@ import { ToastService, ConfirmDialogService } from '@ng-mfe-hub/ui';
                               (click)="router.navigate(['/eco-tracker/community', user.uid])">
                         <i class="icon-eye"></i>
                       </button>
-                      <button class="btn btn-sm btn-link text-muted p-1"
-                              title="Remove"
-                              (click)="deleteUser(user.uid, user.username)">
-                        <i class="icon-trash"></i>
-                      </button>
+                      @if (isAdmin() || user.uid === gistService.getUserId()) {
+                        <button class="btn btn-sm btn-link text-muted p-1"
+                                title="Remove"
+                                (click)="deleteUser(user.uid, user.username)">
+                          <i class="icon-trash"></i>
+                        </button>
+                      }
                     </td>
                   </tr>
                 }
@@ -150,6 +152,9 @@ export class CommunityListComponent {
   protected readonly fmt = formatCo2;
 
   protected readonly publishing = signal(false);
+  protected readonly isAdmin = computed(() =>
+    this.communityService.users().find(u => u.isAdmin)?.uid === this.gistService.getUserId(),
+  );
 
   constructor() {
     void this.communityService.loadUsers();
