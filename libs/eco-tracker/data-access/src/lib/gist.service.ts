@@ -1,8 +1,5 @@
 import { Injectable } from '@angular/core';
 
-declare const process: { env: { GH_GIST_TOKEN: string } };
-
-const BUILD_TOKEN = (typeof process !== 'undefined' && process.env?.GH_GIST_TOKEN) || '';
 const LS_TOKEN    = 'eco-tracker-gh-token';
 const LS_USERNAME = 'eco-tracker-gh-username';
 const LS_USER_ID  = 'eco-tracker-user-id';
@@ -45,7 +42,7 @@ export class GistService {
   }
 
   getToken(): string {
-    return localStorage.getItem(LS_TOKEN) || BUILD_TOKEN;
+    return localStorage.getItem(LS_TOKEN) ?? '';
   }
 
   setToken(pat: string): void {

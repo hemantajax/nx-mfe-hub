@@ -8,9 +8,6 @@ on:
 permissions:
   contents: write
 
-env:
-  GH_GIST_TOKEN: ${{ secrets.GH_GIST_TOKEN }}
-
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
