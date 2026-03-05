@@ -4,7 +4,6 @@ const LS_TOKEN    = 'eco-tracker-gh-token';
 const LS_USERNAME = 'eco-tracker-gh-username';
 const LS_USER_ID  = 'eco-tracker-user-id';
 const LS_GIST_ID  = 'eco-tracker-shared-gist-id';
-const DEFAULT_GIST_ID = '98b6be1b5f12647bbf2a923dc2888c56';
 const GIST_FILE   = 'eco-tracker-community.json';
 const API         = 'https://api.github.com/gists';
 
@@ -74,11 +73,33 @@ export class GistService {
   }
 
   getGistId(): string {
-    return localStorage.getItem(LS_GIST_ID) || DEFAULT_GIST_ID;
+    return localStorage.getItem(LS_GIST_ID) ?? '';
   }
 
   setGistId(id: string): void {
     localStorage.setItem(LS_GIST_ID, id.trim());
+  }
+
+  /** Search the token owner's gists for the community board file. Caches the result. */
+  async discoverGistId(): Promise<string> {
+    const cached = this.getGistId();
+    if (cached) return cached;
+
+    const token = this.getToken();
+    if (!token) return '';
+
+    const res = await fetch(`${API}?per_page=100`, {
+      headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json' },
+    });
+    if (!res.ok) return '';
+
+    const gists: { id: string; files: Record<string, unknown> }[] = await res.json();
+    const match = gists.find(g => GIST_FILE in (g.files ?? {}));
+    if (match) {
+      this.setGistId(match.id);
+      return match.id;
+    }
+    return '';
   }
 
   /**
@@ -96,7 +117,7 @@ export class GistService {
       'Content-Type': 'application/json',
     };
 
-    const existingId = this.getGistId();
+    const existingId = await this.discoverGistId();
     let existing: SharedGistData = {};
 
     if (existingId) {
@@ -134,13 +155,14 @@ export class GistService {
     const existing = await this.fetchAllRecords();
     delete existing[uid];
 
+    const gistId = await this.discoverGistId();
     const headers: Record<string, string> = {
       Authorization: `Bearer ${this.getToken()}`,
       Accept: 'application/vnd.github+json',
       'Content-Type': 'application/json',
     };
 
-    const res = await fetch(`${API}/${this.getGistId()}`, {
+    const res = await fetch(`${API}/${gistId}`, {
       method: 'PATCH',
       headers,
       body: JSON.stringify({
@@ -154,7 +176,7 @@ export class GistService {
   async fetchAllRecords(gistIdOrUrl?: string): Promise<SharedGistData> {
     const id = gistIdOrUrl
       ? this.extractGistId(gistIdOrUrl)
-      : this.getGistId();
+      : (this.getGistId() || await this.discoverGistId());
     if (!id) throw new Error('Shared Gist ID not configured');
 
     const res = await fetch(`${API}/${id}`, {
