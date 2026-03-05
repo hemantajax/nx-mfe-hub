@@ -20,7 +20,8 @@
     "affected:test": "nx affected -t test",
     "affected:lint": "nx affected -t lint",
     "graph": "nx graph",
-    "format": "nx format:write"
+    "format": "nx format:write",
+    "build:eco-standalone": "npx nx build eco-tracker --configuration=ghpages"
   },
   "private": true,
   "devDependencies": {

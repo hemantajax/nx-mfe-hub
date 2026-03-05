@@ -29,6 +29,14 @@ for remote in dashboard profile lab theme demos jobs eco-tracker; do
   cp "$DIST/index.html" "$DIST/$remote/index.html"
 done
 
+# Standalone builds for selected remotes (keep host + pure-remote URLs)
+mkdir -p "$DIST/standalone/eco-tracker"
+cp -r dist/apps/eco-tracker/. "$DIST/standalone/eco-tracker/"
+
+# Fix base href for standalone eco-tracker so assets resolve correctly
+sed -i '' 's|/nx-mfe-hub/eco-tracker/|/nx-mfe-hub/standalone/eco-tracker/|g' \
+  "$DIST/standalone/eco-tracker/index.html"
+
 # Inject production remote URLs (replaces localhost manifest from dev)
 cat > "$DIST/module-federation.manifest.json" <<EOF
 {
