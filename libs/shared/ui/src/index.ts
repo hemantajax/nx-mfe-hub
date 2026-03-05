@@ -6,3 +6,6 @@ export * from './lib/nav-item.model';
 export { ToastService } from './lib/toast/toast.service';
 export type { Toast, ToastType } from './lib/toast/toast.service';
 export { ToastContainerComponent } from './lib/toast/toast-container.component';
+export { ConfirmDialogService } from './lib/confirm-dialog/confirm-dialog.service';
+export type { ConfirmDialogOptions } from './lib/confirm-dialog/confirm-dialog.service';
+export { ConfirmDialogComponent } from './lib/confirm-dialog/confirm-dialog.component';

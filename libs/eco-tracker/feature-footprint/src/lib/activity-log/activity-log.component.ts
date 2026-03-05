@@ -3,6 +3,7 @@ import {
 } from '@angular/core';
 import { Router } from '@angular/router';
 import { FootprintService, formatCo2 } from '@ng-mfe-hub/eco-tracker-data-access';
+import { ConfirmDialogService } from '@ng-mfe-hub/ui';
 import type { ActivityCategory } from '@ng-mfe-hub/eco-tracker-data-access';
 import { ActivityCardComponent, EmptyStateComponent } from '@ng-mfe-hub/eco-tracker-ui';
 
@@ -97,9 +98,14 @@ export class ActivityLogComponent {
     return { transport: '🚗 Transport', food: '🍽️ Food', energy: '⚡ Energy', shopping: '🛍️ Shopping' }[cat];
   }
 
+  private readonly confirmDialog = inject(ConfirmDialogService);
+
   async deleteActivity(id: string): Promise<void> {
-    if (confirm('Delete this activity?')) {
-      await this.footprintService.deleteActivity(id);
-    }
+    const confirmed = await this.confirmDialog.open({
+      title: 'Delete Activity',
+      message: 'Delete this activity? This cannot be undone.',
+      confirmText: 'Delete',
+    });
+    if (confirmed) await this.footprintService.deleteActivity(id);
   }
 }

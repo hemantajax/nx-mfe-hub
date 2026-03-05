@@ -4,6 +4,7 @@ import { StorageService, STORES } from './storage.service';
 import { ACHIEVEMENTS } from './achievements-data';
 import { TreeService } from './tree.service';
 import { FootprintService } from './footprint.service';
+import { GistService } from './gist.service';
 import { calcNetImpact, getMonthKey, getLast6Months, getMonthLabel } from './co2-calc';
 
 export interface EcoTip {
@@ -30,6 +31,7 @@ export class InsightsService {
   private readonly storage = inject(StorageService);
   private readonly treeService = inject(TreeService);
   private readonly footprintService = inject(FootprintService);
+  private readonly gistService = inject(GistService);
 
   private readonly _goals = signal<Goal[]>([]);
   private readonly _achievements = signal<Achievement[]>([...ACHIEVEMENTS]);
@@ -180,6 +182,14 @@ export class InsightsService {
 
   exportData(): string {
     return JSON.stringify({
+      username: this.gistService.getUsername() || 'Anonymous',
+      summary: {
+        treeCount: this.treeService.treeCount(),
+        totalOffset: Math.round(this.treeService.totalOffset() * 10) / 10,
+        totalEmissions: Math.round(this.footprintService.totalEmissions() * 10) / 10,
+        netImpact: Math.round(this.netImpact() * 10) / 10,
+        isNetPositive: this.isNetPositive(),
+      },
       trees: this.treeService.trees(),
       treeEvents: this.treeService.events(),
       activities: this.footprintService.activities(),

@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, inject, computed, signal } from '@a
 import { Router } from '@angular/router';
 import {
   InsightsService, FootprintService, TreeService,
-  formatCo2, getMonthLabel
+  GistService, CommunityService, formatCo2, getMonthLabel
 } from '@ng-mfe-hub/eco-tracker-data-access';
 import { ToastService } from '@ng-mfe-hub/ui';
 import { TrendChartComponent } from '@ng-mfe-hub/eco-tracker-ui';
@@ -26,6 +26,9 @@ import type { ChartDataset } from '@ng-mfe-hub/eco-tracker-ui';
           <button class="btn btn-outline-secondary btn-sm" (click)="router.navigate(['/eco-tracker/insights/achievements'])">
             🏆 Achievements
           </button>
+          <button class="btn btn-outline-primary btn-sm" (click)="router.navigate(['/eco-tracker/community'])">
+            <i class="icon-world me-1"></i>Community
+          </button>
           <button class="btn btn-success btn-sm" (click)="exportData()">
             <i class="icon-cloud-down me-1"></i>Export
           </button>
@@ -36,6 +39,14 @@ import type { ChartDataset } from '@ng-mfe-hub/eco-tracker-ui';
               <i class="icon-cloud-up me-1"></i>
             }
             Import
+          </button>
+          <button class="btn btn-outline-success btn-sm" [disabled]="publishing()" (click)="publishToGist()">
+            @if (publishing()) {
+              <span class="spinner-border spinner-border-sm me-1"></span>
+            } @else {
+              <i class="icon-share me-1"></i>
+            }
+            Publish
           </button>
           <input #fileInput type="file" accept=".json" class="d-none" (change)="onFileSelected($event)" />
         </div>
@@ -159,7 +170,10 @@ export class InsightsPageComponent {
   });
 
   private readonly toastService = inject(ToastService);
+  private readonly gistService = inject(GistService);
+  private readonly communityService = inject(CommunityService);
   protected readonly importing = signal(false);
+  protected readonly publishing = signal(false);
 
   protected exportData(): void {
     const json = this.insightsService.exportData();
@@ -190,6 +204,23 @@ export class InsightsPageComponent {
     } finally {
       this.importing.set(false);
       input.value = '';
+    }
+  }
+
+  protected async publishToGist(): Promise<void> {
+    if (!this.gistService.getUsername()) {
+      this.toastService.warning('Set your display name in Community → Settings first.');
+      this.router.navigate(['/eco-tracker/community/settings']);
+      return;
+    }
+    this.publishing.set(true);
+    try {
+      await this.communityService.publishMyData();
+      this.toastService.success('Published to community board!');
+    } catch (e: unknown) {
+      this.toastService.error(e instanceof Error ? e.message : 'Publish failed');
+    } finally {
+      this.publishing.set(false);
     }
   }
 }

@@ -33,6 +33,11 @@ import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
               💡 Insights
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/eco-tracker/community" routerLinkActive="active">
+              🌐 Community
+            </a>
+          </li>
         </ul>
       </div>
     </div>

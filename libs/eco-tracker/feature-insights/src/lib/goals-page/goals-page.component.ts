@@ -4,6 +4,7 @@ import {
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { InsightsService } from '@ng-mfe-hub/eco-tracker-data-access';
+import { ConfirmDialogService } from '@ng-mfe-hub/ui';
 import type { GoalType } from '@ng-mfe-hub/eco-tracker-data-access';
 import { GoalProgressComponent, EmptyStateComponent } from '@ng-mfe-hub/eco-tracker-ui';
 
@@ -129,10 +130,15 @@ export class GoalsPageComponent {
     this.showForm.set(false);
   }
 
+  private readonly confirmDialog = inject(ConfirmDialogService);
+
   async deleteGoal(id: string): Promise<void> {
-    if (confirm('Delete this goal?')) {
-      await this.insightsService.deleteGoal(id);
-    }
+    const confirmed = await this.confirmDialog.open({
+      title: 'Delete Goal',
+      message: 'Delete this goal? This cannot be undone.',
+      confirmText: 'Delete',
+    });
+    if (confirmed) await this.insightsService.deleteGoal(id);
   }
 
   goalSubLabel(goal: import('@ng-mfe-hub/eco-tracker-data-access').Goal): string {

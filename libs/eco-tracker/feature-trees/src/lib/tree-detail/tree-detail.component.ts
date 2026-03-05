@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import {
   TreeService, formatCo2, calcTreeAgeYears
 } from '@ng-mfe-hub/eco-tracker-data-access';
+import { ConfirmDialogService } from '@ng-mfe-hub/ui';
 import type { TreeEventType, HealthStatus } from '@ng-mfe-hub/eco-tracker-data-access';
 import {
   CO2BadgeComponent, TimelineComponent, MiniMapComponent
@@ -277,8 +278,15 @@ export class TreeDetailComponent {
     this.eventHeight = 0;
   }
 
+  private readonly confirmDialog = inject(ConfirmDialogService);
+
   async confirmDelete(): Promise<void> {
-    if (confirm('Delete this tree and all its history? This cannot be undone.')) {
+    const confirmed = await this.confirmDialog.open({
+      title: 'Delete Tree',
+      message: 'Delete this tree and all its history? This cannot be undone.',
+      confirmText: 'Delete',
+    });
+    if (confirmed) {
       await this.treeService.deleteTree(this.treeId());
       await this.router.navigate(['/eco-tracker/trees']);
     }

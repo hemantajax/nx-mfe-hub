@@ -37,6 +37,13 @@ export const remoteRoutes: Route[] = [
             (m) => m.INSIGHTS_ROUTES,
           ),
       },
+      {
+        path: 'community',
+        loadChildren: () =>
+          import('@ng-mfe-hub/eco-tracker-feature-community').then(
+            (m) => m.COMMUNITY_ROUTES,
+          ),
+      },
     ],
   },
 ];

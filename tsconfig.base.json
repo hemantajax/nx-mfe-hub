@@ -60,6 +60,9 @@
       ],
       "@ng-mfe-hub/eco-tracker-feature-insights": [
         "libs/eco-tracker/feature-insights/src/index.ts"
+      ],
+      "@ng-mfe-hub/eco-tracker-feature-community": [
+        "libs/eco-tracker/feature-community/src/index.ts"
       ]
     }
   },
