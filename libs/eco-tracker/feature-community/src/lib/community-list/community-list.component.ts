@@ -131,18 +131,14 @@ import { ToastService, ConfirmDialogService } from '@ng-mfe-hub/ui';
     </div>
   `,
   styles: [`
+    :host { display: block; }
     .avatar-sm {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+      width: 28px; height: 28px; border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
       font-size: 0.75rem;
     }
-    tbody tr:hover {
-      background: #f8f9fa;
-    }
+    table th, table td { white-space: nowrap; }
+    tbody tr:hover { background: #f8f9fa; }
   `],
 })
 export class CommunityListComponent {
