@@ -1,0 +1,1 @@
+(self.webpackChunkjobs=self.webpackChunkjobs||[]).push([[820],{9820(s,e,o){o.d(e,{remoteRoutes:()=>_});var n=o(2578),t=o(3294);const _=[{path:"",component:n.b,children:[{path:"",component:t.B}]}]}}]);

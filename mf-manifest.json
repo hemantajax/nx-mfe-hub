@@ -1,0 +1,639 @@
+{
+  "id": "shell",
+  "name": "shell",
+  "metaData": {
+    "name": "shell",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "0.0.0",
+      "buildName": "@ng-mfe-hub/source"
+    },
+    "remoteEntry": {
+      "name": "",
+      "path": "",
+      "type": "module"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "shell",
+    "pluginVersion": "0.21.6",
+    "prefetchInterface": false,
+    "publicPath": "auto"
+  },
+  "shared": [
+    {
+      "id": "shell:@angular/common/http",
+      "name": "@angular/common/http",
+      "version": "21.1.5",
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "127.4dc562170361b049.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "shell:@angular/common",
+      "name": "@angular/common",
+      "version": "21.1.5",
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "421.2aa52cc7884fa00f.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "shell:@angular/core/primitives/di",
+      "name": "@angular/core/primitives/di",
+      "version": "21.1.5",
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.e1d4121393ef9fb6.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "shell:@angular/core/primitives/signals",
+      "name": "@angular/core/primitives/signals",
+      "version": "21.1.5",
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.e1d4121393ef9fb6.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "shell:@angular/core/rxjs-interop",
+      "name": "@angular/core/rxjs-interop",
+      "version": "21.1.5",
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.e1d4121393ef9fb6.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "shell:@angular/core",
+      "name": "@angular/core",
+      "version": "21.1.5",
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "921.786d647b83799f38.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "shell:@angular/forms",
+      "name": "@angular/forms",
+      "version": "21.1.5",
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "417.cc0aee6854f60171.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "shell:@angular/platform-browser",
+      "name": "@angular/platform-browser",
+      "version": "21.1.5",
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "707.1fd4c424a3191b51.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "shell:@angular/router",
+      "name": "@angular/router",
+      "version": "21.1.5",
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "359.b102f285ad5ae7ed.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "shell:@ng-bootstrap/ng-bootstrap/accordion",
+      "name": "@ng-bootstrap/ng-bootstrap/accordion",
+      "version": "20.0.0",
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "727.2ad965a95e39b5ad.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "shell:@ng-bootstrap/ng-bootstrap/alert",
+      "name": "@ng-bootstrap/ng-bootstrap/alert",
+      "version": "20.0.0",
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.e1d4121393ef9fb6.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "shell:@ng-bootstrap/ng-bootstrap/carousel",
+      "name": "@ng-bootstrap/ng-bootstrap/carousel",
+      "version": "20.0.0",
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "749.3186a6ea352d134b.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "shell:@ng-bootstrap/ng-bootstrap/collapse",
+      "name": "@ng-bootstrap/ng-bootstrap/collapse",
+      "version": "20.0.0",
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.e1d4121393ef9fb6.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "shell:@ng-bootstrap/ng-bootstrap/config",
+      "name": "@ng-bootstrap/ng-bootstrap/config",
+      "version": "20.0.0",
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.e1d4121393ef9fb6.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "shell:@ng-bootstrap/ng-bootstrap/datepicker",
+      "name": "@ng-bootstrap/ng-bootstrap/datepicker",
+      "version": "20.0.0",
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "465.8a7f79cee765448d.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "shell:@ng-bootstrap/ng-bootstrap/dropdown",
+      "name": "@ng-bootstrap/ng-bootstrap/dropdown",
+      "version": "20.0.0",
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "472.d73535b3311a7090.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "shell:@ng-bootstrap/ng-bootstrap/modal",
+      "name": "@ng-bootstrap/ng-bootstrap/modal",
+      "version": "20.0.0",
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "458.0335f97c56e35eda.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "shell:@ng-bootstrap/ng-bootstrap/nav",
+      "name": "@ng-bootstrap/ng-bootstrap/nav",
+      "version": "20.0.0",
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "378.3e65ba1fab8a588f.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "shell:@ng-bootstrap/ng-bootstrap/offcanvas",
+      "name": "@ng-bootstrap/ng-bootstrap/offcanvas",
+      "version": "20.0.0",
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "226.7b5ff48a48e7242b.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "shell:@ng-bootstrap/ng-bootstrap/pagination",
+      "name": "@ng-bootstrap/ng-bootstrap/pagination",
+      "version": "20.0.0",
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "899.c1be0bedc0678481.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "shell:@ng-bootstrap/ng-bootstrap/popover",
+      "name": "@ng-bootstrap/ng-bootstrap/popover",
+      "version": "20.0.0",
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.e1d4121393ef9fb6.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "shell:@ng-bootstrap/ng-bootstrap/progressbar",
+      "name": "@ng-bootstrap/ng-bootstrap/progressbar",
+      "version": "20.0.0",
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.e1d4121393ef9fb6.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "shell:@ng-bootstrap/ng-bootstrap/rating",
+      "name": "@ng-bootstrap/ng-bootstrap/rating",
+      "version": "20.0.0",
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.e1d4121393ef9fb6.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "shell:@ng-bootstrap/ng-bootstrap/scrollspy",
+      "name": "@ng-bootstrap/ng-bootstrap/scrollspy",
+      "version": "20.0.0",
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "822.b01a4b5284328dc2.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "shell:@ng-bootstrap/ng-bootstrap/timepicker",
+      "name": "@ng-bootstrap/ng-bootstrap/timepicker",
+      "version": "20.0.0",
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "174.a5d912754358cc5a.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "shell:@ng-bootstrap/ng-bootstrap/toast",
+      "name": "@ng-bootstrap/ng-bootstrap/toast",
+      "version": "20.0.0",
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.e1d4121393ef9fb6.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "shell:@ng-bootstrap/ng-bootstrap/tooltip",
+      "name": "@ng-bootstrap/ng-bootstrap/tooltip",
+      "version": "20.0.0",
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.e1d4121393ef9fb6.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "shell:@ng-bootstrap/ng-bootstrap/typeahead",
+      "name": "@ng-bootstrap/ng-bootstrap/typeahead",
+      "version": "20.0.0",
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "462.30257698f7520edd.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "shell:@ng-bootstrap/ng-bootstrap",
+      "name": "@ng-bootstrap/ng-bootstrap",
+      "version": "20.0.0",
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.e1d4121393ef9fb6.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "shell:@ng-mfe-hub/ui",
+      "name": "@ng-mfe-hub/ui",
+      "version": "0.0.0",
+      "singleton": true,
+      "requiredVersion": "^0.0.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "874.b5a52711c8e0787c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "shell:rxjs/operators",
+      "name": "rxjs/operators",
+      "version": "7.8.2",
+      "singleton": true,
+      "requiredVersion": "^7.8.2",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "37.d2260db4fe063cbc.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "shell:rxjs",
+      "name": "rxjs",
+      "version": "7.8.2",
+      "singleton": true,
+      "requiredVersion": "^7.8.2",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "87.502b27cc01f7f788.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    }
+  ],
+  "remotes": [],
+  "exposes": []
+}

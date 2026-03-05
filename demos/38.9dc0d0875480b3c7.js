@@ -1,0 +1,1 @@
+(self.webpackChunkdemos=self.webpackChunkdemos||[]).push([[38],{5038(s,e,o){o.d(e,{remoteRoutes:()=>m});var n=o(4064),t=o(3300);const m=[{path:"",component:n.b,children:[{path:"",component:t.B},{path:"theme-preview",loadComponent:()=>o.e(874).then(o.bind(o,7874)).then(h=>h.ThemePreviewComponent)}]}]}}]);

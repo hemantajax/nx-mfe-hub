@@ -1,0 +1,212 @@
+{
+  "id": "dashboard",
+  "name": "dashboard",
+  "metaData": {
+    "name": "dashboard",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "0.0.0",
+      "buildName": "@ng-mfe-hub/source"
+    },
+    "remoteEntry": {
+      "name": "remoteEntry.mjs",
+      "path": "",
+      "type": "module"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "dashboard",
+    "pluginVersion": "0.21.6",
+    "prefetchInterface": false,
+    "publicPath": "auto"
+  },
+  "shared": [
+    {
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/common/http",
+      "version": "21.1.5",
+      "eager": false,
+      "id": "dashboard:@angular/common/http",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "127.217f85a964f59714.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/common",
+      "version": "21.1.5",
+      "eager": false,
+      "id": "dashboard:@angular/common",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "421.a0d22cbf8aee1410.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/core/primitives/di",
+      "version": "21.1.5",
+      "eager": false,
+      "id": "dashboard:@angular/core/primitives/di",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.bf1c68e894b0f5f0.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/core/primitives/signals",
+      "version": "21.1.5",
+      "eager": false,
+      "id": "dashboard:@angular/core/primitives/signals",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.bf1c68e894b0f5f0.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/core",
+      "version": "21.1.5",
+      "eager": false,
+      "id": "dashboard:@angular/core",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "673.be84e5642a484fc9.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/platform-browser",
+      "version": "21.1.5",
+      "eager": false,
+      "id": "dashboard:@angular/platform-browser",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "707.160106c044c838ed.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/router",
+      "version": "21.1.5",
+      "eager": false,
+      "id": "dashboard:@angular/router",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "499.cd0ac95e87275d1c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    }
+  ],
+  "remotes": [],
+  "exposes": [
+    {
+      "path": "./Routes",
+      "id": "dashboard:Routes",
+      "name": "Routes",
+      "requires": [],
+      "file": "apps/dashboard/src/app/remote-entry/entry.routes.ts",
+      "assets": {
+        "js": {
+          "sync": [
+            "__federation_expose_Routes.5abbd24ee70535b9.js"
+          ],
+          "async": []
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      }
+    }
+  ]
+}

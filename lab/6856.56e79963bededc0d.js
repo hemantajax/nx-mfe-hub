@@ -1,0 +1,1 @@
+(self.webpackChunklab=self.webpackChunklab||[]).push([[6856],{6856(h,c,_){_.r(c),_.d(c,{ArchitectureModule:()=>u.i,createArchitectureServices:()=>u.S});var u=_(99970);_(94308)}}]);

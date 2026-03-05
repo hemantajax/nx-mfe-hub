@@ -1,0 +1,260 @@
+{
+  "id": "jobs",
+  "name": "jobs",
+  "metaData": {
+    "name": "jobs",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "0.0.0",
+      "buildName": "@ng-mfe-hub/source"
+    },
+    "remoteEntry": {
+      "name": "remoteEntry.mjs",
+      "path": "",
+      "type": "module"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "jobs",
+    "pluginVersion": "0.21.6",
+    "prefetchInterface": false,
+    "publicPath": "auto"
+  },
+  "shared": [
+    {
+      "id": "jobs:@angular/common/http",
+      "name": "@angular/common/http",
+      "version": "21.1.5",
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "127.28848e4a5a00a708.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "jobs:@angular/common",
+      "name": "@angular/common",
+      "version": "21.1.5",
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "421.d59b47ce6b94ad7d.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "jobs:@angular/core/primitives/di",
+      "name": "@angular/core/primitives/di",
+      "version": "21.1.5",
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.38b6b3ca5acd3b40.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "jobs:@angular/core/primitives/signals",
+      "name": "@angular/core/primitives/signals",
+      "version": "21.1.5",
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.38b6b3ca5acd3b40.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "jobs:@angular/core",
+      "name": "@angular/core",
+      "version": "21.1.5",
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "673.67de46ed72b1e3e1.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "jobs:@angular/forms",
+      "name": "@angular/forms",
+      "version": "21.1.5",
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "341.68f569220842ce09.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "jobs:@angular/platform-browser",
+      "name": "@angular/platform-browser",
+      "version": "21.1.5",
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "707.7dfee0b07580a189.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "jobs:@angular/router",
+      "name": "@angular/router",
+      "version": "21.1.5",
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "484.8cc7a3c6980142b2.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "jobs:@ng-mfe-hub/jobs-data-access",
+      "name": "@ng-mfe-hub/jobs-data-access",
+      "version": "0.0.0",
+      "singleton": true,
+      "requiredVersion": "^0.0.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.38b6b3ca5acd3b40.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "jobs:@ng-mfe-hub/jobs-feature-search",
+      "name": "@ng-mfe-hub/jobs-feature-search",
+      "version": "0.0.0",
+      "singleton": true,
+      "requiredVersion": "^0.0.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.38b6b3ca5acd3b40.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "jobs:@ng-mfe-hub/jobs-ui",
+      "name": "@ng-mfe-hub/jobs-ui",
+      "version": "0.0.0",
+      "singleton": true,
+      "requiredVersion": "^0.0.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.38b6b3ca5acd3b40.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    }
+  ],
+  "remotes": [],
+  "exposes": [
+    {
+      "id": "jobs:Routes",
+      "name": "Routes",
+      "assets": {
+        "js": {
+          "sync": [
+            "__federation_expose_Routes.46e1aff5afef2638.js"
+          ],
+          "async": [
+            "839.1650fbfbde6eb42f.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      },
+      "path": "./Routes"
+    }
+  ]
+}
