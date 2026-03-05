@@ -88,6 +88,9 @@ import { ToastService, ConfirmDialogService } from '@ng-mfe-hub/ui';
                         @if (user.uid === gistService.getUserId()) {
                           <span class="badge bg-success bg-opacity-10 text-success" style="font-size:0.6rem">You</span>
                         }
+                        @if (user.isAdmin) {
+                          <span class="badge bg-warning bg-opacity-10 text-warning" style="font-size:0.6rem">Admin</span>
+                        }
                       </div>
                     </td>
                     <td class="text-center">
@@ -165,9 +168,7 @@ export class CommunityListComponent {
   protected readonly publishing = signal(false);
 
   constructor() {
-    if (this.gistService.getGistId()) {
-      void this.communityService.loadUsers();
-    }
+    void this.communityService.loadUsers();
   }
 
   protected async publish(): Promise<void> {

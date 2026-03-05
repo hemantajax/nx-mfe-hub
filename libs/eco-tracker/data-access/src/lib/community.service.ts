@@ -5,8 +5,8 @@ import { FootprintService } from './footprint.service';
 import { calcNetImpact } from './co2-calc';
 
 export interface CommunityUser extends CommunityRecord {
-  /** The unique device-level ID used as the gist key. */
   readonly uid: string;
+  readonly isAdmin: boolean;
 }
 
 @Injectable({ providedIn: 'root' })
@@ -26,10 +26,12 @@ export class CommunityService {
     this._loading.set(true);
     try {
       const data = await this.gistService.fetchAllRecords();
-      const users: CommunityUser[] = Object.entries(data)
-        .map(([uid, record]) => ({ ...record, uid }))
-        .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
-      this._users.set(users);
+      const entries = Object.entries(data)
+        .map(([uid, record]) => ({ ...record, uid, isAdmin: false as boolean }))
+        .sort((a, b) => a.publishedAt.localeCompare(b.publishedAt));
+      if (entries.length) entries[0].isAdmin = true;
+      entries.sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
+      this._users.set(entries);
     } catch {
       this._users.set([]);
     } finally {

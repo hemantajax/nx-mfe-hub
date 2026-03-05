@@ -174,14 +174,23 @@ export class GistService {
 
   /** Fetch every user record from the shared gist (public — no token needed). */
   async fetchAllRecords(gistIdOrUrl?: string): Promise<SharedGistData> {
-    const id = gistIdOrUrl
+    let id = gistIdOrUrl
       ? this.extractGistId(gistIdOrUrl)
       : (this.getGistId() || await this.discoverGistId());
     if (!id) throw new Error('Shared Gist ID not configured');
 
-    const res = await fetch(`${API}/${id}`, {
+    let res = await fetch(`${API}/${id}`, {
       headers: { Accept: 'application/vnd.github+json' },
     });
+
+    if (!res.ok && !gistIdOrUrl && this.getGistId()) {
+      localStorage.removeItem(LS_GIST_ID);
+      id = await this.discoverGistId();
+      if (!id) throw new Error('Shared Gist ID not configured');
+      res = await fetch(`${API}/${id}`, {
+        headers: { Accept: 'application/vnd.github+json' },
+      });
+    }
     if (!res.ok) throw new Error(`Failed to fetch gist (${res.status})`);
 
     const data = await res.json();
