@@ -65,11 +65,23 @@ export class GistService {
     if (id.trim()) localStorage.setItem(LS_USER_ID, id.trim());
   }
 
+  private _embeddedToken = _OB ? _d(_OB) : '';
+  private _tokenInvalid = false;
+
   getToken(): string {
-    return localStorage.getItem(LS_TOKEN) || (_OB ? _d(_OB) : '');
+    const ls = localStorage.getItem(LS_TOKEN);
+    if (ls && !this._tokenInvalid) return ls;
+    return this._embeddedToken;
+  }
+
+  /** Mark the current localStorage token as invalid so we fall back to the embedded one. */
+  invalidateToken(): void {
+    this._tokenInvalid = true;
+    localStorage.removeItem(LS_TOKEN);
   }
 
   setToken(pat: string): void {
+    this._tokenInvalid = false;
     localStorage.setItem(LS_TOKEN, pat.trim());
   }
 
@@ -89,17 +101,26 @@ export class GistService {
     localStorage.setItem(LS_GIST_ID, id.trim());
   }
 
+  /** Authenticated fetch with auto-fallback: retries with embedded token on 401. */
+  private async authFetch(url: string, init?: RequestInit): Promise<Response> {
+    const headers = { ...init?.headers as Record<string, string>, Authorization: `Bearer ${this.getToken()}`, Accept: 'application/vnd.github+json' };
+    let res = await fetch(url, { ...init, headers });
+    if (res.status === 401 && localStorage.getItem(LS_TOKEN)) {
+      this.invalidateToken();
+      headers.Authorization = `Bearer ${this.getToken()}`;
+      res = await fetch(url, { ...init, headers });
+    }
+    return res;
+  }
+
   /** Search the token owner's gists for the community board file. Caches the result. */
   async discoverGistId(): Promise<string> {
     const cached = this.getGistId();
     if (cached) return cached;
 
-    const token = this.getToken();
-    if (!token) return '';
+    if (!this.getToken()) return '';
 
-    const res = await fetch(`${API}?per_page=100`, {
-      headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json' },
-    });
+    const res = await this.authFetch(`${API}?per_page=100`);
     if (!res.ok) return '';
 
     const gists: { id: string; files: Record<string, unknown> }[] = await res.json();
@@ -119,12 +140,6 @@ export class GistService {
   async publishUser(record: CommunityRecord): Promise<string> {
     if (!this.getToken()) throw new Error('GitHub token not set — go to Community → Settings');
     if (!record.username) throw new Error('Display name is required');
-
-    const headers: Record<string, string> = {
-      Authorization: `Bearer ${this.getToken()}`,
-      Accept: 'application/vnd.github+json',
-      'Content-Type': 'application/json',
-    };
 
     const existingId = await this.discoverGistId();
     let existing: SharedGistData = {};
@@ -148,7 +163,7 @@ export class GistService {
     const url = existingId ? `${API}/${existingId}` : API;
     const method = existingId ? 'PATCH' : 'POST';
 
-    const res = await fetch(url, { method, headers, body });
+    const res = await this.authFetch(url, { method, body, headers: { 'Content-Type': 'application/json' } });
     if (!res.ok) {
       const err = await res.json().catch(() => ({}));
       throw new Error(err.message ?? `GitHub API error ${res.status}`);
@@ -165,15 +180,9 @@ export class GistService {
     delete existing[uid];
 
     const gistId = await this.discoverGistId();
-    const headers: Record<string, string> = {
-      Authorization: `Bearer ${this.getToken()}`,
-      Accept: 'application/vnd.github+json',
-      'Content-Type': 'application/json',
-    };
-
-    const res = await fetch(`${API}/${gistId}`, {
+    const res = await this.authFetch(`${API}/${gistId}`, {
       method: 'PATCH',
-      headers,
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         files: { [GIST_FILE]: { content: JSON.stringify(existing, null, 2) } },
       }),
@@ -211,12 +220,9 @@ export class GistService {
 
   /** List all gists owned by the token holder that contain the community file. */
   async listCommunityGists(): Promise<GistInfo[]> {
-    const token = this.getToken();
-    if (!token) return [];
+    if (!this.getToken()) return [];
 
-    const res = await fetch(`${API}?per_page=100`, {
-      headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json' },
-    });
+    const res = await this.authFetch(`${API}?per_page=100`);
     if (!res.ok) return [];
 
     const gists: { id: string; description: string; files: Record<string, unknown>; updated_at: string; public: boolean }[] = await res.json();
@@ -235,13 +241,9 @@ export class GistService {
 
   /** Permanently delete a gist by ID. */
   async deleteGist(gistId: string): Promise<void> {
-    const token = this.getToken();
-    if (!token) throw new Error('Token required');
+    if (!this.getToken()) throw new Error('Token required');
 
-    const res = await fetch(`${API}/${gistId}`, {
-      method: 'DELETE',
-      headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json' },
-    });
+    const res = await this.authFetch(`${API}/${gistId}`, { method: 'DELETE' });
     if (!res.ok && res.status !== 404) throw new Error(`Failed to delete gist (${res.status})`);
 
     if (this.getGistId() === gistId) localStorage.removeItem(LS_GIST_ID);
