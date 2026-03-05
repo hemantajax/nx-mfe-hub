@@ -21,7 +21,8 @@
     "affected:lint": "nx affected -t lint",
     "graph": "nx graph",
     "format": "nx format:write",
-    "build:eco-standalone": "npx nx build eco-tracker --configuration=ghpages"
+    "build:eco-standalone": "npx nx build eco-tracker --configuration=ghpages",
+    "standalone:eco-gh": "npm run build:eco-standalone && mkdir -p dist/gh-pages/standalone/eco-tracker && cp -r dist/apps/eco-tracker/. dist/gh-pages/standalone/eco-tracker/"
   },
   "private": true,
   "devDependencies": {
