@@ -10,6 +10,6 @@ export { FootprintService } from './lib/footprint.service';
 export { InsightsService } from './lib/insights.service';
 export type { EcoTip } from './lib/insights.service';
 export { GistService } from './lib/gist.service';
-export type { CommunitySummary, CommunityRecord, SharedGistData } from './lib/gist.service';
+export type { CommunitySummary, CommunityRecord, SharedGistData, GistInfo } from './lib/gist.service';
 export { CommunityService } from './lib/community.service';
 export type { CommunityUser } from './lib/community.service';

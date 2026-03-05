@@ -1,14 +1,15 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { DatePipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { GistService } from '@ng-mfe-hub/eco-tracker-data-access';
-import { ToastService } from '@ng-mfe-hub/ui';
+import { GistService, GistInfo } from '@ng-mfe-hub/eco-tracker-data-access';
+import { ToastService, ConfirmDialogService } from '@ng-mfe-hub/ui';
 
 @Component({
   selector: 'eco-community-settings',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [FormsModule],
+  imports: [FormsModule, DatePipe],
   template: `
     <div class="container-fluid py-4 px-3 px-md-4" style="max-width:700px">
       <a class="text-decoration-none small d-inline-block mb-3" style="cursor:pointer"
@@ -79,6 +80,58 @@ import { ToastService } from '@ng-mfe-hub/ui';
           </button>
         </div>
       </div>
+
+      <!-- Admin: Gist Management -->
+      <div class="card border-0 shadow-sm mb-4">
+        <div class="card-body">
+          <div class="d-flex align-items-center justify-content-between mb-3">
+            <h5 class="fw-bold mb-0"><i class="icon-panel me-2"></i>Gist Management</h5>
+            <button class="btn btn-outline-secondary btn-sm" (click)="loadGists()" [disabled]="loadingGists()">
+              @if (loadingGists()) {
+                <span class="spinner-border spinner-border-sm me-1"></span>
+              } @else {
+                <i class="icon-reload me-1"></i>
+              }
+              Scan
+            </button>
+          </div>
+          <p class="text-muted small mb-3">
+            Lists all <code>eco-tracker-community.json</code> gists owned by the token account. Delete stale/duplicate boards.
+          </p>
+
+          @if (gists().length) {
+            <div class="list-group">
+              @for (g of gists(); track g.id) {
+                <div class="list-group-item d-flex align-items-center gap-3 py-2">
+                  <div class="flex-grow-1">
+                    <div class="d-flex align-items-center gap-2">
+                      <code class="small">{{ g.id.slice(0, 12) }}…</code>
+                      @if (g.isActive) {
+                        <span class="badge bg-success bg-opacity-10 text-success" style="font-size:.6rem">Active</span>
+                      }
+                      @if (!g.isPublic) {
+                        <span class="badge bg-secondary bg-opacity-10 text-secondary" style="font-size:.6rem">Private</span>
+                      }
+                    </div>
+                    <div class="text-muted small">Updated {{ g.updatedAt | date:'medium' }}</div>
+                  </div>
+                  <button class="btn btn-sm btn-outline-secondary py-0 px-2" title="Copy ID"
+                          (click)="copyId(g.id)">
+                    <i class="icon-layers"></i>
+                  </button>
+                  <button class="btn btn-sm btn-outline-danger py-0 px-2" title="Delete gist"
+                          [disabled]="g.isActive"
+                          (click)="deleteGist(g.id)">
+                    <i class="icon-trash"></i>
+                  </button>
+                </div>
+              }
+            </div>
+          } @else if (!loadingGists()) {
+            <p class="text-muted small mb-0">Click <strong>Scan</strong> to find community gists.</p>
+          }
+        </div>
+      </div>
     </div>
   `,
 })
@@ -86,11 +139,15 @@ export class CommunitySettingsComponent {
   protected readonly router = inject(Router);
   private readonly gistService = inject(GistService);
   private readonly toastService = inject(ToastService);
+  private readonly confirmDialog = inject(ConfirmDialogService);
 
   protected readonly username = signal(this.gistService.getUsername());
   protected readonly token = signal(this.gistService.getToken());
   protected readonly gistId = signal(this.gistService.getGistId());
   protected readonly userId = signal(this.gistService.getUserId());
+
+  protected readonly gists = signal<GistInfo[]>([]);
+  protected readonly loadingGists = signal(false);
 
   protected save(): void {
     this.gistService.setUsername(this.username());
@@ -104,5 +161,41 @@ export class CommunitySettingsComponent {
   protected copyUserId(): void {
     navigator.clipboard.writeText(this.gistService.getUserId());
     this.toastService.info('User ID copied');
+  }
+
+  protected async loadGists(): Promise<void> {
+    this.loadingGists.set(true);
+    try {
+      const list = await this.gistService.listCommunityGists();
+      this.gists.set(list);
+      this.toastService.info(`Found ${list.length} community gist(s)`);
+    } catch {
+      this.toastService.error('Failed to load gists');
+    } finally {
+      this.loadingGists.set(false);
+    }
+  }
+
+  protected async deleteGist(id: string): Promise<void> {
+    const confirmed = await this.confirmDialog.open({
+      title: 'Delete Gist',
+      message: `Permanently delete gist ${id.slice(0, 12)}…? This cannot be undone.`,
+      confirmText: 'Delete',
+      confirmClass: 'btn-danger',
+    });
+    if (!confirmed) return;
+
+    try {
+      await this.gistService.deleteGist(id);
+      this.gists.update(prev => prev.filter(g => g.id !== id));
+      this.toastService.success('Gist deleted');
+    } catch (e: unknown) {
+      this.toastService.error(e instanceof Error ? e.message : 'Delete failed');
+    }
+  }
+
+  protected copyId(id: string): void {
+    navigator.clipboard.writeText(id);
+    this.toastService.info('Gist ID copied');
   }
 }

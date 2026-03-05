@@ -39,6 +39,15 @@ export interface CommunityRecord {
 /** Shape of the JSON stored inside the shared gist file — keyed by unique user ID. */
 export type SharedGistData = Record<string, CommunityRecord>;
 
+export interface GistInfo {
+  readonly id: string;
+  readonly description: string;
+  readonly updatedAt: string;
+  readonly isPublic: boolean;
+  readonly isActive: boolean;
+  readonly userCount: number;
+}
+
 @Injectable({ providedIn: 'root' })
 export class GistService {
 
@@ -198,6 +207,44 @@ export class GistService {
     if (!file?.content) return {};
 
     return JSON.parse(file.content) as SharedGistData;
+  }
+
+  /** List all gists owned by the token holder that contain the community file. */
+  async listCommunityGists(): Promise<GistInfo[]> {
+    const token = this.getToken();
+    if (!token) return [];
+
+    const res = await fetch(`${API}?per_page=100`, {
+      headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json' },
+    });
+    if (!res.ok) return [];
+
+    const gists: { id: string; description: string; files: Record<string, unknown>; updated_at: string; public: boolean }[] = await res.json();
+    const activeId = this.getGistId();
+    return gists
+      .filter(g => GIST_FILE in (g.files ?? {}))
+      .map(g => ({
+        id: g.id,
+        description: g.description || 'Eco-Tracker Community Board',
+        updatedAt: g.updated_at,
+        isPublic: g.public,
+        isActive: g.id === activeId,
+        userCount: 0,
+      }));
+  }
+
+  /** Permanently delete a gist by ID. */
+  async deleteGist(gistId: string): Promise<void> {
+    const token = this.getToken();
+    if (!token) throw new Error('Token required');
+
+    const res = await fetch(`${API}/${gistId}`, {
+      method: 'DELETE',
+      headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json' },
+    });
+    if (!res.ok && res.status !== 404) throw new Error(`Failed to delete gist (${res.status})`);
+
+    if (this.getGistId() === gistId) localStorage.removeItem(LS_GIST_ID);
   }
 
   /**
