@@ -1,0 +1,75 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  GH_GIST_TOKEN: ${{ secrets.GH_GIST_TOKEN }}
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build all apps (ghpages config)
+        run: |
+          NX_PLUGIN_NO_TIMEOUTS=true npx nx run-many -t build \
+            --projects=shell,dashboard,profile,lab,theme,demos,jobs,eco-tracker \
+            --configuration=ghpages \
+            --parallel=2
+
+      - name: Assemble dist
+        run: |
+          PAGES_BASE="https://hemantajax.github.io/nx-mfe-hub"
+          DIST="dist/gh-pages"
+
+          mkdir -p "$DIST"
+          cp -r dist/apps/shell/. "$DIST/"
+
+          for remote in dashboard profile lab theme demos jobs eco-tracker; do
+            mkdir -p "$DIST/$remote"
+            cp -r dist/apps/"$remote"/. "$DIST/$remote/"
+          done
+
+          cat > "$DIST/module-federation.manifest.json" <<EOF
+          {
+            "dashboard":   "$PAGES_BASE/dashboard/mf-manifest.json",
+            "profile":     "$PAGES_BASE/profile/mf-manifest.json",
+            "lab":         "$PAGES_BASE/lab/mf-manifest.json",
+            "theme":       "$PAGES_BASE/theme/mf-manifest.json",
+            "demos":       "$PAGES_BASE/demos/mf-manifest.json",
+            "jobs":        "$PAGES_BASE/jobs/mf-manifest.json",
+            "eco-tracker": "$PAGES_BASE/eco-tracker/mf-manifest.json"
+          }
+          EOF
+
+          find "$DIST" -name "*.css" -exec sed -i 's|url(/fonts/|url(fonts/|g' {} \;
+
+          cp "$DIST/index.html" "$DIST/404.html"
+          touch "$DIST/.nojekyll"
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: dist/gh-pages
+          force_orphan: true
