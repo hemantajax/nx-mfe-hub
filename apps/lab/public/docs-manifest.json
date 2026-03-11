@@ -165,6 +165,24 @@
         { "slug": "09-security-and-privacy", "title": "Security & Privacy", "file": "09-security-and-privacy.md" },
         { "slug": "10-cheat-sheet-and-qa", "title": "Cheat Sheet & Interview Q&A", "file": "10-cheat-sheet-and-qa.md" }
       ]
+    },
+    {
+      "slug": "ai-backend-ebook",
+      "title": "AI / GenAI for Backend",
+      "icon": "icon-server",
+      "description": "Server-side LLM integration, API design, RAG, prompts, tool use, MCP, cost control, and security",
+      "chapters": [
+        { "slug": "01-when-to-use-ai-on-backend", "title": "When to Use AI on the Backend", "file": "01-when-to-use-ai-on-backend.md" },
+        { "slug": "02-api-design-for-ai-endpoints", "title": "API Design for AI Endpoints", "file": "02-api-design-for-ai-endpoints.md" },
+        { "slug": "03-calling-llm-providers", "title": "Calling LLM Providers", "file": "03-calling-llm-providers.md" },
+        { "slug": "04-prompt-construction-and-management", "title": "Prompt Construction & Management", "file": "04-prompt-construction-and-management.md" },
+        { "slug": "05-rag-implementation", "title": "RAG Implementation", "file": "05-rag-implementation.md" },
+        { "slug": "06-tool-use-and-function-calling", "title": "Tool Use & Function Calling", "file": "06-tool-use-and-function-calling.md" },
+        { "slug": "07-mcp-server-side", "title": "MCP Server-Side", "file": "07-mcp-server-side.md" },
+        { "slug": "08-cost-rate-limiting-and-budgets", "title": "Cost, Rate Limiting & Budgets", "file": "08-cost-rate-limiting-and-budgets.md" },
+        { "slug": "09-security-privacy-and-observability", "title": "Security, Privacy & Observability", "file": "09-security-privacy-and-observability.md" },
+        { "slug": "10-cheat-sheet-and-qa", "title": "Cheat Sheet & Interview Q&A", "file": "10-cheat-sheet-and-qa.md" }
+      ]
     }
   ]
 }

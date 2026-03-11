@@ -1,7 +1,7 @@
 
 Planned ebooks to add to the lab docs (`apps/lab/public/docs/`) for interview readiness and professional depth. Use this as a backlog; implement when ready.
 
-**Existing ebooks (as of this doc):** Angular Step by Step, System Design, Node/Express/MongoDB, React Step by Step, JavaScript & TypeScript Deep Dive, Docker for System Design, Kubernetes for System Design.
+**Existing ebooks (as of this doc):** Angular Step by Step, System Design, Node/Express/MongoDB, React Step by Step, JavaScript & TypeScript Deep Dive, Docker for System Design, Kubernetes for System Design, AI/GenAI for Frontend.
 
 ---
 
@@ -25,7 +25,27 @@ Planned ebooks to add to the lab docs (`apps/lab/public/docs/`) for interview re
 
 ---
 
-## 2. Frontend Testing Strategy
+## 2. AI / GenAI for Backend — **Implemented**
+
+**Why:** Pairs with the AI Frontend ebook; covers server-side LLM integration, RAG, prompts, tool use, MCP, cost control, and security. Essential for full-stack and backend interview prep.
+
+**Suggested chapters:**
+- When to use AI on the backend (proxy vs rules, when to call LLMs)
+- API design for AI endpoints (chat, stream, structured output)
+- Calling LLM providers (streaming, retries, timeouts)
+- Prompt construction and management (system prompts, few-shot, where they live)
+- RAG implementation (embeddings, vector stores, chunking, retrieval)
+- Tool use and function calling (defining tools, executing, returning)
+- MCP server-side (exposing tools/resources for agents)
+- Cost, rate limiting and budgets (per-user limits, token counting)
+- Security, privacy and observability (keys, PII redaction, audit, logging)
+- Cheat sheet and interview Q&A
+
+**Slug suggestion:** `ai-backend-ebook`
+
+---
+
+## 3. Frontend Testing Strategy
 
 **Why:** Testing is a standard interview topic; no single "testing vault" exists yet.
 
@@ -44,7 +64,7 @@ Planned ebooks to add to the lab docs (`apps/lab/public/docs/`) for interview re
 
 ---
 
-## 3. Accessibility (a11y) for UI Architects
+## 4. Accessibility (a11y) for UI Architects
 
 **Why:** Common in senior/frontend architect interviews (WCAG, inclusive design, legal risk).
 
@@ -62,7 +82,7 @@ Planned ebooks to add to the lab docs (`apps/lab/public/docs/`) for interview re
 
 ---
 
-## 4. Frontend Performance & Core Web Vitals
+## 5. Frontend Performance & Core Web Vitals
 
 **Why:** Complements system design and framework ebooks; "how would you make this fast?" is a common question.
 
@@ -79,7 +99,7 @@ Planned ebooks to add to the lab docs (`apps/lab/public/docs/`) for interview re
 
 ---
 
-## 5. API Design & Frontend–Backend Contract
+## 6. API Design & Frontend–Backend Contract
 
 **Why:** System Design touches API design; a dedicated "contract + frontend" ebook helps for "how do you work with backend?" and BFF.
 
@@ -95,7 +115,7 @@ Planned ebooks to add to the lab docs (`apps/lab/public/docs/`) for interview re
 
 ---
 
-## 6. Micro-Frontends Deep Dive
+## 7. Micro-Frontends Deep Dive
 
 **Why:** System Design has a micro-frontends chapter; a full ebook makes "design a micro-frontend platform" interview-ready (aligns with this repo's Module Federation setup).
 
@@ -111,7 +131,7 @@ Planned ebooks to add to the lab docs (`apps/lab/public/docs/`) for interview re
 
 ---
 
-## 7. Frontend Security
+## 8. Frontend Security
 
 **Why:** Security appears in Angular and System Design; a focused "frontend security" ebook helps for "how do you secure the UI?"
 
@@ -128,13 +148,14 @@ Planned ebooks to add to the lab docs (`apps/lab/public/docs/`) for interview re
 
 ## Suggested implementation order
 
-1. **AI / GenAI for Frontend** — Directly addresses "AI with Angular/React and best use of Angular"
-2. **Frontend Testing Strategy** — High interview value, no dedicated book yet
-3. **Accessibility** — Very common in senior/architect interviews
-4. **Frontend Performance & Core Web Vitals** — Complements system design and framework ebooks
-5. **API Design & Frontend–Backend Contract**
-6. **Micro-Frontends Deep Dive**
-7. **Frontend Security**
+1. **AI / GenAI for Frontend** — Implemented
+2. **AI / GenAI for Backend** — Implemented (pairs with frontend)
+3. **Frontend Testing Strategy** — High interview value, no dedicated book yet
+4. **Accessibility** — Very common in senior/architect interviews
+5. **Frontend Performance & Core Web Vitals** — Complements system design and framework ebooks
+6. **API Design & Frontend–Backend Contract**
+7. **Micro-Frontends Deep Dive**
+8. **Frontend Security**
 
 ---
 
