@@ -183,6 +183,20 @@
         { "slug": "09-security-privacy-and-observability", "title": "Security, Privacy & Observability", "file": "09-security-privacy-and-observability.md" },
         { "slug": "10-cheat-sheet-and-qa", "title": "Cheat Sheet & Interview Q&A", "file": "10-cheat-sheet-and-qa.md" }
       ]
+    },
+    {
+      "slug": "api-design-ebook",
+      "title": "API Design & Frontend–Backend Contract",
+      "icon": "icon-api",
+      "description": "REST vs GraphQL vs gRPC, pagination, BFF pattern, contract-first design, error handling and resilience — interview-ready for senior frontend and full-stack engineers",
+      "chapters": [
+        { "slug": "01-rest-vs-graphql-vs-grpc", "title": "REST vs GraphQL vs gRPC — A Frontend Perspective", "file": "01-rest-vs-graphql-vs-grpc.md" },
+        { "slug": "02-pagination-filtering-versioning", "title": "Pagination, Filtering & Versioning", "file": "02-pagination-filtering-versioning.md" },
+        { "slug": "03-bff-pattern", "title": "The BFF Pattern", "file": "03-bff-pattern.md" },
+        { "slug": "04-contract-first-design", "title": "Contract-First Design", "file": "04-contract-first-design.md" },
+        { "slug": "05-error-handling-and-resilience", "title": "Error Handling & Resilience on the Client", "file": "05-error-handling-and-resilience.md" },
+        { "slug": "06-cheat-sheet-and-qa", "title": "Cheat Sheet & Interview Q&A", "file": "06-cheat-sheet-and-qa.md" }
+      ]
     }
   ]
 }
