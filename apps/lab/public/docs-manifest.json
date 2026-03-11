@@ -111,6 +111,24 @@
         { "slug": "15-error-handling-debugging", "title": "Error Handling & Debugging", "file": "15-error-handling-debugging.md" },
         { "slug": "16-interview-qa", "title": "Interview Q&A", "file": "16-interview-qa.md" }
       ]
+    },
+    {
+      "slug": "docker-ebook",
+      "title": "Docker for System Design",
+      "icon": "icon-layers",
+      "description": "Docker, Docker Compose, CI/CD, security and Kubernetes fundamentals for interview-ready architects",
+      "chapters": [
+        { "slug": "01-docker-mental-model", "title": "Docker Mental Model & Architecture", "file": "01-docker-mental-model.md" },
+        { "slug": "02-images-and-dockerfile", "title": "Images, Layers & Dockerfile Design", "file": "02-images-and-dockerfile.md" },
+        { "slug": "03-containers-and-lifecycle", "title": "Containers, Lifecycle & Resource Management", "file": "03-containers-and-lifecycle.md" },
+        { "slug": "04-volumes-and-persistence", "title": "Volumes & Persistence", "file": "04-volumes-and-persistence.md" },
+        { "slug": "05-networking-and-network-modes", "title": "Networking & Service Discovery", "file": "05-networking-and-network-modes.md" },
+        { "slug": "06-docker-compose", "title": "Docker Compose for Local Environments", "file": "06-docker-compose.md" },
+        { "slug": "07-docker-in-ci-cd", "title": "Docker in CI/CD & Environments", "file": "07-docker-in-ci-cd.md" },
+        { "slug": "08-security-and-best-practices", "title": "Security, Compliance & Best Practices", "file": "08-security-and-best-practices.md" },
+        { "slug": "09-docker-and-kubernetes", "title": "Docker & Kubernetes/System Design", "file": "09-docker-and-kubernetes.md" },
+        { "slug": "10-cheat-sheet-and-qa", "title": "Cheat Sheet & Interview Q&A", "file": "10-cheat-sheet-and-qa.md" }
+      ]
     }
   ]
 }
