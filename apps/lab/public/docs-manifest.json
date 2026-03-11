@@ -147,6 +147,24 @@
         { "slug": "09-security-and-best-practices", "title": "Security & Best Practices", "file": "09-security-and-best-practices.md" },
         { "slug": "10-cheat-sheet-and-qa", "title": "Cheat Sheet & Interview Q&A", "file": "10-cheat-sheet-and-qa.md" }
       ]
+    },
+    {
+      "slug": "ai-frontend-ebook",
+      "title": "AI / GenAI for Frontend",
+      "icon": "icon-bolt",
+      "description": "When and how to use AI in the UI, LLM integration, RAG, prompts, MCP, and best practices in Angular & React",
+      "chapters": [
+        { "slug": "01-when-to-use-ai-in-ui", "title": "When to Use AI in the UI", "file": "01-when-to-use-ai-in-ui.md" },
+        { "slug": "02-integrating-llm-apis", "title": "Integrating LLM APIs from Angular & React", "file": "02-integrating-llm-apis.md" },
+        { "slug": "03-rag-and-ai-with-your-data", "title": "RAG and AI + Your Data", "file": "03-rag-and-ai-with-your-data.md" },
+        { "slug": "04-prompt-engineering-and-api-design", "title": "Prompt Engineering & API Design for AI", "file": "04-prompt-engineering-and-api-design.md" },
+        { "slug": "05-mcp-and-ai-agents", "title": "MCP & AI Agents in Frontend", "file": "05-mcp-and-ai-agents.md" },
+        { "slug": "06-angular-best-practices-for-ai", "title": "Angular Best Practices for AI", "file": "06-angular-best-practices-for-ai.md" },
+        { "slug": "07-react-best-practices-for-ai", "title": "React Best Practices for AI", "file": "07-react-best-practices-for-ai.md" },
+        { "slug": "08-cost-latency-and-ux", "title": "Cost, Latency & UX", "file": "08-cost-latency-and-ux.md" },
+        { "slug": "09-security-and-privacy", "title": "Security & Privacy", "file": "09-security-and-privacy.md" },
+        { "slug": "10-cheat-sheet-and-qa", "title": "Cheat Sheet & Interview Q&A", "file": "10-cheat-sheet-and-qa.md" }
+      ]
     }
   ]
 }
