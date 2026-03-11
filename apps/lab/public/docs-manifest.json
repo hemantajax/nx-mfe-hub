@@ -197,6 +197,23 @@
         { "slug": "05-error-handling-and-resilience", "title": "Error Handling & Resilience on the Client", "file": "05-error-handling-and-resilience.md" },
         { "slug": "06-cheat-sheet-and-qa", "title": "Cheat Sheet & Interview Q&A", "file": "06-cheat-sheet-and-qa.md" }
       ]
+    },
+    {
+      "slug": "micro-frontend-ebook",
+      "title": "Micro-Frontend Deep Dive",
+      "icon": "icon-layout",
+      "description": "Module Federation, shell/remote architecture, shared deps, state & auth across apps, independent deployment, and Nx MFE with Angular & React — interview-ready for frontend architects",
+      "chapters": [
+        { "slug": "01-what-are-micro-frontends", "title": "What Are Micro-Frontends?", "file": "01-what-are-micro-frontends.md" },
+        { "slug": "02-mfe-approaches-and-techniques", "title": "MFE Approaches & Techniques", "file": "02-mfe-approaches-and-techniques.md" },
+        { "slug": "03-shell-remotes-and-routing", "title": "Shell, Remotes & Routing", "file": "03-shell-remotes-and-routing.md" },
+        { "slug": "04-shared-dependencies-and-design-systems", "title": "Shared Dependencies & Design Systems", "file": "04-shared-dependencies-and-design-systems.md" },
+        { "slug": "05-state-and-auth-across-apps", "title": "State & Auth Across Apps", "file": "05-state-and-auth-across-apps.md" },
+        { "slug": "06-deployment-and-versioning", "title": "Deployment & Independent Versioning", "file": "06-deployment-and-versioning.md" },
+        { "slug": "07-when-not-to-use-mfe", "title": "When (Not) to Use Micro-Frontends", "file": "07-when-not-to-use-mfe.md" },
+        { "slug": "08-nx-mfe-angular-react", "title": "Nx Monorepo: MFE with Angular & React", "file": "08-nx-mfe-angular-react.md" },
+        { "slug": "09-cheat-sheet-and-qa", "title": "Cheat Sheet & Interview Q&A", "file": "09-cheat-sheet-and-qa.md" }
+      ]
     }
   ]
 }
