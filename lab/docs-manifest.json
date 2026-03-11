@@ -1,0 +1,237 @@
+{
+  "books": [
+    {
+      "slug": "angular-step-by-step",
+      "title": "Angular Step by Step",
+      "icon": "icon-desktop",
+      "description": "Deep dive into Angular 18+ architecture, signals, RxJS and beyond",
+      "chapters": [
+        { "slug": "01-architecture", "title": "Architecture", "file": "01-architecture.md" },
+        { "slug": "02-change-detection", "title": "Change Detection", "file": "02-change-detection.md" },
+        { "slug": "03-defer-lazy-loading", "title": "Defer & Lazy Loading", "file": "03-defer-lazy-loading.md" },
+        { "slug": "04-ngrx-deep-dive", "title": "NgRx Deep Dive", "file": "04-ngrx-deep-dive.md" },
+        { "slug": "04b-ngrx-data", "title": "NgRx Data (Zero-Boilerplate CRUD)", "file": "04b-ngrx-data.md" },
+        { "slug": "05-rxjs-deep-dive", "title": "RxJS Deep Dive", "file": "05-rxjs-deep-dive.md" },
+        { "slug": "06-signals", "title": "Signals", "file": "06-signals.md" },
+        { "slug": "07-security-auth", "title": "Security & Auth", "file": "07-security-auth.md" },
+        { "slug": "08-ssr-hydration", "title": "SSR & Hydration", "file": "08-ssr-hydration.md" },
+        { "slug": "09-performance", "title": "Performance", "file": "09-performance.md" },
+        { "slug": "10-testing", "title": "Testing", "file": "10-testing.md" },
+        { "slug": "11-ai-angular-mcp", "title": "AI & Angular MCP", "file": "11-ai-angular-mcp.md" },
+        { "slug": "12-interview-qa", "title": "Interview Q&A", "file": "12-interview-qa.md" }
+      ]
+    },
+    {
+      "slug": "system-design-ebook",
+      "title": "System Design",
+      "icon": "icon-server",
+      "description": "Scalability, databases, caching, APIs and modern system design patterns",
+      "chapters": [
+        { "slug": "01-system-design-thinking", "title": "System Design Thinking", "file": "01-system-design-thinking.md" },
+        { "slug": "02-scalability", "title": "Scalability", "file": "02-scalability.md" },
+        { "slug": "03-databases", "title": "Databases", "file": "03-databases.md" },
+        { "slug": "04-caching", "title": "Caching", "file": "04-caching.md" },
+        { "slug": "05-networking-and-protocols", "title": "Networking & Protocols", "file": "05-networking-and-protocols.md" },
+        { "slug": "06-api-design", "title": "API Design", "file": "06-api-design.md" },
+        { "slug": "07-messaging-and-async", "title": "Messaging & Async", "file": "07-messaging-and-async.md" },
+        { "slug": "08-frontend-system-design", "title": "Frontend System Design", "file": "08-frontend-system-design.md" },
+        { "slug": "09-state-management", "title": "State Management", "file": "09-state-management.md" },
+        { "slug": "10-rendering-strategies", "title": "Rendering Strategies", "file": "10-rendering-strategies.md" },
+        { "slug": "11-performance-optimization", "title": "Performance Optimization", "file": "11-performance-optimization.md" },
+        { "slug": "12-micro-frontends", "title": "Micro Frontends", "file": "12-micro-frontends.md" },
+        { "slug": "13-security", "title": "Security", "file": "13-security.md" },
+        { "slug": "14-testing-and-quality", "title": "Testing & Quality", "file": "14-testing-and-quality.md" },
+        { "slug": "15-observability", "title": "Observability", "file": "15-observability.md" },
+        { "slug": "16-cheat-sheet", "title": "Cheat Sheet", "file": "16-cheat-sheet.md" },
+        { "slug": "17-authentication-authorization", "title": "Authentication & Authorization", "file": "17-authentication-authorization.md" }
+      ]
+    },
+    {
+      "slug": "node-express-mongodb",
+      "title": "Node.js / Express / MongoDB",
+      "icon": "icon-harddrives",
+      "description": "Backend architecture deep dive — Express 5, Mongoose 8, auth, security, performance and DevOps",
+      "chapters": [
+        { "slug": "01-architecture", "title": "Architecture & Structure", "file": "01-architecture.md" },
+        { "slug": "02-express-deep-dive", "title": "Express 5 Deep Dive", "file": "02-express-deep-dive.md" },
+        { "slug": "03-mongodb-mongoose", "title": "MongoDB & Mongoose", "file": "03-mongodb-mongoose.md" },
+        { "slug": "04-middleware-patterns", "title": "Middleware Patterns", "file": "04-middleware-patterns.md" },
+        { "slug": "05-authentication-authz", "title": "Authentication & Auth", "file": "05-authentication-authz.md" },
+        { "slug": "06-validation-error-handling", "title": "Validation & Errors", "file": "06-validation-error-handling.md" },
+        { "slug": "07-logging-observability", "title": "Logging & Observability", "file": "07-logging-observability.md" },
+        { "slug": "08-security", "title": "Security", "file": "08-security.md" },
+        { "slug": "09-performance", "title": "Performance", "file": "09-performance.md" },
+        { "slug": "10-testing", "title": "Testing Strategy", "file": "10-testing.md" },
+        { "slug": "11-configuration", "title": "Environment & Config", "file": "11-configuration.md" },
+        { "slug": "12-deployment-devops", "title": "Deployment & DevOps", "file": "12-deployment-devops.md" },
+        { "slug": "13-advanced-patterns", "title": "Advanced Patterns", "file": "13-advanced-patterns.md" },
+        { "slug": "14-interview-qa", "title": "Interview Q&A", "file": "14-interview-qa.md" }
+      ]
+    },
+    {
+      "slug": "react-step-by-step",
+      "title": "React 19 Step by Step",
+      "icon": "icon-layout-media-center-alt",
+      "description": "React 19 deep dive — Fiber, Server Components, Compiler, hooks, performance and architecture",
+      "chapters": [
+        { "slug": "01-architecture", "title": "Architecture", "file": "01-architecture.md" },
+        { "slug": "02-rendering", "title": "Rendering & Reconciliation", "file": "02-rendering.md" },
+        { "slug": "03-react-19", "title": "React 19 Deep Dive", "file": "03-react-19.md" },
+        { "slug": "04-react-compiler", "title": "React Compiler", "file": "04-react-compiler.md" },
+        { "slug": "05-hooks-deep-dive", "title": "Hooks Deep Dive", "file": "05-hooks-deep-dive.md" },
+        { "slug": "06-state-management", "title": "State Management", "file": "06-state-management.md" },
+        { "slug": "07-server-components", "title": "Server Components & SSR", "file": "07-server-components.md" },
+        { "slug": "08-performance", "title": "Performance", "file": "08-performance.md" },
+        { "slug": "09-routing-data", "title": "Routing & Data Fetching", "file": "09-routing-data.md" },
+        { "slug": "10-security", "title": "Security & Auth", "file": "10-security.md" },
+        { "slug": "11-testing", "title": "Testing Strategy", "file": "11-testing.md" },
+        { "slug": "12-interview-qa", "title": "Interview Q&A", "file": "12-interview-qa.md" }
+      ]
+    },
+    {
+      "slug": "js-ts-deep-dive",
+      "title": "JavaScript & TypeScript Deep Dive",
+      "icon": "icon-bolt",
+      "description": "Prototypes, OOP, closures, async, modern ES2024+ and TypeScript — senior interview vault",
+      "chapters": [
+        { "slug": "01-execution-context", "title": "Execution Context & Call Stack", "file": "01-execution-context.md" },
+        { "slug": "02-scope-closures", "title": "Scope & Closures", "file": "02-scope-closures.md" },
+        { "slug": "03-this-keyword", "title": "The this Keyword", "file": "03-this-keyword.md" },
+        { "slug": "04-prototypes-deep-dive", "title": "Prototypes Deep Dive", "file": "04-prototypes-deep-dive.md" },
+        { "slug": "05-oop-javascript", "title": "OOP in JavaScript", "file": "05-oop-javascript.md" },
+        { "slug": "06-oop-design-patterns", "title": "OOP Design Patterns", "file": "06-oop-design-patterns.md" },
+        { "slug": "07-async-javascript", "title": "Async JavaScript", "file": "07-async-javascript.md" },
+        { "slug": "08-functional-patterns", "title": "Functional Patterns", "file": "08-functional-patterns.md" },
+        { "slug": "09-modern-es2024", "title": "Modern JavaScript (ES2020–2024+)", "file": "09-modern-es2024.md" },
+        { "slug": "10-memory-performance", "title": "Memory & Performance", "file": "10-memory-performance.md" },
+        { "slug": "11-modules-bundling", "title": "Modules & Bundling", "file": "11-modules-bundling.md" },
+        { "slug": "12-typescript-foundations", "title": "TypeScript Foundations", "file": "12-typescript-foundations.md" },
+        { "slug": "13-typescript-advanced", "title": "TypeScript Advanced", "file": "13-typescript-advanced.md" },
+        { "slug": "14-typescript-patterns", "title": "TypeScript Patterns in Practice", "file": "14-typescript-patterns.md" },
+        { "slug": "15-error-handling-debugging", "title": "Error Handling & Debugging", "file": "15-error-handling-debugging.md" },
+        { "slug": "16-interview-qa", "title": "Interview Q&A", "file": "16-interview-qa.md" }
+      ]
+    },
+    {
+      "slug": "docker-ebook",
+      "title": "Docker for System Design",
+      "icon": "icon-layers",
+      "description": "Docker, Docker Compose, CI/CD, security and Kubernetes fundamentals for interview-ready architects",
+      "chapters": [
+        { "slug": "01-docker-mental-model", "title": "Docker Mental Model & Architecture", "file": "01-docker-mental-model.md" },
+        { "slug": "02-images-and-dockerfile", "title": "Images, Layers & Dockerfile Design", "file": "02-images-and-dockerfile.md" },
+        { "slug": "03-containers-and-lifecycle", "title": "Containers, Lifecycle & Resource Management", "file": "03-containers-and-lifecycle.md" },
+        { "slug": "04-volumes-and-persistence", "title": "Volumes & Persistence", "file": "04-volumes-and-persistence.md" },
+        { "slug": "05-networking-and-network-modes", "title": "Networking & Service Discovery", "file": "05-networking-and-network-modes.md" },
+        { "slug": "06-docker-compose", "title": "Docker Compose for Local Environments", "file": "06-docker-compose.md" },
+        { "slug": "07-docker-in-ci-cd", "title": "Docker in CI/CD & Environments", "file": "07-docker-in-ci-cd.md" },
+        { "slug": "08-security-and-best-practices", "title": "Security, Compliance & Best Practices", "file": "08-security-and-best-practices.md" },
+        { "slug": "09-docker-and-kubernetes", "title": "Docker & Kubernetes/System Design", "file": "09-docker-and-kubernetes.md" },
+        { "slug": "10-cheat-sheet-and-qa", "title": "Cheat Sheet & Interview Q&A", "file": "10-cheat-sheet-and-qa.md" }
+      ]
+    },
+    {
+      "slug": "kubernetes-ebook",
+      "title": "Kubernetes for System Design",
+      "icon": "icon-cloud",
+      "description": "Kubernetes fundamentals, traffic, scaling, security and interview-ready patterns for UI architects",
+      "chapters": [
+        { "slug": "01-k8s-mental-model", "title": "Kubernetes Mental Model & Architecture", "file": "01-k8s-mental-model.md" },
+        { "slug": "02-pods-and-workloads", "title": "Pods, Containers & Workloads", "file": "02-pods-and-workloads.md" },
+        { "slug": "03-services-and-ingress", "title": "Services, Ingress & Traffic", "file": "03-services-and-ingress.md" },
+        { "slug": "04-config-and-secrets", "title": "Config, Secrets & Environment Management", "file": "04-config-and-secrets.md" },
+        { "slug": "05-storage-and-persistence", "title": "Storage & Persistence", "file": "05-storage-and-persistence.md" },
+        { "slug": "06-scaling-and-health", "title": "Scaling, Health Checks & Self-Healing", "file": "06-scaling-and-health.md" },
+        { "slug": "07-multi-tenancy-and-environments", "title": "Multi-Tenancy & Environments", "file": "07-multi-tenancy-and-environments.md" },
+        { "slug": "08-observability-and-troubleshooting", "title": "Observability & Troubleshooting", "file": "08-observability-and-troubleshooting.md" },
+        { "slug": "09-security-and-best-practices", "title": "Security & Best Practices", "file": "09-security-and-best-practices.md" },
+        { "slug": "10-cheat-sheet-and-qa", "title": "Cheat Sheet & Interview Q&A", "file": "10-cheat-sheet-and-qa.md" }
+      ]
+    },
+    {
+      "slug": "ai-frontend-ebook",
+      "title": "AI / GenAI for Frontend",
+      "icon": "icon-bolt",
+      "description": "When and how to use AI in the UI, LLM integration, RAG, prompts, MCP, and best practices in Angular & React",
+      "chapters": [
+        { "slug": "01-when-to-use-ai-in-ui", "title": "When to Use AI in the UI", "file": "01-when-to-use-ai-in-ui.md" },
+        { "slug": "02-integrating-llm-apis", "title": "Integrating LLM APIs from Angular & React", "file": "02-integrating-llm-apis.md" },
+        { "slug": "03-rag-and-ai-with-your-data", "title": "RAG and AI + Your Data", "file": "03-rag-and-ai-with-your-data.md" },
+        { "slug": "04-prompt-engineering-and-api-design", "title": "Prompt Engineering & API Design for AI", "file": "04-prompt-engineering-and-api-design.md" },
+        { "slug": "05-mcp-and-ai-agents", "title": "MCP & AI Agents in Frontend", "file": "05-mcp-and-ai-agents.md" },
+        { "slug": "06-angular-best-practices-for-ai", "title": "Angular Best Practices for AI", "file": "06-angular-best-practices-for-ai.md" },
+        { "slug": "07-react-best-practices-for-ai", "title": "React Best Practices for AI", "file": "07-react-best-practices-for-ai.md" },
+        { "slug": "08-cost-latency-and-ux", "title": "Cost, Latency & UX", "file": "08-cost-latency-and-ux.md" },
+        { "slug": "09-security-and-privacy", "title": "Security & Privacy", "file": "09-security-and-privacy.md" },
+        { "slug": "10-cheat-sheet-and-qa", "title": "Cheat Sheet & Interview Q&A", "file": "10-cheat-sheet-and-qa.md" }
+      ]
+    },
+    {
+      "slug": "ai-backend-ebook",
+      "title": "AI / GenAI for Backend",
+      "icon": "icon-server",
+      "description": "Server-side LLM integration, API design, RAG, prompts, tool use, MCP, cost control, and security",
+      "chapters": [
+        { "slug": "01-when-to-use-ai-on-backend", "title": "When to Use AI on the Backend", "file": "01-when-to-use-ai-on-backend.md" },
+        { "slug": "02-api-design-for-ai-endpoints", "title": "API Design for AI Endpoints", "file": "02-api-design-for-ai-endpoints.md" },
+        { "slug": "03-calling-llm-providers", "title": "Calling LLM Providers", "file": "03-calling-llm-providers.md" },
+        { "slug": "04-prompt-construction-and-management", "title": "Prompt Construction & Management", "file": "04-prompt-construction-and-management.md" },
+        { "slug": "05-rag-implementation", "title": "RAG Implementation", "file": "05-rag-implementation.md" },
+        { "slug": "06-tool-use-and-function-calling", "title": "Tool Use & Function Calling", "file": "06-tool-use-and-function-calling.md" },
+        { "slug": "07-mcp-server-side", "title": "MCP Server-Side", "file": "07-mcp-server-side.md" },
+        { "slug": "08-cost-rate-limiting-and-budgets", "title": "Cost, Rate Limiting & Budgets", "file": "08-cost-rate-limiting-and-budgets.md" },
+        { "slug": "09-security-privacy-and-observability", "title": "Security, Privacy & Observability", "file": "09-security-privacy-and-observability.md" },
+        { "slug": "10-cheat-sheet-and-qa", "title": "Cheat Sheet & Interview Q&A", "file": "10-cheat-sheet-and-qa.md" }
+      ]
+    },
+    {
+      "slug": "api-design-ebook",
+      "title": "API Design & Frontend–Backend Contract",
+      "icon": "icon-panel",
+      "description": "REST vs GraphQL vs gRPC, pagination, BFF pattern, contract-first design, error handling and resilience — interview-ready for senior frontend and full-stack engineers",
+      "chapters": [
+        { "slug": "01-rest-vs-graphql-vs-grpc", "title": "REST vs GraphQL vs gRPC — A Frontend Perspective", "file": "01-rest-vs-graphql-vs-grpc.md" },
+        { "slug": "02-pagination-filtering-versioning", "title": "Pagination, Filtering & Versioning", "file": "02-pagination-filtering-versioning.md" },
+        { "slug": "03-bff-pattern", "title": "The BFF Pattern", "file": "03-bff-pattern.md" },
+        { "slug": "04-contract-first-design", "title": "Contract-First Design", "file": "04-contract-first-design.md" },
+        { "slug": "05-error-handling-and-resilience", "title": "Error Handling & Resilience on the Client", "file": "05-error-handling-and-resilience.md" },
+        { "slug": "06-cheat-sheet-and-qa", "title": "Cheat Sheet & Interview Q&A", "file": "06-cheat-sheet-and-qa.md" }
+      ]
+    },
+    {
+      "slug": "micro-frontend-ebook",
+      "title": "Micro-Frontend Deep Dive",
+      "icon": "icon-layout",
+      "description": "Module Federation, shell/remote architecture, shared deps, state & auth across apps, independent deployment, and Nx MFE with Angular & React — interview-ready for frontend architects",
+      "chapters": [
+        { "slug": "01-what-are-micro-frontends", "title": "What Are Micro-Frontends?", "file": "01-what-are-micro-frontends.md" },
+        { "slug": "02-mfe-approaches-and-techniques", "title": "MFE Approaches & Techniques", "file": "02-mfe-approaches-and-techniques.md" },
+        { "slug": "03-shell-remotes-and-routing", "title": "Shell, Remotes & Routing", "file": "03-shell-remotes-and-routing.md" },
+        { "slug": "04-shared-dependencies-and-design-systems", "title": "Shared Dependencies & Design Systems", "file": "04-shared-dependencies-and-design-systems.md" },
+        { "slug": "05-state-and-auth-across-apps", "title": "State & Auth Across Apps", "file": "05-state-and-auth-across-apps.md" },
+        { "slug": "06-deployment-and-versioning", "title": "Deployment & Independent Versioning", "file": "06-deployment-and-versioning.md" },
+        { "slug": "07-when-not-to-use-mfe", "title": "When (Not) to Use Micro-Frontends", "file": "07-when-not-to-use-mfe.md" },
+        { "slug": "08-nx-mfe-angular-react", "title": "Nx Monorepo: MFE with Angular & React", "file": "08-nx-mfe-angular-react.md" },
+        { "slug": "09-cheat-sheet-and-qa", "title": "Cheat Sheet & Interview Q&A", "file": "09-cheat-sheet-and-qa.md" }
+      ]
+    },
+    {
+      "slug": "frontend-performance-ebook",
+      "title": "Frontend Performance & Core Web Vitals",
+      "icon": "icon-shine",
+      "description": "LCP, INP, CLS, loading strategy, caching, rendering patterns, Angular performance, React performance, Lighthouse, RUM, and CI budget enforcement — interview-ready for senior frontend engineers",
+      "chapters": [
+        { "slug": "01-core-web-vitals", "title": "Core Web Vitals & Architecture", "file": "01-core-web-vitals.md" },
+        { "slug": "02-loading-strategy", "title": "Loading Strategy: Critical Path, Code Splitting & Lazy Loading", "file": "02-loading-strategy.md" },
+        { "slug": "03-caching", "title": "Caching: Browser, CDN & Service Workers", "file": "03-caching.md" },
+        { "slug": "04-images-and-media", "title": "Images & Media: Formats, Responsive, Priority", "file": "04-images-and-media.md" },
+        { "slug": "05-rendering-strategies", "title": "Rendering Strategies: CSR, SSR, SSG, ISR & Streaming", "file": "05-rendering-strategies.md" },
+        { "slug": "06-angular-performance", "title": "Angular Performance", "file": "06-angular-performance.md" },
+        { "slug": "07-react-performance", "title": "React Performance", "file": "07-react-performance.md" },
+        { "slug": "08-monitoring-rum-synthetic", "title": "Monitoring: RUM, Synthetic Testing & Lighthouse", "file": "08-monitoring-rum-synthetic.md" },
+        { "slug": "09-performance-budgets-ci", "title": "Performance Budgets & CI Pipelines", "file": "09-performance-budgets-ci.md" },
+        { "slug": "10-cheat-sheet-and-qa", "title": "Cheat Sheet & Interview Q&A", "file": "10-cheat-sheet-and-qa.md" }
+      ]
+    }
+  ]
+}

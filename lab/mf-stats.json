@@ -1,0 +1,438 @@
+{
+  "id": "lab",
+  "name": "lab",
+  "metaData": {
+    "name": "lab",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "0.0.0",
+      "buildName": "@ng-mfe-hub/source"
+    },
+    "remoteEntry": {
+      "name": "remoteEntry.mjs",
+      "path": "",
+      "type": "module"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "lab",
+    "pluginVersion": "0.21.6",
+    "prefetchInterface": false,
+    "publicPath": "auto"
+  },
+  "shared": [
+    {
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/common/http",
+      "version": "21.1.5",
+      "eager": false,
+      "id": "lab:@angular/common/http",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "6127.6271f23b7d3d2038.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/common",
+      "version": "21.1.5",
+      "eager": false,
+      "id": "lab:@angular/common",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "6421.2ad94c4cba9c1903.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/core/primitives/di",
+      "version": "21.1.5",
+      "eager": false,
+      "id": "lab:@angular/core/primitives/di",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.b3de71d5185dafb1.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/core/primitives/signals",
+      "version": "21.1.5",
+      "eager": false,
+      "id": "lab:@angular/core/primitives/signals",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.b3de71d5185dafb1.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/core/rxjs-interop",
+      "version": "21.1.5",
+      "eager": false,
+      "id": "lab:@angular/core/rxjs-interop",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "9079.a7238766481b14a8.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/core",
+      "version": "21.1.5",
+      "eager": false,
+      "id": "lab:@angular/core",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "6921.88388dcf7bf1ebb2.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/platform-browser",
+      "version": "21.1.5",
+      "eager": false,
+      "id": "lab:@angular/platform-browser",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "1707.b992d88f8988fc68.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/router",
+      "version": "21.1.5",
+      "eager": false,
+      "id": "lab:@angular/router",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "2359.4fccf847694aad58.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^0.0.0",
+      "shareScope": "default",
+      "eager": false,
+      "name": "@ng-mfe-hub/lab-data-access",
+      "version": "0.0.0",
+      "id": "lab:@ng-mfe-hub/lab-data-access",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.b3de71d5185dafb1.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^0.0.0",
+      "shareScope": "default",
+      "eager": false,
+      "name": "@ng-mfe-hub/lab-feature-docs",
+      "version": "0.0.0",
+      "id": "lab:@ng-mfe-hub/lab-feature-docs",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.b3de71d5185dafb1.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^0.0.0",
+      "shareScope": "default",
+      "eager": false,
+      "name": "@ng-mfe-hub/lab-ui",
+      "version": "0.0.0",
+      "id": "lab:@ng-mfe-hub/lab-ui",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.b3de71d5185dafb1.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^11.12.3",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "mermaid",
+      "version": "11.12.3",
+      "eager": false,
+      "id": "lab:mermaid",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "5854.8d8b53498668c02a.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^21.1.0",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "ngx-markdown",
+      "version": "21.1.0",
+      "eager": false,
+      "id": "lab:ngx-markdown",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "1784.1744759d81827a3c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^7.8.2",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "rxjs/operators",
+      "version": "7.8.2",
+      "eager": false,
+      "id": "lab:rxjs/operators",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "7037.51df9fea8f5d4f06.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^7.8.2",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "rxjs",
+      "version": "7.8.2",
+      "eager": false,
+      "id": "lab:rxjs",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "4087.019dc0cc265ad79b.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    }
+  ],
+  "remotes": [],
+  "exposes": [
+    {
+      "path": "./Routes",
+      "id": "lab:Routes",
+      "name": "Routes",
+      "requires": [],
+      "file": "apps/lab/src/app/remote-entry/entry.routes.ts",
+      "assets": {
+        "js": {
+          "sync": [
+            "4787.df9f22d3e83655e9.js",
+            "__federation_expose_Routes.e1b522161ee0a3e2.js"
+          ],
+          "async": [
+            "6307.90aeeacf29fd55fb.js",
+            "4966.a18a7221797aa09b.js",
+            "5844.dad2f39f0a980dd9.js",
+            "2235.5ec56f59124efae5.js",
+            "4316.3f76c1fa46a1ae29.js",
+            "4756.ac0105bf199d90d1.js",
+            "3915.f518118f47ddd9bb.js",
+            "7217.d09b9bf06f208d2a.js",
+            "7331.9b7fc7bef718bcc5.js",
+            "4797.58caf5da7381de22.js",
+            "2600.04990da9d1c9ac2f.js",
+            "482.ebaeb4b3343d03c2.js",
+            "9781.9cf657a2dcc954ee.js",
+            "3327.40a01aec16d5849c.js",
+            "9185.c258ede187a42b1f.js",
+            "4267.1b7a6aee8383979d.js",
+            "1772.ffc1be8e22fb959f.js",
+            "315.1822f6bb9d64005d.js",
+            "1223.f411b517ea7ca066.js",
+            "7147.448d26fe38dea6ff.js",
+            "3077.bdc05ce7859a13b4.js",
+            "7957.5d34c1177eb5f6f0.js",
+            "5124.551d328b39cdab28.js",
+            "8872.2aa62a29f9d8bb19.js",
+            "2838.d8bdead2e5a51fa5.js",
+            "9643.8190e354dd3f81b7.js",
+            "684.516dcb696d2462c6.js",
+            "6407.5aebf0650ea4ab69.js",
+            "3853.319b97da6288d8fd.js",
+            "9516.b9474af1d3abdf1e.js",
+            "9966.a1ce0c63fba2de18.js",
+            "2422.b3a05d5c02d0d8ff.js",
+            "6139.abb7dc6c74d49913.js",
+            "6204.4f456e324a416b11.js",
+            "9621.15d47245f3b8e9bd.js",
+            "6656.29803ed7d9c2d98f.js",
+            "4953.35587fdbddd91af2.js",
+            "6116.9dde9f636b9f9a54.js",
+            "4024.274752592067850f.js",
+            "6856.56e79963bededc0d.js",
+            "8700.c1c8a8fda1ec4e3f.js",
+            "1900.549c55c11c140b42.js",
+            "4599.228edd7684c42fb3.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      }
+    }
+  ]
+}

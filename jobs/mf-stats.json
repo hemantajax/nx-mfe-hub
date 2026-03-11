@@ -1,0 +1,303 @@
+{
+  "id": "jobs",
+  "name": "jobs",
+  "metaData": {
+    "name": "jobs",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "0.0.0",
+      "buildName": "@ng-mfe-hub/source"
+    },
+    "remoteEntry": {
+      "name": "remoteEntry.mjs",
+      "path": "",
+      "type": "module"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "jobs",
+    "pluginVersion": "0.21.6",
+    "prefetchInterface": false,
+    "publicPath": "auto"
+  },
+  "shared": [
+    {
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/common/http",
+      "version": "21.1.5",
+      "eager": false,
+      "id": "jobs:@angular/common/http",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "127.28848e4a5a00a708.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/common",
+      "version": "21.1.5",
+      "eager": false,
+      "id": "jobs:@angular/common",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "421.d59b47ce6b94ad7d.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/core/primitives/di",
+      "version": "21.1.5",
+      "eager": false,
+      "id": "jobs:@angular/core/primitives/di",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.38b6b3ca5acd3b40.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/core/primitives/signals",
+      "version": "21.1.5",
+      "eager": false,
+      "id": "jobs:@angular/core/primitives/signals",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.38b6b3ca5acd3b40.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/core",
+      "version": "21.1.5",
+      "eager": false,
+      "id": "jobs:@angular/core",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "673.67de46ed72b1e3e1.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/forms",
+      "version": "21.1.5",
+      "eager": false,
+      "id": "jobs:@angular/forms",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "341.68f569220842ce09.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/platform-browser",
+      "version": "21.1.5",
+      "eager": false,
+      "id": "jobs:@angular/platform-browser",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "707.7dfee0b07580a189.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/router",
+      "version": "21.1.5",
+      "eager": false,
+      "id": "jobs:@angular/router",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "484.8cc7a3c6980142b2.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^0.0.0",
+      "shareScope": "default",
+      "eager": false,
+      "name": "@ng-mfe-hub/jobs-data-access",
+      "version": "0.0.0",
+      "id": "jobs:@ng-mfe-hub/jobs-data-access",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.38b6b3ca5acd3b40.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^0.0.0",
+      "shareScope": "default",
+      "eager": false,
+      "name": "@ng-mfe-hub/jobs-feature-search",
+      "version": "0.0.0",
+      "id": "jobs:@ng-mfe-hub/jobs-feature-search",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.38b6b3ca5acd3b40.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^0.0.0",
+      "shareScope": "default",
+      "eager": false,
+      "name": "@ng-mfe-hub/jobs-ui",
+      "version": "0.0.0",
+      "id": "jobs:@ng-mfe-hub/jobs-ui",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.38b6b3ca5acd3b40.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    }
+  ],
+  "remotes": [],
+  "exposes": [
+    {
+      "path": "./Routes",
+      "id": "jobs:Routes",
+      "name": "Routes",
+      "requires": [],
+      "file": "apps/jobs/src/app/remote-entry/entry.routes.ts",
+      "assets": {
+        "js": {
+          "sync": [
+            "__federation_expose_Routes.46e1aff5afef2638.js"
+          ],
+          "async": [
+            "839.1650fbfbde6eb42f.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      }
+    }
+  ]
+}

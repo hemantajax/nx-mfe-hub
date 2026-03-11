@@ -1,0 +1,1003 @@
+{
+  "id": "eco_tracker",
+  "name": "eco_tracker",
+  "metaData": {
+    "name": "eco_tracker",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "0.0.0",
+      "buildName": "@ng-mfe-hub/source"
+    },
+    "remoteEntry": {
+      "name": "remoteEntry.mjs",
+      "path": "",
+      "type": "module"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "eco_tracker",
+    "pluginVersion": "0.21.6",
+    "prefetchInterface": false,
+    "publicPath": "auto"
+  },
+  "shared": [
+    {
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/common/http",
+      "version": "21.1.5",
+      "eager": false,
+      "id": "eco_tracker:@angular/common/http",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "6127.1c271a18f9bd42cb.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/common",
+      "version": "21.1.5",
+      "eager": false,
+      "id": "eco_tracker:@angular/common",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "6421.60c275d673c26620.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/core/primitives/di",
+      "version": "21.1.5",
+      "eager": false,
+      "id": "eco_tracker:@angular/core/primitives/di",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.bd89efb49eaf196b.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/core/primitives/signals",
+      "version": "21.1.5",
+      "eager": false,
+      "id": "eco_tracker:@angular/core/primitives/signals",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.bd89efb49eaf196b.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/core/rxjs-interop",
+      "version": "21.1.5",
+      "eager": false,
+      "id": "eco_tracker:@angular/core/rxjs-interop",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.bd89efb49eaf196b.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/core",
+      "version": "21.1.5",
+      "eager": false,
+      "id": "eco_tracker:@angular/core",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "6921.5a028a0463465db4.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/forms",
+      "version": "21.1.5",
+      "eager": false,
+      "id": "eco_tracker:@angular/forms",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "4341.32ad958b142ea4c6.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/platform-browser",
+      "version": "21.1.5",
+      "eager": false,
+      "id": "eco_tracker:@angular/platform-browser",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "1707.4f96006ff5efdcdb.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^21.1.5",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/router",
+      "version": "21.1.5",
+      "eager": false,
+      "id": "eco_tracker:@angular/router",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "5210.b6761723ca9224fc.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@ng-bootstrap/ng-bootstrap/accordion",
+      "version": "20.0.0",
+      "eager": false,
+      "id": "eco_tracker:@ng-bootstrap/ng-bootstrap/accordion",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "727.a2516ba5061ab111.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@ng-bootstrap/ng-bootstrap/alert",
+      "version": "20.0.0",
+      "eager": false,
+      "id": "eco_tracker:@ng-bootstrap/ng-bootstrap/alert",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.bd89efb49eaf196b.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@ng-bootstrap/ng-bootstrap/carousel",
+      "version": "20.0.0",
+      "eager": false,
+      "id": "eco_tracker:@ng-bootstrap/ng-bootstrap/carousel",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "1623.19fd20e03cf5bcd1.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@ng-bootstrap/ng-bootstrap/collapse",
+      "version": "20.0.0",
+      "eager": false,
+      "id": "eco_tracker:@ng-bootstrap/ng-bootstrap/collapse",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.bd89efb49eaf196b.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@ng-bootstrap/ng-bootstrap/config",
+      "version": "20.0.0",
+      "eager": false,
+      "id": "eco_tracker:@ng-bootstrap/ng-bootstrap/config",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.bd89efb49eaf196b.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@ng-bootstrap/ng-bootstrap/datepicker",
+      "version": "20.0.0",
+      "eager": false,
+      "id": "eco_tracker:@ng-bootstrap/ng-bootstrap/datepicker",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "2143.a9824dbc84f17e75.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@ng-bootstrap/ng-bootstrap/dropdown",
+      "version": "20.0.0",
+      "eager": false,
+      "id": "eco_tracker:@ng-bootstrap/ng-bootstrap/dropdown",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "3472.20fbe8e7ea7bcde5.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@ng-bootstrap/ng-bootstrap/modal",
+      "version": "20.0.0",
+      "eager": false,
+      "id": "eco_tracker:@ng-bootstrap/ng-bootstrap/modal",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "6458.55f95180a8959a0b.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@ng-bootstrap/ng-bootstrap/nav",
+      "version": "20.0.0",
+      "eager": false,
+      "id": "eco_tracker:@ng-bootstrap/ng-bootstrap/nav",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "8315.179416b8e85fb008.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@ng-bootstrap/ng-bootstrap/offcanvas",
+      "version": "20.0.0",
+      "eager": false,
+      "id": "eco_tracker:@ng-bootstrap/ng-bootstrap/offcanvas",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "2226.6cd30dc0b237c37b.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@ng-bootstrap/ng-bootstrap/pagination",
+      "version": "20.0.0",
+      "eager": false,
+      "id": "eco_tracker:@ng-bootstrap/ng-bootstrap/pagination",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "6899.9eb107652ed29892.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@ng-bootstrap/ng-bootstrap/popover",
+      "version": "20.0.0",
+      "eager": false,
+      "id": "eco_tracker:@ng-bootstrap/ng-bootstrap/popover",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.bd89efb49eaf196b.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@ng-bootstrap/ng-bootstrap/progressbar",
+      "version": "20.0.0",
+      "eager": false,
+      "id": "eco_tracker:@ng-bootstrap/ng-bootstrap/progressbar",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.bd89efb49eaf196b.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@ng-bootstrap/ng-bootstrap/rating",
+      "version": "20.0.0",
+      "eager": false,
+      "id": "eco_tracker:@ng-bootstrap/ng-bootstrap/rating",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.bd89efb49eaf196b.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@ng-bootstrap/ng-bootstrap/scrollspy",
+      "version": "20.0.0",
+      "eager": false,
+      "id": "eco_tracker:@ng-bootstrap/ng-bootstrap/scrollspy",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "6822.c29fd9f2c7311fef.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@ng-bootstrap/ng-bootstrap/timepicker",
+      "version": "20.0.0",
+      "eager": false,
+      "id": "eco_tracker:@ng-bootstrap/ng-bootstrap/timepicker",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "1174.d7a06e38e189c633.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@ng-bootstrap/ng-bootstrap/toast",
+      "version": "20.0.0",
+      "eager": false,
+      "id": "eco_tracker:@ng-bootstrap/ng-bootstrap/toast",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.bd89efb49eaf196b.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@ng-bootstrap/ng-bootstrap/tooltip",
+      "version": "20.0.0",
+      "eager": false,
+      "id": "eco_tracker:@ng-bootstrap/ng-bootstrap/tooltip",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.bd89efb49eaf196b.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@ng-bootstrap/ng-bootstrap/typeahead",
+      "version": "20.0.0",
+      "eager": false,
+      "id": "eco_tracker:@ng-bootstrap/ng-bootstrap/typeahead",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "9462.738b6482c959c49e.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^20.0.0",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@ng-bootstrap/ng-bootstrap",
+      "version": "20.0.0",
+      "eager": false,
+      "id": "eco_tracker:@ng-bootstrap/ng-bootstrap",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.bd89efb49eaf196b.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^0.0.0",
+      "shareScope": "default",
+      "eager": false,
+      "name": "@ng-mfe-hub/eco-tracker-data-access",
+      "version": "0.0.0",
+      "id": "eco_tracker:@ng-mfe-hub/eco-tracker-data-access",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "1548.5f4b6612a54d64c0.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^0.0.0",
+      "shareScope": "default",
+      "eager": false,
+      "name": "@ng-mfe-hub/eco-tracker-feature-community",
+      "version": "0.0.0",
+      "id": "eco_tracker:@ng-mfe-hub/eco-tracker-feature-community",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "6534.25fcaa67842c6ce2.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^0.0.0",
+      "shareScope": "default",
+      "eager": false,
+      "name": "@ng-mfe-hub/eco-tracker-feature-dashboard",
+      "version": "0.0.0",
+      "id": "eco_tracker:@ng-mfe-hub/eco-tracker-feature-dashboard",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "8543.f56bfa2c8f9162fb.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^0.0.0",
+      "shareScope": "default",
+      "eager": false,
+      "name": "@ng-mfe-hub/eco-tracker-feature-footprint",
+      "version": "0.0.0",
+      "id": "eco_tracker:@ng-mfe-hub/eco-tracker-feature-footprint",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "7102.48b08e14a6af9301.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^0.0.0",
+      "shareScope": "default",
+      "eager": false,
+      "name": "@ng-mfe-hub/eco-tracker-feature-insights",
+      "version": "0.0.0",
+      "id": "eco_tracker:@ng-mfe-hub/eco-tracker-feature-insights",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "7085.87b2737d5e2a77ca.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^0.0.0",
+      "shareScope": "default",
+      "eager": false,
+      "name": "@ng-mfe-hub/eco-tracker-feature-trees",
+      "version": "0.0.0",
+      "id": "eco_tracker:@ng-mfe-hub/eco-tracker-feature-trees",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "7692.c7d153a301a65a90.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^0.0.0",
+      "shareScope": "default",
+      "eager": false,
+      "name": "@ng-mfe-hub/eco-tracker-ui",
+      "version": "0.0.0",
+      "id": "eco_tracker:@ng-mfe-hub/eco-tracker-ui",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "3005.3bc1cd881640a576.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^0.0.0",
+      "shareScope": "default",
+      "eager": false,
+      "name": "@ng-mfe-hub/ui",
+      "version": "0.0.0",
+      "id": "eco_tracker:@ng-mfe-hub/ui",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "1874.3bfa4a4873a7c749.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^4.5.1",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "chart.js",
+      "version": "4.5.1",
+      "eager": false,
+      "id": "eco_tracker:chart.js",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "5574.84819cfe2b5af86c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^1.9.4",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "leaflet",
+      "version": "1.9.4",
+      "eager": false,
+      "id": "eco_tracker:leaflet",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "8244.1807def5ea8c38c7.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^1.10.0",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "localforage",
+      "version": "1.10.0",
+      "eager": false,
+      "id": "eco_tracker:localforage",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "119.8778142831f86b99.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^9.0.0",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "ng2-charts",
+      "version": "9.0.0",
+      "eager": false,
+      "id": "eco_tracker:ng2-charts",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "8192.ecd8911904f0a69f.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    }
+  ],
+  "remotes": [],
+  "exposes": [
+    {
+      "path": "./Routes",
+      "id": "eco_tracker:Routes",
+      "name": "Routes",
+      "requires": [],
+      "file": "apps/eco-tracker/src/app/remote-entry/entry.routes.ts",
+      "assets": {
+        "js": {
+          "sync": [
+            "__federation_expose_Routes.a493c6f208c7c857.js"
+          ],
+          "async": [
+            "1230.39429c39ed7d16f8.js",
+            "6307.d82d3a30edac7a14.js",
+            "957.25f8cab4d43cc6f0.js",
+            "5821.d6f61b842318a06d.js",
+            "3545.7082667e1e5fcfd0.js",
+            "877.41b45077c5b3095c.js",
+            "1145.ddbfc47198fdc4a9.js",
+            "2379.edb1462bae7b8c41.js",
+            "5795.df2cf89718ae8348.js",
+            "9447.c05e30d62fecaae1.js",
+            "1225.553b469ffd72b817.js",
+            "3695.787e6e5f34849445.js",
+            "2795.7d1bb5a49720bb05.js",
+            "3781.3a61548c41b76336.js",
+            "1773.dae41b55f3d6b591.js",
+            "1860.7780f92d95f04781.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      }
+    }
+  ]
+}

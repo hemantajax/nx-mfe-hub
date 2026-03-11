@@ -1,0 +1,9 @@
+{
+  "dashboard":   "https://hemantajax.github.io/nx-mfe-hub/dashboard/mf-manifest.json",
+  "profile":     "https://hemantajax.github.io/nx-mfe-hub/profile/mf-manifest.json",
+  "lab":         "https://hemantajax.github.io/nx-mfe-hub/lab/mf-manifest.json",
+  "theme":       "https://hemantajax.github.io/nx-mfe-hub/theme/mf-manifest.json",
+  "demos":       "https://hemantajax.github.io/nx-mfe-hub/demos/mf-manifest.json",
+  "jobs":        "https://hemantajax.github.io/nx-mfe-hub/jobs/mf-manifest.json",
+  "eco-tracker": "https://hemantajax.github.io/nx-mfe-hub/eco-tracker/mf-manifest.json"
+}
