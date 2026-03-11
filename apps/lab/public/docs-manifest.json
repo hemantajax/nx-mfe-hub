@@ -187,7 +187,7 @@
     {
       "slug": "api-design-ebook",
       "title": "API Design & Frontend–Backend Contract",
-      "icon": "icon-api",
+      "icon": "icon-panel",
       "description": "REST vs GraphQL vs gRPC, pagination, BFF pattern, contract-first design, error handling and resilience — interview-ready for senior frontend and full-stack engineers",
       "chapters": [
         { "slug": "01-rest-vs-graphql-vs-grpc", "title": "REST vs GraphQL vs gRPC — A Frontend Perspective", "file": "01-rest-vs-graphql-vs-grpc.md" },
@@ -213,6 +213,24 @@
         { "slug": "07-when-not-to-use-mfe", "title": "When (Not) to Use Micro-Frontends", "file": "07-when-not-to-use-mfe.md" },
         { "slug": "08-nx-mfe-angular-react", "title": "Nx Monorepo: MFE with Angular & React", "file": "08-nx-mfe-angular-react.md" },
         { "slug": "09-cheat-sheet-and-qa", "title": "Cheat Sheet & Interview Q&A", "file": "09-cheat-sheet-and-qa.md" }
+      ]
+    },
+    {
+      "slug": "frontend-performance-ebook",
+      "title": "Frontend Performance & Core Web Vitals",
+      "icon": "icon-shine",
+      "description": "LCP, INP, CLS, loading strategy, caching, rendering patterns, Angular performance, React performance, Lighthouse, RUM, and CI budget enforcement — interview-ready for senior frontend engineers",
+      "chapters": [
+        { "slug": "01-core-web-vitals", "title": "Core Web Vitals & Architecture", "file": "01-core-web-vitals.md" },
+        { "slug": "02-loading-strategy", "title": "Loading Strategy: Critical Path, Code Splitting & Lazy Loading", "file": "02-loading-strategy.md" },
+        { "slug": "03-caching", "title": "Caching: Browser, CDN & Service Workers", "file": "03-caching.md" },
+        { "slug": "04-images-and-media", "title": "Images & Media: Formats, Responsive, Priority", "file": "04-images-and-media.md" },
+        { "slug": "05-rendering-strategies", "title": "Rendering Strategies: CSR, SSR, SSG, ISR & Streaming", "file": "05-rendering-strategies.md" },
+        { "slug": "06-angular-performance", "title": "Angular Performance", "file": "06-angular-performance.md" },
+        { "slug": "07-react-performance", "title": "React Performance", "file": "07-react-performance.md" },
+        { "slug": "08-monitoring-rum-synthetic", "title": "Monitoring: RUM, Synthetic Testing & Lighthouse", "file": "08-monitoring-rum-synthetic.md" },
+        { "slug": "09-performance-budgets-ci", "title": "Performance Budgets & CI Pipelines", "file": "09-performance-budgets-ci.md" },
+        { "slug": "10-cheat-sheet-and-qa", "title": "Cheat Sheet & Interview Q&A", "file": "10-cheat-sheet-and-qa.md" }
       ]
     }
   ]
