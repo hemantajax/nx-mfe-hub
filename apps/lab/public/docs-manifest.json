@@ -129,6 +129,24 @@
         { "slug": "09-docker-and-kubernetes", "title": "Docker & Kubernetes/System Design", "file": "09-docker-and-kubernetes.md" },
         { "slug": "10-cheat-sheet-and-qa", "title": "Cheat Sheet & Interview Q&A", "file": "10-cheat-sheet-and-qa.md" }
       ]
+    },
+    {
+      "slug": "kubernetes-ebook",
+      "title": "Kubernetes for System Design",
+      "icon": "icon-cloud",
+      "description": "Kubernetes fundamentals, traffic, scaling, security and interview-ready patterns for UI architects",
+      "chapters": [
+        { "slug": "01-k8s-mental-model", "title": "Kubernetes Mental Model & Architecture", "file": "01-k8s-mental-model.md" },
+        { "slug": "02-pods-and-workloads", "title": "Pods, Containers & Workloads", "file": "02-pods-and-workloads.md" },
+        { "slug": "03-services-and-ingress", "title": "Services, Ingress & Traffic", "file": "03-services-and-ingress.md" },
+        { "slug": "04-config-and-secrets", "title": "Config, Secrets & Environment Management", "file": "04-config-and-secrets.md" },
+        { "slug": "05-storage-and-persistence", "title": "Storage & Persistence", "file": "05-storage-and-persistence.md" },
+        { "slug": "06-scaling-and-health", "title": "Scaling, Health Checks & Self-Healing", "file": "06-scaling-and-health.md" },
+        { "slug": "07-multi-tenancy-and-environments", "title": "Multi-Tenancy & Environments", "file": "07-multi-tenancy-and-environments.md" },
+        { "slug": "08-observability-and-troubleshooting", "title": "Observability & Troubleshooting", "file": "08-observability-and-troubleshooting.md" },
+        { "slug": "09-security-and-best-practices", "title": "Security & Best Practices", "file": "09-security-and-best-practices.md" },
+        { "slug": "10-cheat-sheet-and-qa", "title": "Cheat Sheet & Interview Q&A", "file": "10-cheat-sheet-and-qa.md" }
+      ]
     }
   ]
 }
